@@ -58,11 +58,11 @@
 </section>
 
 <!-- A BIT MORE ABOUT US SECTION WITH SWIPE AND SAME LAYOUT -->
-<section style="background-color: #ebebeb; color: #2d2c2a; padding: 100px 20px; text-align: center;">
+<section class="about-couple" style="background-color: #ebebeb; color: #2d2c2a; padding: 100px 20px; text-align: center;">
   <div style="max-width: 1000px; margin: 0 auto;">
 
     <!-- Section Header -->
-    <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 60px;">
+    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 60px;">
       A BIT MORE ABOUT US<br>
       HERE’S TO MY BETTER HALF
     </h2>
@@ -147,7 +147,7 @@
                font-size: 1.5rem; 
                display: flex; 
                align-items: center; 
-               justify-content: center;">
+               justify-content: center; ">
    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
 </svg>
@@ -157,7 +157,71 @@
 
   </div>
 </section>
+<style>/* Mobile Optimization Only */
+@media (max-width: 992px) {
+  /* Stack slide content vertically on tablets/small desktops */
+  #aboutCarousel .slide {
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-bottom: 60px !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+  }
+  .about-couple{
+    margin-top: -120px !important;
+  }
+  #aboutCarousel .slide div {
+    text-align: center !important;
+  }
 
+  #aboutCarousel .slide-content {
+    flex: unset !important;
+    width: 100% !important;
+  }
+
+  #aboutCarousel .slide-image {
+    flex: unset !important;
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Adjust arrows for smaller screens */
+  #nextBtn, #prevBtn {
+    right: 175px !important;
+    left: 175px !important;
+    transform: translateY(-50%) !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 1.2rem !important;
+  }
+
+  #prevBtn { left: 175px !important; }
+  #nextBtn { right: 175px !important; }
+}
+
+@media (max-width: 576px) {
+  /* Stack content fully for mobile phones */
+  #aboutCarousel .slide-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+  }
+
+  #aboutCarousel .slide-content h3 {
+    font-size: 1.5rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  #aboutCarousel .slide-image {
+    width: 100% !important;
+  }
+
+  #aboutCarousel .slide {
+    margin-bottom: 40px !important;
+  }
+}
+</style>
 <!-- JavaScript Carousel -->
 <script>
   const slidesWrapper = document.querySelector('#aboutCarousel .slides-wrapper');
@@ -168,36 +232,152 @@
   let currentIndex = 0;
 
   function updateSlide() {
+    // Move the slides
     slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
 
-    // Hide/Show arrows based on current slide
-    if (currentIndex === 0) {
-      prevBtn.style.display = 'none'; // Hide left arrow on first slide (EJ)
-      nextBtn.style.display = 'flex';
-    } else if (currentIndex === totalSlides - 1) {
-      nextBtn.style.display = 'none'; // Hide right arrow on last slide (Sarah)
-      prevBtn.style.display = 'flex';
-    } else {
-      prevBtn.style.display = 'flex';
-      nextBtn.style.display = 'flex';
+    // Show/hide arrows
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'flex';
+    nextBtn.style.display = currentIndex === totalSlides - 1 ? 'none' : 'flex';
+
+    // Scroll to current slide's image only on mobile
+    if (window.innerWidth <= 992) {
+      const currentImage = slides[currentIndex].querySelector('img');
+      if(currentImage) {
+        currentImage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
-  // Initialize arrows on page load
+  // Initialize on page load
   updateSlide();
 
+  // Next button click
   nextBtn.addEventListener('click', () => {
     currentIndex = Math.min(currentIndex + 1, totalSlides - 1);
     updateSlide();
   });
 
+  // Previous button click
   prevBtn.addEventListener('click', () => {
     currentIndex = Math.max(currentIndex - 1, 0);
     updateSlide();
   });
+
+  // Optional: Swipe support for mobile
+  let startX = 0;
+  slidesWrapper.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  slidesWrapper.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextBtn.click();
+    if (endX - startX > 50) prevBtn.click();
+  });
 </script>
 
 
+
+<div class="section-wrapper">
+  <div class="connection-card">
+    <img class="background-img" src="images/EJSarahNR-10-1-1024x683.jpg" alt="Wedding background">
+    <div class="overlay"></div>
+    <div class="content">
+      <h5>FEELING A CONNECTION?</h5>
+      <h1>EXPLORE YOUR OPTIONS</h1>
+      <p>We offer various options and create customized collections.<br>
+         So you can relive your wedding day the way you see fit.</p>
+      <button>LET'S CHAT</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.section-wrapper {
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px; /* more space around */
+}
+
+.connection-card {
+  position: relative;
+  width: 100%;
+  max-width: 1700px; /* wider card */
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.connection-card .background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3); /* charcoal overlay */
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 0 40px;
+}
+
+.content h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.content h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.content button {
+  padding: 15px 40px;
+  font-size: 18px;
+     font-family: 'Cormorant Garamond', sans-serif;
+  background-color: #2d2c2a;
+  color: #ebebeb;
+  border: 1px solid #2d2c2a;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  letter-spacing: 2px;
+}
+
+.content button:hover {
+  background-color: #ebebeb;
+  color: #2d2c2a;
+  border-color: #2d2c2a;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+</style>
+ 
 
 <?php include 'footer.php'; ?>
 
