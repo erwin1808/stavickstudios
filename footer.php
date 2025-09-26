@@ -85,9 +85,15 @@ scrollIcon.addEventListener('click', () => {
       </div>
 
       <!-- Email -->
-      <div class="footer-email">
-        <p>Hello@StavickStudios.Com</p>
-      </div>
+  <div class="footer-email">
+  <p>
+    <a href="mailto:Hello@StavickStudios.Com" style="text-decoration: none; color: inherit;">
+      Hello@StavickStudios.Com
+    </a>
+  </p>
+</div>
+
+
     </div>
 
     <!-- Right Column -->
@@ -98,7 +104,7 @@ scrollIcon.addEventListener('click', () => {
           <h4>Navigate</h4>
           <ul>
 
-            <li><a href="#">About</a></li>
+            <li><a href="about.php">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">South Asian Weddings</a></li>
             <li><a href="#">Western Weddings</a></li>
@@ -112,10 +118,11 @@ scrollIcon.addEventListener('click', () => {
         <div class="footer-social">
           <h4>Follow Us</h4>
           <ul>
-            <li><a href="https://www.facebook.com/StavickStudios">Facebook</a></li>
-            <li><a href="https://www.instagram.com/stavickstudios/">Instagram</a></li>
-            <li><a href="https://ph.pinterest.com/stavickstudios/">Pinterest</a></li>
-            <li><a href="https://www.youtube.com/@stavickstudios">Youtube</a></li>
+           <li><a href="https://www.facebook.com/StavickStudios" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.instagram.com/stavickstudios/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://ph.pinterest.com/stavickstudios/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+          <li><a href="https://www.youtube.com/@stavickstudios" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+
           </ul>
         </div>
       </div>
@@ -310,10 +317,16 @@ scrollIcon.addEventListener('click', () => {
 
 .footer-nav a,
 .footer-social a {
- color: #323232;
+  color: #323232;
   text-decoration: none;
-  
+  transition: color 0.3s; /* smooth hover effect */
 }
+
+.footer-nav a:hover,
+.footer-social a:hover {
+  color: #7c806f;
+}
+
 
 .footer-social ul {
   text-align: right;
