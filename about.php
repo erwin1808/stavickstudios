@@ -248,8 +248,7 @@
     }
   }
 
-  // Initialize on page load
-  updateSlide();
+  
 
   // Next button click
   nextBtn.addEventListener('click', () => {

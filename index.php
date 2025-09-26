@@ -130,23 +130,48 @@
     </div>
 
     <!-- 3rd Row: Vimeo Video Cover with Badge -->
-    <div class="row mb-4">
-      <div class="col d-flex justify-content-center">
-<div class="lux-video position-relative" style="width:1000px; height:450px; overflow:hidden; border-radius:8px;">
-  <iframe 
-    src="https://player.vimeo.com/video/848916194?h=e5fae21f19&background=1&autoplay=1&muted=1&loop=1" 
-    frameborder="0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen
-    class="lux-iframe">
-  </iframe>
-  <!--span class="badge text-dark position-absolute bottom-0 start-0 m-3 fs-5 px-3 py-2">
-    John & Maria
-  </span-->
+<div class="row mb-4">
+  <div class="col d-flex justify-content-center">
+    <div class="lux-video position-relative" style="width:1000px; height:450px; overflow:hidden; border-radius:8px;">
+
+      <!-- Loading text -->
+      <div id="video-loader" class="position-absolute top-50 start-50 translate-middle" 
+           style="z-index:10; font-size:24px; font-weight:bold; color:#333333;">
+       Video Loading...
+      </div>
+
+      <iframe 
+        id="vimeo-video"
+        src="https://player.vimeo.com/video/848916194?h=e5fae21f19&background=1&autoplay=1&muted=1&loop=1" 
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        class="lux-iframe"
+        style="width:100%; height:100%;">
+      </iframe>
+
+    </div>
+  </div>
 </div>
 
-      </div>
-    </div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  const iframe = document.getElementById('vimeo-video');
+  const loader = document.getElementById('video-loader');
+
+  const player = new Vimeo.Player(iframe);
+
+  // Hide loader when video is ready
+  player.on('loaded', function() {
+    loader.style.display = 'none';
+  });
+
+  // Fallback in case API fails
+  iframe.addEventListener('load', function() {
+    loader.style.display = 'none';
+  });
+</script>
+
 
     <!-- 4th Row: Description -->
 <div class="row mb-4">
