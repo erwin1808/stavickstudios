@@ -185,8 +185,7 @@
             Based in California | Available Worldwide
         </div>
     </section>
-    
-<section class="lux-section text-center">
+    <section class="lux-section text-center">
   <div class="container">
     <!-- 1st Row: Logo -->
     <div class="row mb-4">
@@ -369,181 +368,6 @@ margin-bottom: -50px;
   }
 }
 </style>
-<section class="lux-story text-center">
-  <div class="lux-overlay"></div>
-  <div class="container position-relative">
-    <!-- Title -->
-    <h2 class="lux-heading mb-3">
-      A VISION OF MEANINGFUL MOMENTS
-    </h2>
-    <p class="lux-subtitle mb-4">
-      TIMELESS. CAPTIVATING. EMOTIONAL.<br>
-      UNIQUE. CAPTIVATING. EMOTIONAL.
-    </p>
-
-    <!-- Description -->
-    <div class="lux-desc-story mx-auto mb-5">
-      <p>
-        When it comes to creating your film and photos, we don’t focus on the latest trends or our own artistic style. <br><br>
-        Instead, we use what we learn about your relationship, your love story, your day, and we focus on what these images will mean to you.
-      </p>
-    </div>
-
-    <!-- Call-to-action -->
-    <p class="lux-cta mb-4">CLICK ANY GALLERY TO SEE MORE OF THE STORY</p>
-
-    <!-- Buttons -->
-    <div class="d-flex justify-content-center gap-4 flex-wrap">
-      <a href="#films" class="lux-btn">FILMS</a>
-      <a href="#photos" class="lux-btn">PHOTOS</a>
-    </div>
-  </div>
-</section>
-
-<style>
-/* === Story Section with Parallax === */
-.lux-story {
-  position: relative;
-  padding: 50px 20px;
-  background: url('images/story-bg.jpg') center center / cover no-repeat fixed;
-  color: #fff;
-  font-family: 'DM Sans', sans-serif;
-  overflow: hidden;
-}
-
-/* Overlay */
-.lux-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 14, 14, 0.4);
-  z-index: 1;
-}
-
-/* Content sits above overlay */
-.lux-story .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Headings */
-.lux-heading {
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.lux-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #f8f8f8;
-  line-height: 1.6;
-}
-
-/* Description */
-.lux-desc-story {
-  font-size: 1.12rem !important;
-  max-width: 800px;
-  line-height: 1.8;
-  color: #fff;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  padding: 1.5rem;
-  background: rgba(124, 128, 111, 0.5);
-  border-radius: 4px;
-}
-
-/* Call-to-action */
-.lux-cta {
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-/* Buttons */
-.lux-btn {
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 12px 28px;
-  border: 1px solid #fff;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  color: #fff;
-  background: rgba(124, 128, 111, 0.4);
-}
-
-.lux-btn:hover {
-  background: #fff;
-  color: #111;
-}
-
-/* === Tablet Responsive === */
-@media (max-width: 768px) {
-  .lux-heading {
-    font-size: 2rem;
-  }
-  .lux-subtitle {
-    font-size: 1rem;
-  }
-  .lux-desc-story {
-    font-size: 0.95rem;
-  }
-}
-
-/* === Mobile Responsive (Compact) === */
-@media (max-width: 576px) {
-  .lux-story {
-    padding: 30px 15px; /* less padding */
-  }
-
-  .lux-heading {
-    font-size: 1.4rem;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-  }
-
-  .lux-subtitle {
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-  }
-
-  .lux-desc-story {
-    padding: 0.75rem 1rem;
-    font-size: 0.85rem !important;
-    line-height: 1.5;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-  }
-
-  .lux-cta {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .lux-btn {
-    width: 100%;
-    max-width: 200px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-}
-</style>
-
-
 <section class="about-section d-flex align-items-stretch">
     <div class="row w-100 g-0">
         <!-- Left: Full Image -->
@@ -667,6 +491,7 @@ margin-bottom: -50px;
     }
 }
 </style>
+
 <!-- Font Awesome CDN (add in <head> if not already included) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <section class="experience-section">
@@ -924,6 +749,183 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
   });
 });
 </script>
+
+
+<section class="lux-story text-center">
+  <div class="lux-overlay"></div>
+  <div class="container position-relative">
+    <!-- Title -->
+    <h2 class="lux-heading mb-3">
+      A VISION OF MEANINGFUL MOMENTS
+    </h2>
+    <p class="lux-subtitle mb-4">
+      TIMELESS. CAPTIVATING. EMOTIONAL.<br>
+      UNIQUE. CAPTIVATING. EMOTIONAL.
+    </p>
+
+    <!-- Description -->
+    <div class="lux-desc-story mx-auto mb-5">
+      <p>
+        When it comes to creating your film and photos, we don’t focus on the latest trends or our own artistic style. <br><br>
+        Instead, we use what we learn about your relationship, your love story, your day, and we focus on what these images will mean to you.
+      </p>
+    </div>
+
+    <!-- Call-to-action -->
+    <p class="lux-cta mb-4">CLICK ANY GALLERY TO SEE MORE OF THE STORY</p>
+
+    <!-- Buttons -->
+    <div class="d-flex justify-content-center gap-4 flex-wrap">
+      <a href="#films" class="lux-btn">FILMS</a>
+      <a href="#photos" class="lux-btn">PHOTOS</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* === Story Section with Parallax === */
+.lux-story {
+  position: relative;
+  padding: 50px 20px;
+  background: url('images/story-bg.jpg') center center / cover no-repeat fixed;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* Overlay */
+.lux-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 14, 14, 0.4);
+  z-index: 1;
+}
+
+/* Content sits above overlay */
+.lux-story .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Headings */
+.lux-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.lux-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f8f8f8;
+  line-height: 1.6;
+}
+
+/* Description */
+.lux-desc-story {
+  font-size: 1.12rem !important;
+  max-width: 800px;
+  line-height: 1.8;
+  color: #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+  padding: 1.5rem;
+  background: rgba(124, 128, 111, 0.5);
+  border-radius: 4px;
+}
+
+/* Call-to-action */
+.lux-cta {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Buttons */
+.lux-btn {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  color: #fff;
+  background: rgba(124, 128, 111, 0.4);
+}
+
+.lux-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* === Tablet Responsive === */
+@media (max-width: 768px) {
+  .lux-heading {
+    font-size: 2rem;
+  }
+  .lux-subtitle {
+    font-size: 1rem;
+  }
+  .lux-desc-story {
+    font-size: 0.95rem;
+  }
+}
+
+/* === Mobile Responsive (Compact) === */
+@media (max-width: 576px) {
+  .lux-story {
+    padding: 30px 15px; /* less padding */
+  }
+
+  .lux-heading {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  .lux-subtitle {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .lux-desc-story {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+  }
+
+  .lux-cta {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .lux-btn {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+}
+</style>
+
+<?php include 'footer.php'; ?>
 
 
     <!-- Bootstrap JS Bundle -->
