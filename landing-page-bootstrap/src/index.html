@@ -9,6 +9,10 @@
     <!-- Google Fonts: Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+
+
         body {
             font-family: 'Cormorant Garamond', sans-serif;
             color: #2d2c2a;
@@ -181,6 +185,7 @@
             Based in California | Available Worldwide
         </div>
     </section>
+    
 <section class="lux-section text-center">
   <div class="container">
     <!-- 1st Row: Logo -->
@@ -222,7 +227,7 @@
 <div class="row mb-4">
   <div class="col-lg-8 mx-auto">
     <div class="lux-desc p-4">
-      <p class="fs-5 mb-0">
+      <p class="fs-6 mb-0">
         Stavick Studios is dedicated to creating exceptional wedding films for couples who want to celebrate their love with elegance and style, while also inspiring and guiding aspiring filmmakers on their own creative paths. Whether it’s capturing a romantic escape in Venice or sharing knowledge through hands-on workshops, 
         Stavick Studios serves sophisticated, adventurous couples and wedding professionals across the globe.
       </p>
@@ -242,58 +247,127 @@
   </div>
 </section>
 
-<style>
-.lux-desc {
-  border: 1px solid #2d2c2a;   /* outline border */
-  font-family: 'Cormorant Garamond', sans-serif;
-  text-align: center;
-  padding: 1.5rem;
-  width: 800px;                /* set specific width */
-  margin: 0 auto;              /* keep it centered */
+<style>/* === Section Wrapper === */
+.lux-section {
+  padding: 60px 20px; /* desktop spacing */
 }
 
+@media (max-width: 576px) {
+  .lux-section {
+    padding: 20px 10px; /* tighter spacing on phones */
+  }
 
+  .lux-section .row {
+    margin-bottom: 0.75rem !important; /* rows closer together */
+  }
+
+  .lux-section .row:last-child {
+    margin-bottom: 0 !important; /* remove last gap */
+  }
+}
+
+/* === Title === */
+.lux-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .lux-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: -200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lux-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* === Description Box === */
+.lux-desc {
+  border: 1px solid #2d2c2a;
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+@media (max-width: 576px) {
+  .lux-desc {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* === Badge === */
 .badge {
-  display: flex;               /* enables flexbox */
-  align-items: center;         /* vertical center */
-  justify-content: center;     /* horizontal center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 45px;
   background: #ebebeb;
   font-family: 'Cormorant Garamond', sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1px;
-  border-radius: 0; /* removed rounded corners */
+  border-radius: 0;
   transform: translate(84px, 16px);
   text-align: center;
 }
 
-
-
-  .lux-section {
-    padding: 60px 20px;
+@media (max-width: 576px) {
+  .badge {
+    transform: translate(85px, -75px);
+    font-size: 1rem;
+    height: auto;
+    padding: 0.5rem 1rem;
   }
+}
+
+/* === Video Wrapper === */
+.lux-video {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* desktop max */
+  height: auto;
+  aspect-ratio: 16/9; /* keeps ratio */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.lux-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+.lux-video {
+margin-top: -150px;
+transform: translateY(100px);
+
+}
+.lux-iframe {
+margin-bottom: -50px;
+}
+
+}
+@media (max-width: 576px) {
   .lux-title {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 1.6rem;
   }
-
-  /* Video cover effect */
-  .lux-video {
-    position: relative;
-  }
-  .lux-iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-  }
+}
 </style>
 
 <section class="about-section d-flex align-items-stretch">
@@ -347,13 +421,14 @@
 }
 
 .about-desc {
-    font-family: "Montserrat", Sans-serif;
-    font-size: 1.15rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.12rem;
     line-height: 1.7;
     margin-left: 0;
     width: 100%;
     max-width: 600px;
     text-align: justify;
+    font-weight: 200;
 }
 
 .about-btn {
