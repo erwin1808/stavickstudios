@@ -21,6 +21,8 @@
   transition: opacity 0.3s, transform 0.3s;
   font-weight: bold;
   letter-spacing: 1px;
+  user-select: none;
+  outline: none;
 }
 
 .floating-backtotop:hover {
@@ -32,10 +34,6 @@
   opacity: 1;
   pointer-events: auto;
 }
-.floating-backtotop {
-  user-select: none;    /* Prevent text selection */
-  outline: none;        /* Remove focus outline */
-}
 </style>
 
 <script>
@@ -46,8 +44,8 @@ window.addEventListener('scroll', () => {
   const windowHeight = window.innerHeight;
   const documentHeight = document.body.scrollHeight;
 
-  // Show from middle to bottom
-  if (scrollPosition > documentHeight / 2 && scrollPosition < documentHeight - windowHeight / 10) {
+  // Show when user scrolls at least 25% of the page
+  if (scrollPosition > documentHeight * 0.15) {
     scrollIcon.classList.add('show');
   } else {
     scrollIcon.classList.remove('show');
@@ -58,6 +56,7 @@ scrollIcon.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+
 
 
 <footer class="site-footer">
