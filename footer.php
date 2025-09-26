@@ -3,7 +3,7 @@
 <style>
 .floating-backtotop {
   position: fixed;
-  bottom: 150px;
+  bottom: 170px;
   right: 0;
   background: #7c806f;
   color: #fff;
@@ -66,12 +66,12 @@ scrollIcon.addEventListener('click', () => {
     <div class="footer-left">
       <!-- Logo -->
       <div class="footer-logo">
-        <img src="images/header-logo.png" alt="Logo">
+        <img src="images/header-logo.png" alt="Logo" onclick="window.location.href = 'index.php';" style="cursor: pointer;">
       </div>
 
       <!-- Instagram Handle -->
       <div class="footer-instagram">
-        <p>@instagramhandle</p>
+        <p onclick="window.open('https://www.instagram.com/stavickstudios/', '_blank')" style="cursor: pointer;">@stavickstudios</p>
       </div>
 
       <!-- 1x1 Pictures -->
@@ -86,7 +86,7 @@ scrollIcon.addEventListener('click', () => {
 
       <!-- Email -->
       <div class="footer-email">
-        <p>Email: contact@example.com</p>
+        <p>Hello@StavickStudios.Com</p>
       </div>
     </div>
 
@@ -112,17 +112,17 @@ scrollIcon.addEventListener('click', () => {
         <div class="footer-social">
           <h4>Follow Us</h4>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/StavickStudios">Facebook</a></li>
+            <li><a href="https://www.instagram.com/stavickstudios/">Instagram</a></li>
+            <li><a href="https://ph.pinterest.com/stavickstudios/">Pinterest</a></li>
+            <li><a href="https://www.youtube.com/@stavickstudios">Youtube</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Copyright -->
       <div class="footer-copyright">
-        &copy; 2025 Your Company Name. All Rights Reserved.
+        &copy; 2025 STAVICK STUDIOS.
       </div>
     </div>
 
@@ -180,10 +180,101 @@ scrollIcon.addEventListener('click', () => {
   height: 62.5px;
   object-fit: cover;
 }
+/* Mobile view: 2 rows × 3 columns, images slightly bigger (10px padding around) */
+@media (max-width: 767px) {
+  .footer-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 10px; /* spacing between images */
+    margin-bottom: 20px;
+    margin-left: -15px;
+  }
+
+  .footer-photos img {
+    width: 115px;  /* fixed width */
+    height: 115px; /* fixed height */
+    object-fit: cover;
+  }
+}
+@media (width: 360px) {
+  .footer-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 10px; /* spacing between images */
+    margin-bottom: 20px;
+    margin-left: -25px;
+  }
+
+  .footer-photos img {
+    width: 100px;  /* fixed width */
+    height: 100px; /* fixed height */
+    object-fit: cover;
+  }
+}
+@media (width: 430px) {
+  .footer-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 10px; /* spacing between images */
+    margin-bottom: 20px;
+    margin-left: 5px;
+  }  
+  .footer-copyright {
+      transform: translate(-90px, -0px) !important;
+      font-size: 17px !important;
+    }
+}
+
+
+  .footer-photos img {
+    width: 115px;  /* fixed width */
+    height: 115px; /* fixed height */
+    object-fit: cover;
+  }
 
 /* Email */
 .footer-email {
   margin-bottom: 20px;
+  transform: translateY(95px);
+}
+/* Adjust for mobile devices (e.g., max-width 767px) */
+@media (min-width: 320px) and (max-width: 393px) {
+    .footer-email {  /* Replace with your actual selector */
+        transform: none !important; /* Removes the translateY */
+    }
+    .footer-copyright {
+      transform: translate(-70px, -0px) !important;
+      font-size: 16px !important;
+    }
+    .footer-nav h4, .footer-social h4 {
+      margin-top: 20px !important;
+    }
+    .floating-backtotop {
+      position: fixed;
+  bottom: 190px;
+  right: 0;
+  background: #7c806f;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  padding: 10px 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: -3px 3px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  user-select: none;
+  outline: none;
+    }
 }
 
 /* Right Column */
@@ -233,5 +324,6 @@ scrollIcon.addEventListener('click', () => {
   text-align: right;
   margin-top: 40px;
   font-size: 14px;
+  transform: translateY(70px);
 }
 </style>
