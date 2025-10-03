@@ -25,7 +25,7 @@
 <body>
 <?php include 'navbar.php'; ?>
 <!-- VIDEOGRAPHY & PHOTOGRAPHY SECTION -->
-<section style="background-color: #ebebeb; color: #2d2c2a; padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px;">
+<section style="background-color: #ebebeb; color: #2d2c2a; padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; ">
   
   <!-- Photo of the Couple -->
   <div style="flex: 1 1 300px; max-width: 400px; text-align: center;">
@@ -42,15 +42,15 @@
     </h1>
     
     <!-- Description -->
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
       Our love story began ten years ago before we ever dated. Although we always had a crush on each other, it wasn’t until Sarah rejected Ej. A year later another attempt, and asked her on a date to their favorite place at CHIPOTLE! We both love to travel and spend time together as a family.
     </p>
     
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
       Our journey as wedding creatives didn’t just happen and we want to let you into the backstory of how that came about. Ej was a FedEx driver for nine years before quitting his full-time job to follow his passion for filming. Sarah was in the medical field until we both decided to team up together. Sarah loves to take pictures and capture authentic moments to create a story.
     </p>
     
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; text-align: justify;">
       Today, we’re engaged and planning a wedding of our own. So, we know a thing or two about finding one-of-a-kind love. And we understand how much your film and photos mean to you. We welcome and embrace this honor and responsibility, and promise to approach it with LOVE, PASSION, AND PURPOSE.
     </p>
   </div>
@@ -133,24 +133,25 @@
 
 
       <!-- Left Arrow -->
+<!-- Left Arrow -->
 <button id="prevBtn" 
         style="position: absolute; 
                left: 300px; 
-               transform: translateY(-350px); /* arrow flipped */
+               transform: translateY(-350px); 
                background: #2d2c2a; 
                color: #ebebeb; 
                border: none; 
                width: 60px; 
                height: 60px; 
-               border-radius: 50%; /* perfect circle */
+               border-radius: 50%; 
                cursor: pointer; 
                font-size: 1.5rem; 
-               display: flex; 
+               display: none; /* start hidden */
                align-items: center; 
-               justify-content: center; ">
+               justify-content: center;">
    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-</svg>
+     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+   </svg>
 </button>
 
 

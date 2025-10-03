@@ -31,6 +31,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+      
         }
         .hero video {
             position: absolute;
@@ -39,6 +40,7 @@
             height: 100%;
             object-fit: cover;
             z-index: 1;
+      
         }
         .hero-logo {
             position: absolute;
@@ -111,7 +113,9 @@
             Based in California | Available Worldwide
         </div>
     </section>
-    <section class="lux-section text-center">
+
+
+    <section class="lux-section text-center" style="margin-top: -30px;">
   <div class="container">
     <!-- 1st Row: Logo -->
     <div class="row mb-4">
@@ -199,9 +203,12 @@
 
 <style>/* === Section Wrapper === */
 .lux-section {
+
   padding: 60px 20px; /* desktop spacing */
 }
-
+.lux-logo {
+  top: -40px;
+}
 @media (max-width: 576px) {
   .lux-section {
     padding: 20px 10px; /* tighter spacing on phones */
@@ -319,6 +326,8 @@ margin-bottom: -50px;
   }
 }
 </style>
+
+
 <section class="about-section d-flex align-items-stretch">
     <div class="row w-100 g-0">
         <!-- Left: Full Image -->
