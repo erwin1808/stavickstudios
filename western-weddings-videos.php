@@ -86,10 +86,41 @@
       text-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
 
-    @media (max-width: 768px) {
-      .hero-logo img { max-width: 150px; }
-      .hero-caption-left, .hero-caption-right { display: none; }
-    }
+/* === HERO SECTION MOBILE LANDSCAPE === */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vw; /* shorter height for landscape orientation */
+    background-size: cover;
+  }
+
+  .hero-logo img {
+    max-width: 180px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 1rem;
+    bottom: 10px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vw; /* maintain a wide landscape look */
+  }
+
+  .hero-logo img {
+    max-width: 150px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+}
+
 
     /* === PORTFOLIO GRID === */
     .portfolio-section {

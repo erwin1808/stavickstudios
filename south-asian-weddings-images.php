@@ -75,18 +75,42 @@
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
       max-width: 350px;
     }
+/* Landscape view for mobile */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vw; /* shorter height for landscape orientation */
+    background-size: cover;
+  }
 
-    @media (max-width: 768px) {
-      .hero-logo img {
-        max-width: 180px;
-      }
-      .hero-caption-left,
-      .hero-caption-right {
-        font-size: 1.1rem;
-        bottom: 15px;
-        max-width: 200px;
-      }
-    }
+  .hero-logo img {
+    max-width: 180px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 1rem;
+    bottom: 10px;
+    max-width: 180px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .hero {
+    height: 60vw; /* maintain a wide landscape look */
+  }
+
+  .hero-logo img {
+    max-width: 150px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+}
+
 
     /* === PORTFOLIO SECTION === */
     .portfolio-section {
