@@ -143,7 +143,7 @@
 
             <!-- Centered logo -->
             <a class="navbar-brand navbar-center" href="index.php">
-                <img src="https://stavickstudios.com/wp-content/uploads/2023/05/header-logo.png" alt="Logo" height="40">
+                <img src="images/header-logo.png" alt="Logo" height="70">
             </a>
 
             <!-- Right links -->

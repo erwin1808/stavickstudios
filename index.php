@@ -121,7 +121,7 @@
     <div class="row mb-4">
       <div class="col">
         <div class="lux-logo">
-          <img src="https://stavickstudios.com/wp-content/uploads/2023/05/header-logo.png" alt="Logo" class="img-fluid">
+          <img src="images/header-logo.png" alt="Logo" class="img-fluid">
         </div>
       </div>
     </div>

@@ -246,7 +246,7 @@
     <div class="inquiry-header">
         <div class="inquiry-text">
             <h2>INQUIRE WITH</h2>
-            <img src="https://stavickstudios.com/wp-content/uploads/2023/05/header-logo.png" alt="Logo" class="inquiry-logo">
+            <img src="images/header-logo.png" alt="Logo" class="inquiry-logo">
             <p>We want every photo and film to be a dream our couples can revisit</p>
             <p>Hopefully, you’re as excited to get started as we are to hear from you!</p>
             <p>Please fill out the form below and we will be in touch within 24 hours.</p>
