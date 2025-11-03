@@ -148,7 +148,7 @@
 
             <!-- Right links -->
             <ul class="navbar-nav navbar-right">
-                <li class="nav-item"><a class="nav-link" href="#">FILMS</a></li>
+                <li class="nav-item"><a class="nav-link" href="stavick-films.php">FILMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">PHOTOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
             </ul>
