@@ -325,7 +325,7 @@
     <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
       <img src="images/wedding-wire.png" alt="Wedding Wire" class="media-logo">
     </a>
-    <a href="https://www.google.com/maps/place/Stavick+Studios/" target="_blank">
+    <a href="https://www.google.com/search?q=stavick+studio&rlz=1C1ONGR_enPH1056PH1056&sxsrf=APwXEdcjRTrDNNFfJLgGvdWJ-qwMsLh_SA%3A1685072436838&ei=NCpwZLfoMpnfseMPp-S_2A4&ved=0ahUKEwi30pKAiJL_AhWZb2wGHSfyD-sQ4dUDCA8&uact=5&oq=stavick+studio&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIHCCMQigUQJ0oECEEYAFAAWABg7QFoAHAAeACAAXuIAXuSAQMwLjGYAQCgAQHAAQE&sclient=gws-wiz-serp#rlimm=17970166578315231020" target="_blank">
       <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
     </a>
     <a href="https://www.theknot.com/marketplace/stavick-studios-antioch-ca-2059950" target="_blank">
