@@ -317,6 +317,102 @@
 }
 
 </style>
+
+<!-- MEDIA FEATURES SECTION -->
+<section class="media-features">
+  <h2>Media Features</h2>
+  <div class="media-wrapper">
+    <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
+      <img src="images/wedding-wire.png" alt="Wedding Wire" class="media-logo">
+    </a>
+    <a href="https://www.google.com/maps/place/Stavick+Studios/" target="_blank">
+      <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
+    </a>
+    <a href="https://www.theknot.com/marketplace/stavick-studios-antioch-ca-2059950" target="_blank">
+      <img src="images/the-knot.png" alt="The Knot" class="media-logo">
+    </a>
+    <!-- Add more logos as needed -->
+  </div>
+</section>
+
+<style>
+.media-features { 
+  background-color: transparent; /* transparent background */
+  padding: 50px 20px;
+  border-top: 1px solid #2d2c2a;   /* top border */
+  border-bottom: 1px solid #2d2c2a; /* bottom border */
+}
+
+
+.media-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* space between logos */
+}
+
+.media-wrapper a {
+  display: inline-block;
+}
+.media-features h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 1rem;
+    color: #2d2c2a; 
+    margin-bottom: 50px;
+}
+.media-logo {
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0%) saturate(100%); /* makes logos black */
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.media-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .media-logo {
+    max-width: 120px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .media-wrapper {
+    gap: 25px;
+  }
+
+  .media-logo {
+    max-width: 100px;
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .media-wrapper {
+    gap: 15px;
+  }
+
+  .media-logo {
+    max-width: 80px;
+    margin: 5px;
+  }
+}
+</style>
+
+
+
+<!-- FEATURED SERVICES SECTION -->
   <section class="featured-services">
         <h2 class="section-title">Featured Services</h2>
         
@@ -506,6 +602,7 @@
   margin-bottom: 40px;
     color: #2d2c2a;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .faq-section {
