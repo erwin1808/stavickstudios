@@ -150,7 +150,7 @@
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item"><a class="nav-link" href="stavick-films.php">FILMS</a></li>
                 <li class="nav-item"><a class="nav-link" href="stavick-photography.php">PHOTOS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">CONTACT</a></li>
             </ul>
         </div>
     </div>
