@@ -131,7 +131,7 @@
                 <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
                 <li class="nav-item"><a class="nav-link" href="services.php">SERVICES</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link dropdown-toggle" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
                         PORTFOLIO
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
@@ -149,7 +149,7 @@
             <!-- Right links -->
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item"><a class="nav-link" href="stavick-films.php">FILMS</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">PHOTOS</a></li>
+                <li class="nav-item"><a class="nav-link" href="stavick-photography.php">PHOTOS</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
             </ul>
         </div>

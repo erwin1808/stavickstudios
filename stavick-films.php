@@ -12,6 +12,9 @@
   <!-- Font Awesome for Play Icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+
+
+
   <style>
     body {
       font-family: 'Cormorant Garamond', serif;
@@ -97,10 +100,10 @@
         background-size: cover;
       }
       .hero-caption-left {
-        font-size: 1.1rem !important;
+        font-size: 1.7rem !important;
         bottom: 100px;
         max-width: 180px;
-        left: 15px;
+         left: 90px;
       }
       
       .hero-caption-right{display: none;}
@@ -275,7 +278,7 @@
     Your browser does not support the video tag.
   </video>
   <div class="hero-caption-left">
-    Awe-Inspiring Videos That Move You
+    Stavick Films
   </div>
   <div class="hero-caption-right">
     Based in California | Available Worldwide
@@ -481,6 +484,8 @@ document.getElementById('scrollIcon2').addEventListener('click', () => {
     }
   });
 </script>
+<!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
