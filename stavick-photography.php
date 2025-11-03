@@ -25,7 +25,8 @@
 
     /* === HERO SECTION (IMAGE) === */
     .hero {
-      margin-top: 20px;
+   margin-top: 40px;
+       margin-bottom: -20px;
       position: relative;
       width: 100%;
       height: 75vh;
