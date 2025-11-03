@@ -23,19 +23,21 @@
       padding: 0;
     }
 
-    /* === HERO SECTION (IMAGE) === */
-    .hero {
-   margin-top: 40px;
-       margin-bottom: -20px;
-      position: relative;
-      width: 100%;
-      height: 75vh;
-      background: url('images/story-bg.jpg') center center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+
+/* === HERO SECTION (IMAGE) === */
+.hero {
+  margin: 40px auto -20px; /* top 40px, bottom -20px, centered horizontally */
+  position: relative;
+  width: 100%;             /* reduce width from 100% to 90% */
+  max-width: 1830px;      /* optional: limit the max width */
+  height: 70vh;
+  background: url('images/story-bg.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 
     .hero::after {
       content: "";
@@ -194,7 +196,7 @@
 
       <!-- Card 1 -->
       <div class="portfolio-card">
-        <img src="images/Jaclyn § Tyler.jpg" alt="Couple 1">
+        <img src="https://images.squarespace-cdn.com/content/v1/51febf49e4b0c1fd09a2c49c/1692288557995-FSBDHXU8BSN14MZZHOCH/Made-With-love-Harry-Wedding-Dress-Western-Texas-Wedding-15.jpg" alt="Couple 1">
         <div class="portfolio-card-body">
           <div class="portfolio-couple">Jaclyn § Tyler</div>
           <p class="portfolio-desc">A romantic coastal celebration filled with laughter, elegance, and timeless moments.</p>

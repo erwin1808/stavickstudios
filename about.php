@@ -37,7 +37,7 @@
     <!-- Header -->
      <h4>   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
     <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
-  font-weight: 700; line-height: 1.2; margin-bottom: 40px;">
+   line-height: 1.2; margin-bottom: 40px;">
    
       ONE-OF-A-KIND MEMORIES. ONE-OF-A-KIND LOVE.
     </h1>
@@ -64,7 +64,7 @@
 
     <!-- Section Header -->
     <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
-  font-weight: 700; margin-bottom: 60px;">
+   margin-bottom: 60px;">
       A BIT MORE ABOUT US<br>
       HERE’S TO MY BETTER HALF
     </h2>
@@ -286,7 +286,7 @@
       <h1>EXPLORE YOUR OPTIONS</h1>
       <p>We offer various options and create customized collections.<br>
          So you can relive your wedding day the way you see fit.</p>
-      <button>LET'S CHAT</button>
+      <button onclick="window.location.href='contact.php'">LET'S CHAT</button>
     </div>
   </div>
 </div>
@@ -350,7 +350,7 @@
 
 .content h1 {
   font-size: 3rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;

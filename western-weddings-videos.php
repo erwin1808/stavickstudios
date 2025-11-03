@@ -131,7 +131,7 @@
 
     .portfolio-section h2 {
       font-size: 3rem;
-      font-weight: 700;
+      
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 60px;
@@ -202,7 +202,7 @@
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
       font-size: 1.8rem;
-      font-weight: 700;
+      
       padding: 15px 10px;
       text-align: center;
       opacity: 0;

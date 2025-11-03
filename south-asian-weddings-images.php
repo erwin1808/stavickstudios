@@ -123,7 +123,7 @@
 
     .portfolio-title {
       font-size: 2.8rem;
-      font-weight: 700;
+      
       margin-bottom: 50px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -159,7 +159,7 @@
 
     .portfolio-couple {
       font-size: 1.5rem;
-      font-weight: 700;
+      
       margin-bottom: 10px;
       font-family: 'Cormorant Garamond', serif;
     }

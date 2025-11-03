@@ -148,7 +148,7 @@
     font-size: 3rem;
     color: var(--primary);
     text-align: center;
-    font-weight: 700;
+    
     letter-spacing: 1px;
     line-height: 1.2;
      font-family: 'Cormorant Garamond', sans-serif;

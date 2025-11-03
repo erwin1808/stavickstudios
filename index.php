@@ -193,7 +193,7 @@
     <!-- 5th Row: Button -->
     <div class="row">
       <div class="col">
-        <a href="#contact" class="btn btn-dark btn-lg px-5 rounded-pill shadow">
+        <a href="contact.php" class="btn btn-dark btn-lg px-5 rounded-pill shadow">
     Learn More
         </a>
       </div>
@@ -226,7 +226,6 @@
 /* === Title === */
 .lux-title {
   font-size: 3rem;
-  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -341,7 +340,7 @@ margin-bottom: -50px;
                We capture the big and small moments, personal details, and people that create the complete story.<br><br>
                With us, you’ll not only get images that help you remember your wedding day— you’ll get photos and films that take your breath away. And allow you to see, relive, and fully cherish the whole, beautiful story. Over and over again.
             </p>
-            <a href="#" class="about-btn">Learn More</a>
+            <a href="about.php" class="about-btn">Learn More</a>
         </div>
     </div>
 </section>
@@ -362,7 +361,6 @@ margin-bottom: -50px;
     transform: none;
     font-family: 'Cormorant Garamond', sans-serif;
     font-size: 2rem;
-    font-weight: 700;
     letter-spacing: 2px;
     color: #2d2c2a;
     transform: translateY(-50px);
@@ -372,7 +370,6 @@ margin-bottom: -50px;
     color: #ebebeb;
     font-family: 'Cormorant Garamond', sans-serif;
   font-size: 3rem;
-  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
     padding-top: 20px;
@@ -470,7 +467,7 @@ margin-bottom: -50px;
         <p class="experience-section-desc">
           But, we’re equally committed to providing you with an effortless and enjoyable experience.
         </p>
-        <a href="#experience-section-right" class="experience-section-btn">MORE OF WHAT YOU'LL EXPERIENCE</a>
+        <a href="services.php" class="experience-section-btn">MORE OF WHAT YOU'LL EXPERIENCE</a>
       </div>
 
       <!-- Right Column (70%) -->
@@ -556,7 +553,7 @@ margin-bottom: -50px;
 
 .experience-section-title {
   font-size: 3rem;
-  font-weight: 700;
+  
   margin-bottom: 20px;
   font-family: 'Cormorant Garamond', serif;
   color: #111;
@@ -596,7 +593,7 @@ margin-bottom: -50px;
 
 .experience-section-number {
   font-size: 1.5rem;
-  font-weight: 700;
+  
   margin-right: 20px;
   font-family: 'Cormorant Garamond', serif;
   color: #111;
@@ -613,7 +610,7 @@ margin-bottom: -50px;
 
 .experience-section-title-item {
   font-size: 3rem;
-  font-weight: 700;
+  
   margin: 0;
   cursor: pointer;
   font-family: 'Cormorant Garamond', serif;
@@ -738,8 +735,8 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 
     <!-- Buttons -->
     <div class="d-flex justify-content-center gap-4 flex-wrap">
-      <a href="#films" class="lux-btn">FILMS</a>
-      <a href="#photos" class="lux-btn">PHOTOS</a>
+      <a href="stavick-films.php" class="lux-btn">FILMS</a>
+      <a href="stavick-photography.php" class="lux-btn">PHOTOS</a>
     </div>
   </div>
 </section>
@@ -775,7 +772,7 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 /* Headings */
 .lux-heading {
   font-size: 3rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;

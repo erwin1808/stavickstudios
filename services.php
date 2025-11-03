@@ -37,7 +37,7 @@
         
         .section-title {
             font-size: 3rem;
-            font-weight: 700;
+            
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 1rem;
@@ -99,7 +99,7 @@
         .service-card h4 {
             margin-bottom: 20px;
             font-size: 1.8rem;
-            font-weight: 700;
+            
             color: #2d2c2a;
         }
         
@@ -186,7 +186,7 @@
             padding: 5px 30px;
             transform: rotate(45deg);
             font-size: 0.8rem;
-            font-weight: 700;
+            
             font-family: 'DM Sans', sans-serif;
         }
         
@@ -222,7 +222,7 @@
 <section>
     <h4>QUALITY | VALUE | TRUST​​​​​</h4>
     <h1 style="  font-size: 3rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -236,7 +236,7 @@
   <div style="max-width: 1200px; margin: 0 auto;">
 
     <h2 style="font-size: 3rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -252,7 +252,7 @@
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 2.5rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -271,7 +271,7 @@
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 2.5rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -290,7 +290,7 @@
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 2.5rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -357,7 +357,6 @@
 }
 .media-features h2 {
     font-size: 3rem;
-    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Cormorant Garamond', serif;
@@ -438,7 +437,7 @@
                     <li>ADVENTURE SESSION</li>
                 </ul>
                 
-                <a href="#" class="service-cta">Explore Films</a>
+                <a href="stavick-films.php" class="service-cta">Explore Films</a>
                 <div class="service-badge">POPULAR</div>
             </div>
 
@@ -458,7 +457,7 @@
                     <li>ALBUM GALLERY</li>
                 </ul>
                 
-                <a href="#" class="service-cta">Explore Photos</a>
+                <a href="stavick-photography.php" class="service-cta">Explore Photos</a>
             </div>
         </div>
     </section>
@@ -589,7 +588,7 @@
 
 .faq-heading {
   font-size: 1.5rem;
-  font-weight: 700;
+  
   margin-bottom: 10px;
   letter-spacing: 1px;
     color: #555;
@@ -598,7 +597,7 @@
 
 .faq-subheading {
  font-size: 3rem;
-  font-weight: 700;
+  
   margin-bottom: 40px;
     color: #2d2c2a;
   text-align: center;
@@ -624,7 +623,7 @@
   width: 100%;
   text-align: left;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #2d2c2a;
   cursor: pointer;
   padding: 10px 0;
@@ -697,7 +696,7 @@
       <h5>CAPTURE THE MAGIC OF YOUR SPECIAL DAY</h5>
       <h1>PRESERVE EVERY MOMENT FOREVER</h1>
       <p>With our expert wedding photography and videography services, you can relive your wedding day whenever you want. From the intimate glances to the exuberant celebrations, our team will be there to document every precious moment — creating a timeless collection of images and films that tell your love story.</p>
-      <button>RESERVE YOUR DATE</button>
+      <button onclick="window.location.href='contact.php'" >RESERVE YOUR DATE</button>
     </div>
   </div>
 </div>
@@ -762,7 +761,7 @@
 
 .content h1 {
   font-size: 3rem;
-  font-weight: 700;
+  
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;

@@ -37,7 +37,7 @@
     .media-section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 3rem;
-      font-weight: 700;
+      
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: center;
