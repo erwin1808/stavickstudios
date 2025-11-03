@@ -136,7 +136,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
                         <li><a class="dropdown-item" href="south-asian-weddings.php">SOUTH ASIAN WEDDINGS</a></li>
-                        <li><a class="dropdown-item" href="#">WESTERN WEDDINGS</a></li>
+                        <li><a class="dropdown-item" href="western-weddings.php">WESTERN WEDDINGS</a></li>
                     </ul>
                 </li>
             </ul>

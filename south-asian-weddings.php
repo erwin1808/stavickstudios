@@ -150,7 +150,7 @@
       <div class="col-lg-6 col-md-10">
         <a href="south-asian-weddings-images.php" class="media-card">
           <div class="media-overlay"></div>
-          <img src="images/south-asian.jpg" alt="South Asian Weddings Images" class="media-bg">
+          <img src="images/AG100906_11zon.jpg" alt="South Asian Weddings Images" class="media-bg">
           <div class="media-title">See Images</div>
         </a>
       </div>
