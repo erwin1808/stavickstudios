@@ -106,7 +106,7 @@ scrollIcon.addEventListener('click', () => {
 
             <li><a href="about.php">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">South Asian Weddings</a></li>
+            <li><a href="south-asian-weddings.php">South Asian Weddings</a></li>
             <li><a href="#">Western Weddings</a></li>
             <li><a href="#">Films</a></li>
             <li><a href="#">Photos</a></li>
