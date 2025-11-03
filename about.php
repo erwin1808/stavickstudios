@@ -36,7 +36,8 @@
   <div style="flex: 2 1 500px; max-width: 700px;">
     <!-- Header -->
      <h4>   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
-    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; line-height: 1.2; margin-bottom: 40px;">
+    <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
+  font-weight: 700; line-height: 1.2; margin-bottom: 40px;">
    
       ONE-OF-A-KIND MEMORIES. ONE-OF-A-KIND LOVE.
     </h1>
@@ -62,7 +63,8 @@
   <div style="max-width: 1000px; margin: 0 auto;">
 
     <!-- Section Header -->
-    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif; font-size: 3rem; margin-bottom: 60px;">
+    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
+  font-weight: 700; margin-bottom: 60px;">
       A BIT MORE ABOUT US<br>
       HERE’S TO MY BETTER HALF
     </h2>
@@ -294,13 +296,13 @@
   background-color: #ebebeb;
   display: flex;
   justify-content: center;
-  padding: 50px 20px; /* more space around */
+  padding: 50px 20px;
 }
 
 .connection-card {
   position: relative;
   width: 100%;
-  max-width: 1700px; /* wider card */
+  max-width: 1700px;
   height: 600px;
   border-radius: 10px;
   overflow: hidden;
@@ -327,7 +329,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3); /* charcoal overlay */
+  background-color: rgba(0,0,0,0.3);
   z-index: 1;
 }
 
@@ -337,26 +339,37 @@
   padding: 0 40px;
 }
 
-.content h2 {
-  font-size: 42px;
-  margin-bottom: 10px;
+.content h5 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
 }
 
-.content h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 
 .content p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
-  margin-bottom: 30px;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #f1f1f1; 
 }
+
 .content button {
   padding: 15px 40px;
   font-size: 18px;
-     font-family: 'Cormorant Garamond', sans-serif;
+  font-family: 'Cormorant Garamond', sans-serif;
   background-color: #2d2c2a;
   color: #ebebeb;
   border: 1px solid #2d2c2a;
@@ -376,7 +389,77 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
+/* MOBILE & TABLET RESPONSIVENESS */
+@media screen and (max-width: 1024px) {
+  .connection-card {
+    height: 500px;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .content button {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .connection-card {
+    height: 450px;
+  }
+
+  .content h5 {
+    font-size: 1rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .content button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .section-wrapper {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .connection-card {
+    height: 400px;
+  }
+
+  .content h5 {
+    font-size: 0.9rem;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .content button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
 </style>
+
  
 
 <?php include 'footer.php'; ?>

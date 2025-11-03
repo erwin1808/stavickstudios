@@ -129,7 +129,7 @@
             <!-- Left links -->
             <ul class="navbar-nav navbar-left">
                 <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.php">SERVICES</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
                         PORTFOLIO

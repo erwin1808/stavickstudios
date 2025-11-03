@@ -365,17 +365,19 @@ margin-bottom: -50px;
     font-weight: 700;
     letter-spacing: 2px;
     color: #2d2c2a;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
 }
 
 .about-title {
     color: #ebebeb;
     font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 3rem;
-    line-height: 1.3;
-    letter-spacing: 2px;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
     padding-top: 20px;
     margin-left: 0;
+    
 }
 
 .about-desc {
@@ -553,7 +555,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
   font-family: 'Cormorant Garamond', serif;
@@ -610,7 +612,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-title-item {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin: 0;
   cursor: pointer;
@@ -772,7 +774,7 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 
 /* Headings */
 .lux-heading {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
