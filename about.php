@@ -19,8 +19,57 @@
             color: #2d2c2a;
             background: #ebebeb;
         }
-      
+
+        /* Styles for the A BIT MORE ABOUT US section */
+      .image-container {
+        flex: 1 1 300px;
+        max-width: 400px;         /* same width limit for both */
+        text-align: center;
+      }
+
+      .image-container img {
+        width: 100%;
+        aspect-ratio: 2 / 3;      /* ensures consistent height proportion */
+        object-fit: cover;        /* crops slightly to fit the ratio evenly */
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+.section-divider {
+  width: 100vw;              /* full width of the viewport */
+  height: 100px;             /* default height (desktop) */
+  background-color: #7c806f; /* your divider color */
+  margin: 0;
+  border: none;
+}
+
+/* 🌿 Responsive sizing for smaller screens */
+@media (max-width: 1024px) {
+  .about-couple {
+    margin-top: 15px !important;
+    background-color: #7c806f !important;            /* tablet */
+    color: #ebebeb !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-couple {
+     margin-top: 15px !important;
+     background-color: #7c806f !important;           /* small tablet / large phone */
+     color: #ebebeb !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-couple {
+     margin-top: 15px !important;
+     background-color: #7c806f !important;            /* mobile phones */
+     color: #ebebeb !important;
+  }
+}
+
+
     </style>
+
 </head>
 <body>
 <?php include 'navbar.php'; ?>
@@ -35,36 +84,118 @@
   <!-- Text Content -->
   <div style="flex: 2 1 500px; max-width: 700px;">
     <!-- Header -->
-     <h4>   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
-    <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
+     <h4 style="font-size: 24px;">   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
+    <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 34px;
    line-height: 1.2; margin-bottom: 40px;">
    
       ONE-OF-A-KIND MEMORIES. ONE-OF-A-KIND LOVE.
     </h1>
     
     <!-- Description -->
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
       Our love story began ten years ago before we ever dated. Although we always had a crush on each other, it wasn’t until Sarah rejected Ej. A year later another attempt, and asked her on a date to their favorite place at CHIPOTLE! We both love to travel and spend time together as a family.
     </p>
     
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
       Our journey as wedding creatives didn’t just happen and we want to let you into the backstory of how that came about. Ej was a FedEx driver for nine years before quitting his full-time job to follow his passion for filming. Sarah was in the medical field until we both decided to team up together. Sarah loves to take pictures and capture authentic moments to create a story.
     </p>
     
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; text-align: justify;">
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: -60px;">
       Today, we’re engaged and planning a wedding of our own. So, we know a thing or two about finding one-of-a-kind love. And we understand how much your film and photos mean to you. We welcome and embrace this honor and responsibility, and promise to approach it with LOVE, PASSION, AND PURPOSE.
     </p>
   </div>
   
 </section>
 
+
+
+<section class="image-section" style="display: none;">
+  <img src="images/1.jpg" alt="Cover Image">
+</section>
+
+<style>
+.image-section {
+  width: 100%;
+  max-width: 2200px;   /* desktop max width */
+  margin: 0 auto;      /* center on desktop */
+  overflow: hidden;    /* prevents overflow */
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;         /* keep aspect ratio */
+  object-fit: cover;
+  display: block;
+  max-height: 600px;    /* desktop limit */
+}
+
+/* Add a container for hero content */
+.hero-content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* Adjust mobile view for hero */
+@media screen and (max-width: 956px) {
+  .hero {
+    height: 100vh;
+    padding: 0;
+    position: relative;
+  }
+
+  .hero-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .hero-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+  }
+
+  .hero-container .image-bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  /* Keep the rest of your mobile styles as they were */
+  .logo-container {
+    display: none;
+  }
+
+  .hero-logo {
+    transform: translateY(-20px);
+    width: 375px;
+    margin-bottom: 1rem;
+  }
+
+  .nav-links-hero {
+    display: none;
+  }
+ .image-section {
+
+    margin-top: 14rem;
+    position: relative;
+    z-index: 5;
+  }
+}
+</style>
+
+<div class="section-divider"></div>
 <!-- A BIT MORE ABOUT US SECTION WITH SWIPE AND SAME LAYOUT -->
 <section class="about-couple" style="background-color: #ebebeb; color: #2d2c2a; padding: 100px 20px; text-align: center;">
   <div style="max-width: 1000px; margin: 0 auto;">
 
     <!-- Section Header -->
-    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif;   font-size: 3rem;
-   margin-bottom: 60px;">
+    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif;   font-size: 34px;
+   margin-bottom: 60px; margin-top: -25px">
       A BIT MORE ABOUT US<br>
       HERE’S TO MY BETTER HALF
     </h2>
@@ -77,15 +208,15 @@
 
         <!-- Ej Slide -->
         <div class="slide" style="min-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
-          <div style="flex: 1 1 300px; text-align: center;">
-            <img src="images/Mask-Group-1-898x1024.jpg" alt="Ej" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-          </div>
+      <div class="image-container">
+  <img src="images/Mask-Group-1-898x1024.jpg" alt="Ej">
+</div>
           <div style="flex: 2 1 500px; text-align: left;">
-            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 20px;">EJ ACCORDING TO SARAH</h3>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size:  24px; margin-bottom: 20px;">EJ ACCORDING TO SARAH</h3>
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
               My husband is my rock, my protector, and my constant support system. As a family of four, he works tirelessly to make sure we have everything we need and more. He is the hardest-working person I know, and I am in awe of his dedication and determination.
             </p>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; text-align: justify;">
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify;">
               Through thick and thin, my husband has always been there for me, accepting my faults and loving me unconditionally. He takes care of me in every possible way, and I feel so lucky to have him as my partner.
             </p>
           </div>
@@ -93,15 +224,15 @@
 
         <!-- Sarah Slide -->
         <div class="slide" style="min-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px; flex-direction: row-reverse;">
-          <div style="flex: 1 1 300px; text-align: center;">
-            <img src="images/Mask-Group-2-898x1024.jpg" alt="Sarah" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-          </div>
+              <div class="image-container">
+          <img src="images/Mask-Group-2-898x1024.jpg" alt="Sarah & Ej">
+        </div>
           <div style="flex: 2 1 500px; text-align: left;">
-            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 20px;">SARAH ACCORDING TO EJ</h3>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; margin-bottom: 20px;text-align: justify;">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size:  24px; margin-bottom: 20px;">SARAH ACCORDING TO EJ</h3>
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px;text-align: justify;">
               My beloved wife is a true gem, a kind and mindful person who loves nothing more than helping people. She is the one who always goes the extra mile to make sure everyone is happy and taken care of.
             </p>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 1.125rem; line-height: 1.8; text-align: justify;">
+            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify;">
               Her love for food and travel is contagious, and I am always amazed at her ability to find the best local food truck and places wherever we go. She takes the most amazing photos, capturing memories that we will cherish forever. But what I love most about my wife is how much she values spending time with family.
             </p>
           </div>
@@ -131,30 +262,28 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
 </svg>
-</button>
+    </button>
 
-
-      <!-- Left Arrow -->
-<!-- Left Arrow -->
-<button id="prevBtn" 
-        style="position: absolute; 
-               left: 300px; 
-               transform: translateY(-350px); 
-               background: #2d2c2a; 
-               color: #ebebeb; 
-               border: none; 
-               width: 60px; 
-               height: 60px; 
-               border-radius: 50%; 
-               cursor: pointer; 
-               font-size: 1.5rem; 
-               display: none; /* start hidden */
-               align-items: center; 
-               justify-content: center;">
-   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-   </svg>
-</button>
+    <!-- Left Arrow -->
+    <button id="prevBtn" 
+            style="position: absolute; 
+                  left: 300px; 
+                  transform: translateY(-350px); 
+                  background: #2d2c2a; 
+                  color: #ebebeb; 
+                  border: none; 
+                  width: 60px; 
+                  height: 60px; 
+                  border-radius: 50%; 
+                  cursor: pointer; 
+                  font-size: 1.5rem; 
+                  display: none; /* start hidden */
+                  align-items: center; 
+                  justify-content: center;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+      </svg>
+    </button>
 
 
 
@@ -169,7 +298,7 @@
     margin-bottom: 60px !important;
   }
   .section-title {
-    font-size: 2rem !important;
+    font-size:  24px !important;
   }
   .about-couple{
     margin-top: -120px !important;
@@ -193,7 +322,7 @@
   #nextBtn, #prevBtn {
     right: 175px !important;
     left: 175px !important;
-    transform: translateY(-50%) !important;
+    transform: translateY(-75%) !important;
     width: 45px !important;
     height: 45px !important;
     font-size: 1.2rem !important;
@@ -296,13 +425,16 @@
   background-color: #ebebeb;
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  align-items: center;
+  padding: 50px 0;          /* remove horizontal padding so it touches screen edges */
+  width: 100vw;             /* take full viewport width */
+  margin: 0;                /* prevent body margins from adding spacing */
+  overflow: hidden;
 }
 
 .connection-card {
   position: relative;
-  width: 100%;
-  max-width: 1700px;
+  width: 100%;              /* full width of parent */
   height: 600px;
   border-radius: 10px;
   overflow: hidden;
@@ -311,7 +443,9 @@
   align-items: center;
   text-align: center;
   color: white;
+  max-width: none;           /* remove the max-width limit */
 }
+
 
 .connection-card .background-img {
   position: absolute;
@@ -341,7 +475,7 @@
 
 .content h5 {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #d4af37;
@@ -349,8 +483,7 @@
 }
 
 .content h1 {
-  font-size: 3rem;
-  
+  font-size: 34px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -360,7 +493,7 @@
 
 .content p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 17px;
   margin-bottom: 2rem;
   line-height: 1.6;
   color: #f1f1f1; 
@@ -368,7 +501,7 @@
 
 .content button {
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Cormorant Garamond', sans-serif;
   background-color: #2d2c2a;
   color: #ebebeb;

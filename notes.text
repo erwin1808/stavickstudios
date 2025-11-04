@@ -2,3 +2,9 @@ Header (H1)	32px	Strong and clear.
 Subheader (H2)	22–24px	Provides better distinction from the main header.
 Text Buttons	16–18px	More ergonomic and visually balanced.
 Description	16px	Readable and consistent.
+
+colors
+slate - #2d2c2a;
+oat - #ebebeb;
+moss - #7c806f;
+stone - #c7c2bc;

@@ -327,6 +327,7 @@ margin-bottom: -50px;
 </style>
 
 
+
 <section class="about-section d-flex align-items-stretch">
     <div class="row w-100 g-0">
         <!-- Left: Full Image -->
@@ -610,7 +611,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-title-item {
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
   cursor: pointer;
   font-family: 'Cormorant Garamond', serif;
@@ -675,11 +676,11 @@ margin-bottom: -50px;
   }
 
   .experience-section-title {
-    font-size: 1.6rem;
+    font-size: 34px;
   }
 
   .experience-section-title-item {
-    font-size: 1.1rem;
+    font-size: 24px;
   }
 
   .experience-section-number {
@@ -848,11 +849,17 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
     padding: 30px 15px; /* less padding */
   }
 
-  .lux-heading {
-    font-size: 1.4rem;
-    line-height: 1.3;
-    margin-bottom: 0.75rem;
-  }
+.lux-heading {
+  font-size: 34px;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.lux-heading::after {
+  content: "\A";       /* Insert line break */
+  white-space: pre;    /* Make it render as a line break */
+}
+
 
   .lux-subtitle {
     font-size: 0.85rem;
