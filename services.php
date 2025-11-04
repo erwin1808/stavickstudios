@@ -36,7 +36,7 @@
         }
         
         .section-title {
-            font-size: 3rem;
+            font-size: 34px;
             
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -91,7 +91,7 @@
         }
         
         .service-icon {
-            font-size: 2.5rem;
+            font-size: 26px;
             color: #d4af37;
             margin-bottom: 25px;
         }
@@ -104,7 +104,7 @@
         }
         
         .service-card p {
-            font-size: 1.1rem;
+            font-size: 16px;
             line-height: 1.7;
             margin-bottom: 25px;
             color: #5a5a5a;
@@ -220,22 +220,25 @@
 
 <!-- QUALITY | VALUE | TRUST SECTION -->
 <section>
-    <h4>QUALITY | VALUE | TRUST​​​​​</h4>
-    <h1 style="  font-size: 3rem;
-  
+    <h4 style="font-size: 22px;">QUALITY | VALUE | TRUST​​​​​</h4>
+    <h1 style="  font-size: 34px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 1rem;
   color: #2d2c2a;">A TREASURED LOVE STORY IN THE MAKING</h1>
-    <p>Capturing your memories well requires thoughtful intention and preparation. And a team that's committed to top-notch service and quality. We provide all of the above and so much more.</p>
+   <p style="font-size: 16px;">
+  Capturing your memories well requires thoughtful intention and preparation. And a team that's committed to top-notch service and quality. <br>
+  We provide all of the above and so much more.
+</p>
+
 </section>
 
 <!-- HOW IT WORKS SECTION -->
 <section style="background-color: #ebebeb; color: #2d2c2a; padding: 60px 15px;">
   <div style="max-width: 1200px; margin: 0 auto;">
 
-    <h2 style="font-size: 3rem;
+    <h2 style="font-size: 34px;
   
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -251,14 +254,13 @@
         <img src="images/vision.jpg" alt="Vision" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 2.5rem;
-  
+        <h3 style="font-size: 26px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 1rem;
   color: #2d2c2a; margin-bottom: 10px; text-align: left;">VISION</h3>
-        <p style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; text-align: justify;">
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           The best way to meet and exceed your expectations is to have a clear picture of what those expectations are. So, we'll start with a video call to get to know more about you, your needs, and what you envision for your photos and films.
         </p>
       </div>
@@ -270,14 +272,14 @@
         <img src="images/approach.jpeg" alt="Approach" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 2.5rem;
+        <h3 style="font-size: 26px;
   
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 1rem;
   color: #2d2c2a; margin-bottom: 10px; text-align: right;">APPROACH</h3>
-        <p style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; text-align: justify;">
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           Whether you choose photos, videos, or both, we'll send you a detailed questionnaire to confirm the details and dynamics of your day. By understanding your priorities—and the plan—we can prepare a solid approach to preserve your day.
         </p>
       </div>
@@ -289,14 +291,14 @@
         <img src="images/craft.jpg" alt="Craft" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 2.5rem;
+        <h3 style="font-size: 26px;
   
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 1rem;
   color: #2d2c2a; margin-bottom: 10px; text-align: left;">CRAFT</h3>
-        <p style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; line-height: 1.6; text-align: justify;">
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           We'll focus on the real moments and unique details that enhance your photos and film and encompass the full story of your day. Maintaining natural light, real colors, and true beauty ensures nothing short of an exceptional final result.
         </p>
       </div>
@@ -307,12 +309,12 @@
 <style>
 @media screen and (max-width: 768px){
   .how-row p:last-child {
-    margin-bottom: -100px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .how-row p:last-child {
-    margin-bottom: -100px;
+    margin-bottom: 0;
   }
 }
 
@@ -321,55 +323,101 @@
 <!-- MEDIA FEATURES SECTION -->
 <section class="media-features">
   <h2>Media Features</h2>
-  <div class="media-wrapper">
-    <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
-      <img src="images/wedding-wire.png" alt="Wedding Wire" class="media-logo">
-    </a>
-    <a href="https://www.google.com/search?q=stavick+studio&rlz=1C1ONGR_enPH1056PH1056&sxsrf=APwXEdcjRTrDNNFfJLgGvdWJ-qwMsLh_SA%3A1685072436838&ei=NCpwZLfoMpnfseMPp-S_2A4&ved=0ahUKEwi30pKAiJL_AhWZb2wGHSfyD-sQ4dUDCA8&uact=5&oq=stavick+studio&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJzIHCCMQigUQJ0oECEEYAFAAWABg7QFoAHAAeACAAXuIAXuSAQMwLjGYAQCgAQHAAQE&sclient=gws-wiz-serp#rlimm=17970166578315231020" target="_blank">
-      <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
-    </a>
-    <a href="https://www.theknot.com/marketplace/stavick-studios-antioch-ca-2059950" target="_blank">
-      <img src="images/the-knot.png" alt="The Knot" class="media-logo">
-    </a>
-    <!-- Add more logos as needed -->
+  <div class="carousel">
+    <div class="carousel-track">
+      <!-- First set of logos -->
+      <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
+        <img src="images/wedding_wire.png" alt="Wedding Wire" class="media-logo">
+      </a>
+      <a href="https://www.google.com/search?q=stavick+studio" target="_blank">
+        <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
+      </a>
+      <a href="https://www.theknot.com/marketplace/stavick-studios-antioch-ca-2059950" target="_blank">
+        <img src="images/the-knot.png" alt="The Knot" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/vogue.png" alt="Vogue" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/azb-logo.png" alt="Arizona Bride" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/wedding_sutra_featured_charcoal_1.png" alt="Wedding Sutra" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/sab.webp" alt="South Asian Magazine" class="media-logo">
+      </a>
+
+      <!-- Duplicate logos for seamless infinite scroll -->
+      <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
+        <img src="images/wedding_wire.png" alt="Wedding Wire" class="media-logo">
+      </a>
+      <a href="https://www.google.com/search?q=stavick+studio" target="_blank">
+        <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
+      </a>
+      <a href="https://www.theknot.com/marketplace/stavick-studios-antioch-ca-2059950" target="_blank">
+        <img src="images/the-knot.png" alt="The Knot" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/vogue.png" alt="Vogue" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/azb-logo.png" alt="Arizona Bride" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/wedding_sutra_featured_charcoal_1.png" alt="Wedding Sutra" class="media-logo">
+      </a>
+      <a href="#" target="_blank">
+        <img src="images/sab.webp" alt="South Asian Magazine" class="media-logo">
+      </a>
+    </div>
   </div>
 </section>
 
 <style>
 .media-features { 
-  background-color: transparent; /* transparent background */
+  background-color: #7c806f;
   padding: 50px 20px;
-  border-top: 1px solid #2d2c2a;   /* top border */
-  border-bottom: 1px solid #2d2c2a; /* bottom border */
+  text-align: center;
 }
 
 
-.media-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* space between logos */
-}
-
-.media-wrapper a {
-  display: inline-block;
-}
 .media-features h2 {
-    font-size: 3rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-family: 'Cormorant Garamond', serif;
-    margin-bottom: 1rem;
-    color: #2d2c2a; 
-    margin-bottom: 50px;
+  font-size: 34px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 50px;
+  color: #ebebeb;
 }
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  cursor: grab;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+  user-select: none;
+}
+
+.carousel-track a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .media-logo {
   max-width: 250px;
   height: auto;
   object-fit: contain;
-  filter: brightness(0%) saturate(100%); /* makes logos black */
+  filter: brightness(0%) saturate(100%);
   opacity: 0.8;
+  margin: 0 40px;
   transition: all 0.3s ease;
 }
 
@@ -378,36 +426,83 @@
   transform: scale(1.05);
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Responsive */
 @media screen and (max-width: 1024px) {
   .media-logo {
-    max-width: 120px;
-    margin: 10px;
+    max-width: 170px;
+    margin: 0 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .media-wrapper {
-    gap: 25px;
-  }
-
   .media-logo {
-    max-width: 100px;
-    margin: 8px;
+    max-width: 150px;
+    margin: 0 15px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .media-wrapper {
-    gap: 15px;
-  }
-
   .media-logo {
-    max-width: 80px;
-    margin: 5px;
+    max-width: 100px;
+    margin: 0 10px;
   }
 }
 </style>
+
+<script>
+// Swipe support
+const track = document.querySelector('.carousel-track');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+track.addEventListener('mousedown', (e) => {
+  isDown = true;
+  track.style.animationPlayState = 'paused';
+  startX = e.pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+  track.style.cursor = 'grabbing';
+});
+track.addEventListener('mouseleave', () => {
+  isDown = false;
+  track.style.cursor = 'grab';
+  track.style.animationPlayState = 'running';
+});
+track.addEventListener('mouseup', () => {
+  isDown = false;
+  track.style.cursor = 'grab';
+  track.style.animationPlayState = 'running';
+});
+track.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - track.offsetLeft;
+  const walk = (x - startX) * 2;
+  track.scrollLeft = scrollLeft - walk;
+});
+track.addEventListener('touchstart', (e) => {
+  isDown = true;
+  track.style.animationPlayState = 'paused';
+  startX = e.touches[0].pageX - track.offsetLeft;
+  scrollLeft = track.scrollLeft;
+});
+track.addEventListener('touchend', () => {
+  isDown = false;
+  track.style.animationPlayState = 'running';
+});
+track.addEventListener('touchmove', (e) => {
+  if(!isDown) return;
+  const x = e.touches[0].pageX - track.offsetLeft;
+  const walk = (x - startX) * 2;
+  track.scrollLeft = scrollLeft - walk;
+});
+</script>
+
 
 
 
@@ -587,8 +682,7 @@
 }
 
 .faq-heading {
-  font-size: 1.5rem;
-  
+  font-size: 24px;
   margin-bottom: 10px;
   letter-spacing: 1px;
     color: #555;
@@ -596,7 +690,7 @@
 }
 
 .faq-subheading {
- font-size: 3rem;
+ font-size: 34px;
   
   margin-bottom: 40px;
     color: #2d2c2a;
@@ -622,7 +716,7 @@
   border: none;
   width: 100%;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 18px;
   font-weight: 500;
   color: #2d2c2a;
   cursor: pointer;
@@ -649,6 +743,9 @@
   overflow: hidden;
   transition: all 0.4s ease;
   opacity: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555
 }
 
 .faq-item.active .faq-answer {
@@ -665,13 +762,13 @@
 @media screen and (max-width: 768px){
   .faq-wrapper {
     margin-top: -100px;
-    margin-bottom: -50px;
+    margin-bottom: -250px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
  .faq-wrapper {
     margin-top: -100px;
-    margin-bottom: -50px;
+    margin-bottom: -250px;
   }
 }
 
@@ -703,18 +800,22 @@
 
 <style>
 .section-wrapper {
+  width: 100vw;              /* Full viewport width */
+  min-height: 100vh;         /* Full viewport height */
   background-color: #ebebeb;
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  align-items: center;       /* Vertically center the card */
+  padding: 0;                /* Remove extra padding to allow full width */
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .connection-card {
   position: relative;
-  width: 100%;
-  max-width: 1700px;
+  width: 100%;               /* Full width */
   height: 600px;
-  border-radius: 10px;
+  border-radius: 0;          /* Optional: remove rounded corners for full-width look */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -747,12 +848,12 @@
   position: relative;
   z-index: 2;
   padding: 0 40px;
-  max-width: 900px;
+  max-width: 900px; /* Keep content centered and readable */
 }
 
 .content h5 {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #d4af37;
@@ -760,8 +861,7 @@
 }
 
 .content h1 {
-  font-size: 3rem;
-  
+  font-size: 34px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -771,7 +871,7 @@
 
 .content p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 16px;
   margin-bottom: 2rem;
   line-height: 1.6;
   color: #f1f1f1;
@@ -779,7 +879,7 @@
 
 .content button {
   padding: 15px 40px;
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Cormorant Garamond', serif;
   background-color: #2d2c2a;
   color: #ebebeb;
@@ -802,6 +902,9 @@
 
 /* MOBILE & TABLET RESPONSIVENESS */
 @media screen and (max-width: 1024px) {
+  .section-wrapper {
+    margin-bottom: -120px;
+  }
   .connection-card {
     height: 500px;
   }
@@ -821,6 +924,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .section-wrapper {
+    margin-bottom: -120px;
+  }
   .connection-card {
     height: 450px;
   }
@@ -870,7 +976,6 @@
   }
 }
 </style>
-
 
 
 <?php include 'footer.php'; ?>
