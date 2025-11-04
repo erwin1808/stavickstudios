@@ -235,10 +235,11 @@
     <div class="portfolio-grid">
 
       <!-- Card 1 -->
-      <div class="portfolio-card">
-        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
-        <div class="portfolio-couple">Jaclyn § Tyler</div>
-      </div>
+ <div class="portfolio-card" onclick="window.location.href='western-weddings-images-details.php?id=1';" style="cursor: pointer;">
+  <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+  <div class="portfolio-couple">Jaclyn § Tyler</div>
+</div>
+
 
       <!-- Card 2 -->
       <div class="portfolio-card">
