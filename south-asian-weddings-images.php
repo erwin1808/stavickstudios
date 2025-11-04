@@ -123,7 +123,6 @@
 
     .portfolio-title {
       font-size: 2.8rem;
-      
       margin-bottom: 50px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -134,51 +133,90 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
+.portfolio-card {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 400px; /* portrait orientation */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+}
 
-    .portfolio-card {
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
 
-    .portfolio-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    }
+.portfolio-couple {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: #ebebeb; /* overlay color */
+  color: #2d2c2a;           /* text color */
+  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  opacity: 0;               /* hidden initially */
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
 
-    .portfolio-card img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
 
-    .portfolio-card-body {
-      padding: 20px;
-      text-align: left;
-    }
+.portfolio-card:hover .portfolio-couple {
+  opacity: 1;               /* show on hover */
+  transform: translateY(0);
+}
+/* Mobile and smaller devices: always 3 columns */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio-card {
+  height: 120px; /* you can tweak for smaller screens */
+}
+  .portfolio-couple {
+    font-size: 15px !important;
+     padding: 5px 0;
+  }
+}
 
-    .portfolio-couple {
-      font-size: 1.5rem;
-      
-      margin-bottom: 10px;
-      font-family: 'Cormorant Garamond', serif;
-    }
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio-card {
+  height: 120px; /* you can tweak for smaller screens */
+}
+  .portfolio-couple {
+    font-size: 15px !important;
+    padding: 5px 0;
+  }
+}
 
-    .portfolio-desc {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.6;
-    }
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio-card {
+  height: 120px; /* you can tweak for smaller screens */
+}
+  .portfolio-couple {
+    font-size: 15px !important;
+     padding: 5px 0;
+  }
+}
 
-    @media (max-width: 576px) {
-      .portfolio-title {
-        font-size: 2rem;
-      }
-      .portfolio-card img {
-        height: 220px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -198,43 +236,67 @@
 
       <!-- Card 1 -->
       <div class="portfolio-card">
-        <img src="images/Jaclyn § Tyler.jpg" alt="Couple 1">
-        <div class="portfolio-card-body">
-          <div class="portfolio-couple">Jaclyn § Tyler</div>
-          <p class="portfolio-desc">A romantic coastal celebration filled with laughter, elegance, and timeless moments.</p>
-        </div>
+        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+        <div class="portfolio-couple">Jaclyn § Tyler</div>
       </div>
 
       <!-- Card 2 -->
       <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Couple 2">
-        <div class="portfolio-card-body">
-          <div class="portfolio-couple">Ethan & Sofia</div>
-          <p class="portfolio-desc">An intimate vineyard wedding surrounded by nature’s golden hues and heartfelt joy.</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Ethan & Sofia">
+        <div class="portfolio-couple">Ethan & Sofia</div>
       </div>
 
       <!-- Card 3 -->
       <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=80" alt="Couple 3">
-        <div class="portfolio-card-body">
-          <div class="portfolio-couple">Liam & Noor</div>
-          <p class="portfolio-desc">A breathtaking union that brought together two cultures in vibrant celebration.</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=80" alt="Liam & Noor">
+        <div class="portfolio-couple">Liam & Noor</div>
       </div>
 
       <!-- Card 4 -->
       <div class="portfolio-card">
-        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80" alt="Couple 4">
-        <div class="portfolio-card-body">
-          <div class="portfolio-couple">Isabella & Raj</div>
-          <p class="portfolio-desc">An unforgettable destination wedding with views that took everyone’s breath away.</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80" alt="Isabella & Raj">
+        <div class="portfolio-couple">Isabella & Raj</div>
+      </div>
+
+      <!-- Duplicate cards for 12 total -->
+      <div class="portfolio-card">
+        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+        <div class="portfolio-couple">Jaclyn § Tyler</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Ethan & Sofia">
+        <div class="portfolio-couple">Ethan & Sofia</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=80" alt="Liam & Noor">
+        <div class="portfolio-couple">Liam & Noor</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80" alt="Isabella & Raj">
+        <div class="portfolio-couple">Isabella & Raj</div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+        <div class="portfolio-couple">Jaclyn § Tyler</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1000&q=80" alt="Ethan & Sofia">
+        <div class="portfolio-couple">Ethan & Sofia</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=1000&q=80" alt="Liam & Noor">
+        <div class="portfolio-couple">Liam & Noor</div>
+      </div>
+      <div class="portfolio-card">
+        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=1000&q=80" alt="Isabella & Raj">
+        <div class="portfolio-couple">Isabella & Raj</div>
       </div>
 
     </div>
   </div>
 </section>
+
 
 <?php include 'footer.php'; ?>
 
