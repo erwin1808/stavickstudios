@@ -122,7 +122,7 @@
     }
 
     .portfolio-title {
-      font-size: 2.8rem;
+      font-size: 34px;
       margin-bottom: 50px;
       letter-spacing: 1px;
       text-transform: uppercase;
