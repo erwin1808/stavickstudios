@@ -23,7 +23,7 @@
     /* === HERO SECTION === */
   .hero {
   position: relative;
-  width: 95vw;
+  width: 100vw;
   height: 35vw;
   max-width: 2000px;
   max-height: 800px;
@@ -145,15 +145,14 @@
 
 .inquiry-text h2 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 34px;
     color: var(--primary);
     text-align: center;
-    
     letter-spacing: 1px;
     line-height: 1.2;
      font-family: 'Cormorant Garamond', sans-serif;
 }
-.inquiry-logo { margin-left: 280px; margin-bottom: 5px;}
+.inquiry-logo { margin-left: 200px; margin-bottom: 15px; margin-top: 15px;}
 @media screen and (max-width: 768px) {
     .inquiry-logo {
         display: block;       /* Make logo block */
@@ -175,7 +174,7 @@
 }
 
 .inquiry-text p {
-    font-size: 1.3rem;
+    font-size: 16px;
     line-height: 1.7;
     color: var(--primary);
     text-align: center;
@@ -186,7 +185,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: 18px;
     color: var(--primary);
     text-align: left;
     font-family: 'Cormorant Garamond', sans-serif;
@@ -204,6 +203,9 @@
 /* Center the inline flatpickr calendar only */
 .datepicker-wrapper .flatpickr-calendar {
     margin: 0 auto !important; /* Centers the calendar */
+}
+.datepicker-wrapper .flatpickr-input {
+  margin-bottom: 15px;
 }
 /* Adjust font size for all dropdowns */
 .form-group select {
@@ -292,11 +294,11 @@
                 <label for="wedding-type">Wedding Type?</label>
                 <select name="wedding_type" id="wedding-type" class="form-control">
                     <option value="">Select an option</option>
-                    <option value="traditional">Traditional</option>
-                    <option value="modern">Modern</option>
-                    <option value="fusion">Fusion</option>
-                    <option value="elopement">Elopement</option>
-                    <option value="other">Other</option>
+                    <option value="Traditional">Traditional</option>
+                    <option value="South East Asian">South East Asian</option>
+                    <option value="Fusion">Fusion</option>
+                    <option value="Elopement">Elopement</option>
+                    <option value="Other">Other</option>
                 </select>
             </div>
 

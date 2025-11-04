@@ -23,7 +23,7 @@
     /* === HERO SECTION === */
   .hero {
   position: relative;
-  width: 95vw;
+  width: 100vw;
   height: 35vw;
   max-width: 2000px;
   max-height: 800px;
@@ -130,8 +130,7 @@
     }
 
     .portfolio-section h2 {
-      font-size: 3rem;
-      
+      font-size: 34px;  
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 60px;
@@ -140,16 +139,18 @@
     }
 
 
-        .portfolio-card {
-        background: #fff;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative;
-        width: 100%;           /* full width of column */
-        height: 350px;         /* fixed height */
-        }
+.portfolio-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 75%;      /* 75% width */
+    height: 550px;   /* fixed height */
+    margin: 0 auto;  /* center horizontally */
+}
+
 
     .portfolio-card:hover {
       transform: translateY(-5px);
@@ -201,8 +202,7 @@
       right: 0;
       background: rgba(0, 0, 0, 0.6);
       color: #fff;
-      font-size: 1.8rem;
-      
+      font-size: 24px;     
       padding: 15px 10px;
       text-align: center;
       opacity: 0;
@@ -214,47 +214,60 @@
       opacity: 1;
     }
 
-    /* === VIDEO LIGHTBOX === */
-    .video-lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.9);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 992px) {
+    .portfolio-card {
+        width: 100% !important;     /* increase width on tablets */
+        height: 200px !important; /* reduce height */
     }
+}
 
-    .video-lightbox.active {
-      display: flex;
+@media (max-width: 768px) {
+    .portfolio-card {
+         width: 100% !important;     /* increase width on tablets */
+        height: 200px !important; /* reduce height */
     }
+    .video-title {
+        font-size: 1.2rem;
+        padding: 10px 5px;
+    }
+    .play-button {
+        font-size: 2.5rem;
+    }
+}
 
-    .video-lightbox iframe {
-      width: 80%;
-      height: 80vh;
-      border: none;
-      border-radius: 8px;
+@media (max-width: 480px) {
+    .portfolio-card {
+   width: 100% !important;     /* increase width on tablets */
+        height: 200px !important; /* reduce height */
     }
+    .video-title {
+        font-size: 1rem;
+        padding: 8px 5px;
+    }
+    .play-button {
+        font-size: 2rem;
+    }
+}
+    .portfolio-card-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
 
-    .close-lightbox {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      color: #fff;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 10000;
-    }
+.portfolio-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 75%;      /* 75% width */
+    height: 550px;   /* fixed height */
+    margin: 0 auto;  /* center horizontally */
+}
 
-    @media (max-width: 768px) {
-      .portfolio-section h2 { font-size: 2rem; }
-      .video-thumbnail img { height: 250px; }
-      .video-title { font-size: 1.3rem; }
-      .video-lightbox iframe { width: 90%; height: 60vh; }
-        .portfolio-card {
-    height: 250px;
-  }
-    }
   </style>
 </head>
 
@@ -276,82 +289,59 @@
 <section class="portfolio-section">
   <div class="container">
     <h2>Western Weddings</h2>
-    <div class="row g-4 justify-content-center">
+<div class="row g-4 justify-content-center">
 
-      <!-- Video Card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-card">
-          <div class="video-thumbnail" data-video="https://www.youtube-nocookie.com/embed/7UoP9ABJXGE?si=qnyE9lc2sLtMB1rp&amp;controls=0">
-            <img src="https://img.youtube.com/vi/7UoP9ABJXGE/maxresdefault.jpg" alt="Ava & Liam Wedding">
-            <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
-            <div class="video-title">Ava & Liam</div>
-          </div>
+  <!-- Video Card 1 -->
+  <div class="col-12">
+    <a href="western-weddings-videos-details.php" class="portfolio-card-link">
+      <div class="portfolio-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/7UoP9ABJXGE/maxresdefault.jpg" alt="Ava & Liam Wedding">
+          <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
+          <div class="video-title">Ava & Liam</div>
         </div>
       </div>
+    </a>
+  </div>
 
-      <!-- Video Card 2 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-card">
-          <div class="video-thumbnail" data-video="https://www.youtube.com/embed/RdtOyzda-e4?si=9cTDlS6uqXVYzs-h">
-            <img src="https://img.youtube.com/vi/RdtOyzda-e4/maxresdefault.jpg" alt="Maya & Arjun Wedding">
-             <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
-            <div class="video-title">Maya & Arjun</div>
-          </div>
+  <!-- Video Card 2 -->
+  <div class="col-12">
+    <a href="western-weddings-videos-details.php" class="portfolio-card-link">
+      <div class="portfolio-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/RdtOyzda-e4/maxresdefault.jpg" alt="Maya & Arjun Wedding">
+          <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
+          <div class="video-title">Maya & Arjun</div>
         </div>
       </div>
+    </a>
+  </div>
 
-      <!-- Video Card 3 -->
-      <div class="col-lg-4 col-md-6">
-        <div class="portfolio-card">
-          <div class="video-thumbnail" data-video="https://www.youtube.com/embed/fXN-m49MHO0?si=3wh3t6NPSO_COOt-">
-            <img src="https://img.youtube.com/vi/fXN-m49MHO0/maxresdefault.jpg" alt="Isabella & Noah Wedding">
-            <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
-            <div class="video-title">Isabella & Noah</div>
-          </div>
+  <!-- Video Card 3 -->
+  <div class="col-12">
+    <a href="western-weddings-videos-details.php" class="portfolio-card-link">
+      <div class="portfolio-card">
+        <div class="video-thumbnail">
+          <img src="https://img.youtube.com/vi/fXN-m49MHO0/maxresdefault.jpg" alt="Isabella & Noah Wedding">
+          <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
+          <div class="video-title">Isabella & Noah</div>
         </div>
       </div>
+    </a>
+  </div>
 
-    </div>
+</div>
+
+
   </div>
 </section>
 
-<!-- === LIGHTBOX POPUP === -->
-<div class="video-lightbox" id="videoLightbox">
-  <span class="close-lightbox">&times;</span>
-  <iframe id="lightboxVideo" src="" allowfullscreen></iframe>
-</div>
+
 
 <?php include 'footer.php'; ?>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- === VIDEO LIGHTBOX SCRIPT === -->
-<script>
-  const videoThumbnails = document.querySelectorAll('.video-thumbnail');
-  const lightbox = document.getElementById('videoLightbox');
-  const iframe = document.getElementById('lightboxVideo');
-  const closeBtn = document.querySelector('.close-lightbox');
-
-  videoThumbnails.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const videoUrl = thumb.getAttribute('data-video') + '?autoplay=1';
-      iframe.src = videoUrl;
-      lightbox.classList.add('active');
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    lightbox.classList.remove('active');
-    iframe.src = '';
-  });
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) {
-      lightbox.classList.remove('active');
-      iframe.src = '';
-    }
-  });
-</script>
 </body>
 </html>
