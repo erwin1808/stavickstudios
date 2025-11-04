@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stavick Studios</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Play Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      color: #2d2c2a;
+      background-color: #ebebeb;
+      overflow-x: hidden;
+    }
+
+    /* === HERO SECTION === */
+  .hero {
+  position: relative;
+  width: 100vw;
+  height: 35vw;
+  max-width: 2000px;
+  max-height: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
+.hero-logo,
+.hero-caption-left,
+.hero-caption-right {
+  position: relative;
+  z-index: 3;
+}
+
+    .hero-logo {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .hero-logo img {
+      max-width: 320px;
+      height: auto;
+    }
+
+    .hero-caption-left {
+      position: absolute;
+      bottom: 25px;
+      left: 30px;
+      z-index: 3;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      max-width: 490px;
+    }
+
+    .hero-caption-right {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      z-index: 3;
+      color: #fff;
+      font-size: 1.2rem;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+/* === HERO SECTION MOBILE LANDSCAPE === */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vw; /* shorter height for landscape orientation */
+    background-size: cover;
+  }
+
+  .hero-logo img {
+    max-width: 180px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 1rem;
+    bottom: 10px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vw; /* maintain a wide landscape look */
+  }
+
+  .hero-logo img {
+    max-width: 150px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+<?php include 'navbar.php'; ?>
+
+
+<!-- === HERO SECTION === -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="videos/Stavick Studios - Website background video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+<!-- FAQ SECTION -->
+<section class="faq-wrapper">
+  <h2 class="faq-heading">NEED HELP?​​</h2>
+  <div class="faq-section">
+    <h3 class="faq-subheading">Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+      <button class="faq-question">DO YOU TRAVEL FOR WEDDINGS?</button>
+      <div class="faq-answer">
+        <p>We are based out of California, but we serve clients all around the world. Over the past few years, we have had the privilege of documenting countless love stories, and each wedding has been a unique and precious experience.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">DO YOU OFFER DESTINATION WEDDING DISCOUNTS?</button>
+      <div class="faq-answer">
+        <p>Ej and Sarah have a Bucket List to travel to the following locations. If your wedding is in one of these places, you’re eligible for a DISCOUNT on all our packages:</p>
+        <p><strong>Italy, Iceland, Greece, Turkey, Bali, London, Hawaii, Bora Bora, Bahamas, New York, Mexico, Spain, and Dubai.</strong></p>
+        <p>Active military and veterans, firefighters, and law enforcement receive a <strong>15% discount</strong> on all our packages.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">HOW MANY VIDEOGRAPHERS/PHOTOGRAPHERS DO I NEED AT MY WEDDING?</button>
+      <div class="faq-answer">
+        <p>We recommend having at least two videographers and photographers at your wedding. While one can get the job done, having two shooters allows for more storytelling opportunities and dynamic coverage from multiple angles. Believe us — we’ve solo-shot many weddings before, and the difference is significant!</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">HOW MUCH IS THE DEPOSIT?</button>
+      <div class="faq-answer">
+        <p>We require a <strong>50% deposit</strong> to reserve your wedding date. The remaining balance is due one month before your wedding day.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">CAN I USE MY OWN MUSIC?</button>
+      <div class="faq-answer">
+        <p>We license all music through <strong>Musicbed</strong>. Due to copyright restrictions, we don’t take music requests. We promise to find songs that elevate your love and personality through the film. However, if there’s a song you absolutely need, let us know and we’ll see if we can acquire the licensing rights for your film.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHEN SHOULD I EXPECT MY FILM/PHOTOS?</button>
+      <div class="faq-answer">
+        <p>We don’t rush post-production — every story is crafted with care. Our delivery timelines are:</p>
+        <ul>
+          <li><strong>Photos:</strong> Within 8 weeks</li>
+          <li><strong>Highlight Films / Ceremony / Speeches / Dancing:</strong> Within 8 weeks</li>
+          <li><strong>Documentary Films:</strong> Within 3 months</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHAT IS AN ADVENTURE SESSION?</button>
+      <div class="faq-answer">
+        <p>An adventure session is a short film designed just for you, based on your love story. We’ll go to your favorite location — whether it’s skydiving, snorkeling, or horseback riding. This creative session takes storytelling to the next level. During your wedding reception, we’ll play your pre-wedding adventure film using a 4K laser projector for your guests to enjoy.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHAT IS A DOCUMENTARY FILM?</button>
+      <div class="faq-answer">
+        <p>A documentary film is a long-form, fully edited video (usually one hour or more) that covers your entire wedding day — from getting ready to the reception. It’s an emotional, comprehensive retelling of your day from start to finish.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHAT HAPPENS IF YOU CAN’T MAKE IT TO OUR WEDDING?</button>
+      <div class="faq-answer">
+        <p>This would only happen in extreme circumstances (act of God, illness, or death). In such a case, we would do everything possible to find a trusted replacement team with a similar style and level of quality to document your day.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHAT IF WE NEED TO CANCEL OR RESCHEDULE OUR WEDDING?</button>
+      <div class="faq-answer">
+        <p>The retainer (deposit) is a non-refundable payment made as part of your booking confirmation, in addition to a signed contract, to reserve our services for your specific date. If you cancel the contract, the retainer is forfeited and cannot be transferred to another date or client.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">HOW DO WE RECEIVE OUR PHOTOS?</button>
+      <div class="faq-answer">
+        <p>Once editing is complete, we upload your photos to a password-protected online gallery and send the link via email. You can share this with friends and family or download all images to your computer. The gallery remains available for one year, and we’ll also mail you a USB backup of your images.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">HOW DO WE RECEIVE OUR FILMS?</button>
+      <div class="faq-answer">
+        <p>When your films are complete, we upload your highlight and full films to a private, customized online gallery and send them via email. Like the photos, the videos are stored online for one year, and we’ll also provide a USB copy as a backup.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">WHAT RIGHTS DO WE HAVE?</button>
+      <div class="faq-answer">
+        <p>You have full rights to download, print, and share your images for personal use or on social media. For films, you may download and share them for personal or social media purposes as well.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">DO YOU PHOTOSHOP YOUR CLIENTS?</button>
+      <div class="faq-answer">
+        <p>Our photography and videography celebrate love and authenticity. We promote self-love and body positivity, so we don’t alter appearances beyond removing temporary blemishes like bruises or acne. We won’t Photoshop you to change what’s real and true. However, if there’s something you’re self-conscious about, please let us know — we’ll be mindful during the shoot to ensure you feel confident and comfortable.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ===== FAQ SECTION STYLING ===== */
+.faq-wrapper {
+  background: none; /* Transparent section */
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  color: #2d2c2a;
+}
+
+.faq-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+    color: #555;
+        font-family: 'Cormorant Garamond', sans-serif;
+}
+
+.faq-subheading {
+ font-size: 34px;
+  
+  margin-bottom: 40px;
+    color: #2d2c2a;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+/* QUESTION BUTTON */
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d2c2a;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+/* ANSWER AREA */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px; /* Enough for typical answer length */
+  opacity: 1;
+  margin-top: 8px;
+}
+
+/* Hover/active effects */
+.faq-question:hover {
+  color: #d4af37;
+}
+
+@media screen and (max-width: 768px){
+  .faq-wrapper {
+    margin-top: -100px;
+    margin-bottom: -250px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+ .faq-wrapper {
+    margin-top: -100px;
+    margin-bottom: -250px;
+  }
+}
+
+</style>
+
+<script>
+  // FAQ toggle functionality
+  document.querySelectorAll('.faq-question').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('active');
+    });
+  });
+</script>
+
+
+<?php include 'footer.php'; ?>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
