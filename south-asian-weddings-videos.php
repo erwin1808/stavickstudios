@@ -293,7 +293,7 @@
 
   <!-- Video Card 1 -->
   <div class="col-12">
-    <a href="south-asian-weddings-videos-details.php" class="portfolio-card-link">
+    <a href="south-asian-weddings-videos-details.php?id=1" class="portfolio-card-link">
       <div class="portfolio-card">
         <div class="video-thumbnail">
           <img src="https://img.youtube.com/vi/7UoP9ABJXGE/maxresdefault.jpg" alt="Ava & Liam Wedding">
