@@ -64,7 +64,7 @@
   z-index: 3;
   color: #fff;
   font-size: 3rem;
-  font-weight: 700;
+
   text-shadow: 0 2px 8px rgba(0,0,0,0.5);
   max-width: 490px;
   text-transform: uppercase;
@@ -124,7 +124,7 @@
 
     .portfolio-title {
       font-size: 2.8rem;
-      font-weight: 700;
+    
       margin-bottom: 50px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -162,7 +162,7 @@
 
     .portfolio-couple {
       font-size: 1.5rem;
-      font-weight: 700;
+    
     }
 
     .portfolio-desc {

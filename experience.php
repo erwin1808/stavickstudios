@@ -137,6 +137,392 @@
 </section>
 
 
+<!-- === NEW SECTION: Image Left, Text Right === -->
+<section class="section-feature py-5">
+  <div class="container">
+    <div class="row align-items-start gx-0"> <!-- remove horizontal spacing -->
+      <!-- Left Column: Portrait Image -->
+      <div class="col-md-6 text-center pe-2">
+        <img src="images/EJSarahNR-2-1-683x1024.jpg" alt="Portrait" class="feature-portrait">
+      </div>
+
+      <!-- Right Column: Title, Description, Button -->
+      <div class="col-md-6 right-column ps-2">
+        <h1 class="feature-title mb-4">Welcome to <br> Stavick Studios</h1>
+        <p class="feature-description mb-4">
+          At Stavick Studios, we specialize in capturing timeless memories that tell your unique story. Every session is carefully crafted to reflect your personality and style, blending creativity with heartfelt storytelling. Our goal is to ensure that each moment is unforgettable and truly represents the essence of your journey.
+        </p>
+        <p class="feature-description mb-4">
+          Our approach combines artistic vision with a relaxed and natural atmosphere. We focus on the details—the smiles, the glances, the small intimate moments—that transform every session into an emotional experience. From candid laughter to quiet, heartfelt moments, we capture memories you will treasure forever.
+        </p>
+        <a href="#pricing" class="btn btn-custom">Book Your Session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Tighten columns */
+.right-column {
+  margin-left: -50px; /* overlap text over image for tighter spacing */
+}
+
+.section-feature .feature-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  color: #2d2c2a;
+  text-transform: uppercase;
+}
+
+.section-feature .feature-description {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2d2c2a;
+  text-align: justify;
+}
+
+/* Custom button style */
+.btn-custom {
+  background-color: #2d2c2a;
+  color: #ebebeb;
+  width: 450px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  line-height: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #1f1e1c;
+  color: #ebebeb;
+}
+
+/* Portrait image */
+.feature-portrait {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-feature .feature-title {
+    font-size: 2rem;
+  }
+
+  .section-feature .feature-description {
+    font-size: 1rem;
+  }
+
+  .section-feature .row {
+    flex-direction: column-reverse;
+  }
+
+  .section-feature .col-md-6 {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .feature-portrait {
+    width: 240px;
+    height: 320px;
+  }
+
+  .btn-custom {
+    width: 180px;
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .right-column {
+    margin-left: 0; /* reset negative margin on mobile */
+  }
+}
+</style>
+
+
+
+
+
+<!-- Pricing & Packages Section -->
+<section class="pricing-section">
+  <!-- Parallax Background -->
+  <div class="pricing-parallax" style="background-image: url('images/DJI_0292.jpg');"></div>
+
+  
+  <!-- Content Card -->
+  <div class="pricing-card">
+    <!-- Row 1: Title -->
+    <div class="pricing-title">
+      <h2>THE INVESTMENT</h2>
+    </div>
+    
+    <!-- Row 2: Subtitle -->
+    <div class="pricing-subtitle">
+      <h3>Tailored Photography Experiences</h3>
+    </div>
+    
+    <!-- Row 3: Description -->
+    <div class="pricing-description">
+      <p>Each package is carefully crafted to preserve your unique love story with the artistry and attention it deserves. From intimate elopements to grand celebrations, we offer options to suit every vision and budget.</p>
+    </div>
+    
+    <!-- Row 4: Image/GIF -->
+    <div class="pricing-image">
+      <img src="images/story-bg.jpg" alt="Wedding Photography Package Example">
+    </div>
+        <!-- Row 5: Sub-Description -->
+   <div class="pricing-sub-description">
+<p>Our Package starts at <span style="font-style: italic; color: #74A12E; font-weight: 400">$5,000</span></p>
+
+</div>
+
+  </div>
+</section>
+
+<style>
+/* Pricing Section Styles */
+.pricing-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 4rem 0 0;
+}
+
+.pricing-parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  filter: brightness(0.7);
+}
+
+
+.pricing-parallax::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pricing-card {
+  background: #ebebeb;
+  width: 100%;
+  max-width: 1000px;
+  padding: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing-title h2 {
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #2d2c2a;
+  margin-bottom: 1rem;
+}
+
+.pricing-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing-subtitle h3 {
+font-family: 'DM Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #2d2c2a;
+}
+
+.pricing-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.pricing-description p {
+ font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d2c2a;
+}
+
+.pricing-sub-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+.pricing-sub-description p {
+  font-family: 'DM Sans', sans-serif;
+   font-size: 16px;
+  line-height: 1.7;
+  color: #2d2c2a;
+  text-transform: uppercase;
+  margin-bottom: -50px;
+}
+
+.pricing-image {
+  margin: 0 auto 3rem;
+  max-width: 800px;
+}
+
+.pricing-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pricing-packages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.package {
+  flex: 1;
+  min-width: 280px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.package:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.package h4 {
+  font-family: 'NewYork', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--tertiary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.package-price {
+ font-family: 'DM Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--textcolor);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.package-features {
+  list-style: none;
+}
+
+.package-features li {
+ font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #2d2c2a;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.package-features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #c7c2bc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 4rem 1rem;
+  }
+  
+  .pricing-card {
+    padding: 2rem;
+  }
+  
+  .pricing-title h2 {
+    font-size: 2rem;
+  }
+  
+  .pricing-packages {
+    flex-direction: column;
+  }
+  
+  .package {
+    min-width: 100%;
+  }
+  
+  .pricing-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .pricing-subtitle h3 {
+    font-size: 1rem;
+  }
+  
+  .pricing-description p {
+    font-size: 0.9rem;
+  }
+}
+</style>
+
+<script>
+// Add divider animation for pricing section
+document.addEventListener("DOMContentLoaded", function() {
+  const pricingDivider = document.querySelector('.pricing-title .divider');
+  
+  if (pricingDivider) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          pricingDivider.classList.add('animate');
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(pricingDivider);
+  }
+});
+</script>
+
 <!-- FAQ SECTION -->
 <section class="faq-wrapper">
   <h2 class="faq-heading">NEED HELP?​​</h2>
@@ -254,18 +640,18 @@
 <style>
 /* ===== FAQ SECTION STYLING ===== */
 .faq-wrapper {
-  background: none; /* Transparent section */
+  background: #2d2c2a; /* Transparent section */
   padding: 80px 20px;
   text-align: center;
   font-family: 'DM Sans', sans-serif;
-  color: #2d2c2a;
+  color: #ebebeb;
 }
 
 .faq-heading {
   font-size: 24px;
   margin-bottom: 10px;
   letter-spacing: 1px;
-    color: #555;
+    color: #ebebeb;
         font-family: 'Cormorant Garamond', sans-serif;
 }
 
@@ -273,7 +659,7 @@
  font-size: 34px;
   
   margin-bottom: 40px;
-    color: #2d2c2a;
+    color: #ebebeb;
   text-align: center;
   text-transform: uppercase;
 }
@@ -298,7 +684,7 @@
   text-align: left;
   font-size: 18px;
   font-weight: 500;
-  color: #2d2c2a;
+  color: #ebebeb;
   cursor: pointer;
   padding: 10px 0;
   transition: color 0.3s ease;
@@ -325,7 +711,7 @@
   opacity: 0;
   font-size: 16px;
   line-height: 1.6;
-  color: #555
+  color: #c7c2bc;
 }
 
 .faq-item.active .faq-answer {
