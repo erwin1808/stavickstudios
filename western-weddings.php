@@ -36,8 +36,7 @@
     /* === Section Title === */
     .media-section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      
+      font-size: 34px;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-align: center;
@@ -88,8 +87,7 @@
       z-index: 3;
       background: rgba(0,0,0,0.6);
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 24px;
       padding: 15px 0;
       text-transform: uppercase;
       letter-spacing: 1px;
