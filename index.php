@@ -21,7 +21,7 @@
         
        .hero {
             position: relative;
-            width: 95vw;
+            width:100vw;
             height: 50vw;
             max-width: 2000px;
             max-height: 800px;
@@ -225,7 +225,7 @@
 
 /* === Title === */
 .lux-title {
-  font-size: 3rem;
+  font-size: 34px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -360,7 +360,7 @@ margin-bottom: -50px;
 .about-names {
     transform: none;
     font-family: 'Cormorant Garamond', sans-serif;
-    font-size: 2rem;
+    font-size: 24px;
     letter-spacing: 2px;
     color: #2d2c2a;
     transform: translateY(-50px);
@@ -369,9 +369,9 @@ margin-bottom: -50px;
 .about-title {
     color: #ebebeb;
     font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     padding-top: 20px;
     margin-left: 0;
     
@@ -379,13 +379,14 @@ margin-bottom: -50px;
 
 .about-desc {
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.12rem;
+    font-size: 16px;
     line-height: 1.7;
     margin-left: 0;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     text-align: justify;
-    font-weight: 200;
+    font-weight: 400;
+    
 }
 
 .about-btn {
@@ -537,7 +538,7 @@ margin-bottom: -50px;
 /* Section Background */
 .experience-section {
   background-color: #ebebeb;
-  padding: 60px 20px;
+  padding: 90px 20px;
   color: #111;
   font-family: 'DM Sans', sans-serif;
 }
@@ -552,7 +553,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-title {
-  font-size: 3rem;
+  font-size: 34px;
   
   margin-bottom: 20px;
   font-family: 'Cormorant Garamond', serif;
@@ -560,7 +561,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-desc {
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 15px;
   line-height: 1.6;
   color: #333;
@@ -569,7 +570,7 @@ margin-bottom: -50px;
 .experience-section-btn {
   display: inline-block;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   padding: 12px 24px;
   border: 1px solid #111;
@@ -609,8 +610,7 @@ margin-bottom: -50px;
 }
 
 .experience-section-title-item {
-  font-size: 3rem;
-  
+  font-size: 24px;
   margin: 0;
   cursor: pointer;
   font-family: 'Cormorant Garamond', serif;
@@ -771,8 +771,7 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 
 /* Headings */
 .lux-heading {
-  font-size: 3rem;
-  
+  font-size: 34px;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Cormorant Garamond', serif;
@@ -781,8 +780,8 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 }
 
 .lux-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #f8f8f8;
@@ -791,7 +790,7 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 
 /* Description */
 .lux-desc-story {
-  font-size: 1.12rem !important;
+  font-size:  16px !important;
   max-width: 800px;
   line-height: 1.8;
   color: #fff;
@@ -804,8 +803,8 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 
 /* Call-to-action */
 .lux-cta {
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 200;
+  font-size: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
@@ -814,7 +813,7 @@ document.querySelectorAll('.experience-section-title-item').forEach(title => {
 /* Buttons */
 .lux-btn {
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
   padding: 12px 28px;
