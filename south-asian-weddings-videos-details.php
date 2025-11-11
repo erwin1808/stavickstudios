@@ -16,23 +16,22 @@ if ($result && $result->num_rows > 0) {
     $cover_photo = htmlspecialchars($row['cover_photo']);
     $message = $row['message'];
 
-// Get YouTube video for this wedding
-$video_sql = "SELECT youtube_id FROM wedding_videos WHERE wedding_id = $id ORDER BY display_order ASC LIMIT 1";
-$video_result = $conn->query($video_sql);
-$has_video = $video_result && $video_result->num_rows > 0;
+    // Get YouTube video for this wedding
+    $video_sql = "SELECT youtube_id FROM wedding_videos WHERE wedding_id = $id ORDER BY display_order ASC LIMIT 1";
+    $video_result = $conn->query($video_sql);
+    $has_video = $video_result && $video_result->num_rows > 0;
 
-if ($has_video) {
-    $video = $video_result->fetch_assoc();
-    $youtube_url = htmlspecialchars($video['youtube_id']);
+    if ($has_video) {
+        $video = $video_result->fetch_assoc();
+        $youtube_url = htmlspecialchars($video['youtube_id']);
 
-    // Extract YouTube video ID from a full URL or short link
-    if (preg_match('/(?:v=|\/|embed\/|youtu\.be\/)([0-9A-Za-z_-]{11})/', $youtube_url, $matches)) {
-        $youtube_id = $matches[1];
-    } else {
-        $youtube_id = $youtube_url; // fallback if only ID is stored
+        // Extract YouTube video ID from a full URL or short link
+        if (preg_match('/(?:v=|\/|embed\/|youtu\.be\/)([0-9A-Za-z_-]{11})/', $youtube_url, $matches)) {
+            $youtube_id = $matches[1];
+        } else {
+            $youtube_id = $youtube_url; // fallback if only ID is stored
+        }
     }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -46,16 +45,20 @@ if ($has_video) {
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/modernline-personal-use" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add Font Awesome for play icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
         
         body {
-          font-family: 'Cormorant Garamond', serif;
-      color: #2d2c2a;
-      background-color: #ebebeb;
-      overflow-x: hidden;
+            font-family: 'Cormorant Garamond', serif;
+            color: #2d2c2a;
+            background-color: #ebebeb;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
         }
         
         h1, h2, h3, h4 {
@@ -70,35 +73,105 @@ if ($has_video) {
             transition: all 0.3s ease;
         }
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 0 50px;
-            width: 100vw;
-            max-width: none;
-            margin: 0;
+        /* Video Section */
+        .video-section {
+            padding: 3rem 1rem;
+            background-color: #ebebeb;
         }
 
-        .hero-image {
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Standard YouTube ratio */
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            filter: brightness(0.8);
-            display: block;
-            z-index: -1;
+            border: none;
+        }
+
+        /* Custom Play Button Overlay */
+        .play-button-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .play-button-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button i {
+            color: #2d2c2a;
+            font-size: 2rem;
+            margin-left: 4px; /* Adjusts the play icon to be centered */
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-wrapper:hover .play-button-overlay {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .no-video {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #2d2c2a;
+            font-style: italic;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .no-video p {
+            font-size: 1.1rem;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Info Section */
         .info-section {
-            padding: 4rem 0rem;
+            padding: 3rem 1rem;
             background-color: #7c806f;
         }
 
@@ -107,39 +180,44 @@ if ($has_video) {
             align-items: stretch;
             max-width: 1200px;
             margin: 0 auto;
+            gap: 2rem;
         }
 
         /* Left Column */
         .info-left {
-            transform: translateX(-100px);
             flex: 1;
-            padding: 2rem;
+            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            justify-content: center;
         }
 
         .info-name {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 700;
-            line-height: 0.8;
-            margin-bottom: 1rem;
+            line-height: 0.9;
+            margin-bottom: 1.5rem;
         }
         
         .info-name .bride_name {
-             font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            font-size: 42px;
+            font-size: 3.5rem;
             color: #ebebeb;
+            display: block;
+            line-height: 1;
         }
 
         .info-name .groom_name {
-             font-family: 'Cormorant Garamond', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            font-size: 42px;
-            margin: 0;
+            font-size: 3rem;
             color: #ebebeb;
+            display: block;
+            line-height: 1;
+            margin-top: 0.5rem;
         }
 
         .info-name .full-name {
@@ -147,9 +225,10 @@ if ($has_video) {
         }
 
         .info-location {
-            font-size: 24px;
-            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
             color: #ebebeb;
+            font-weight: 400;
         }
 
         .info-logo img {
@@ -158,78 +237,38 @@ if ($has_video) {
         }
 
         .vertical-divider {
-            height: 350px;
-            transform: translate(-10rem,-1rem);
-            width: 2px;
+            width: 1px;
             background-color: #ebebeb;
-            margin: 0 2rem;
+            margin: 0 1rem;
+            align-self: stretch;
         }
 
         /* Right Column */
         .info-right {
             font-family: 'Montserrat', sans-serif;
-            transform: translate(-10rem, -.3rem);
             flex: 2;
-            padding: 2rem 0 2rem 0.5rem;
-            font-size: 16px;
-            line-height: 1.6;
+            padding: 1rem 0 1rem 1rem;
+            font-size: 1rem;
+            line-height: 1.7;
             text-align: justify;
             color: #ebebeb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        /* Video Section */
-   .video-section {
-    padding: 4rem 2rem;
-}
-
-.video-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 21 / 9; /* perfect ratio instead of padding-bottom hack */
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    object-fit: cover; /* ensures video fills the space nicely */
-}
-
-
-        .no-video {
-            text-align: center;
-            padding: 4rem;
-            color: var(--textcolor);
-            font-style: italic;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .info-right p {
+            margin-bottom: 1.5rem;
         }
 
-        .no-video p {
-            font-size: 1rem;
-            margin: 0;
+        .info-right p:last-child {
+            margin-bottom: 0;
         }
 
-        /* Mobile Responsiveness */
+        /* ===== MOBILE RESPONSIVENESS ===== */
+        
+        /* Tablets and smaller desktops */
         @media (max-width: 1024px) {
-            .hero {
-                height: 50vh;
-            }
-            
             .info-name .bride_name {
                 font-size: 3rem;
             }
@@ -237,94 +276,244 @@ if ($has_video) {
             .info-name .groom_name {
                 font-size: 2.5rem;
             }
-        }
-
-        @media (max-width: 956px) {
-            .hero {
-                transform: translateY(-10px);
-                height: 40vh;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .info-section {
-                margin-top: 0px;
-                padding: 2rem 1rem;
-            }
-
-            .logotitle {
-                display: none;
-            }
-
-            .info-wrapper {
-                margin-top: -280px;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .info-left {
-                transform: translateX(0);
-                padding: 1.5rem 1rem;
-                margin-bottom: 3.5rem;
-            }
-
-            .info-name {
-                margin-bottom: 1rem;
-                margin-left: 0;
-            }
-
-            .info-name .bride_name {
-                display: none;
-            }
-
-            .info-name .groom_name {
-                display: none;
-            }
-
-            .info-name .full-name {
-                margin-left: -10px;
-                display: inline;
-                font-size: 3rem;
-                transform: translateY(-1rem);
-                margin-top: -40px;
-            }
-
+            
             .info-location {
-                margin-left: 0;
-                font-size: 2.5rem;
+                font-size: 1.6rem;
             }
-
-            .info-logo img {
-                margin-left: 0px;
-                max-width: 60px;
-                margin-top: -1rem;
-                margin-bottom: 10px;
+            
+            .info-wrapper {
+                gap: 1.5rem;
             }
+        }
 
+        /* Large tablets */
+        @media (max-width: 900px) {
+            .video-section {
+                padding: 2.5rem 1rem;
+            }
+            
+            .info-section {
+                padding: 2.5rem 1rem;
+            }
+            
+            .info-name .bride_name {
+                font-size: 2.8rem;
+            }
+            
+            .info-name .groom_name {
+                font-size: 2.3rem;
+            }
+        }
+
+        /* Tablets and small devices */
+        @media (max-width: 768px) {
+            .info-wrapper {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
             .vertical-divider {
                 display: none;
             }
-
+            
             .info-right {
-                margin-top: -80px;
-                transform: none;
+                padding: 0;
+                text-align: left;
+            }
+            
+            .info-left {
                 padding: 1rem;
             }
-
-            .info-section .info-right p {
-                font-size: 1rem;
-                text-align: justify;
-                text-indent: 2em;
-                letter-spacing: 0.8px;
+            
+            .info-name .bride_name,
+            .info-name .groom_name {
+                display: none;
+            }
+            
+            .info-name .full-name {
+                display: block;
+                font-size: 2.5rem;
+                color: #ebebeb;
+                font-weight: 400;
+                line-height: 1;
+                margin-bottom: 1rem;
+                border-bottom: 2px solid #ebebeb;
+                padding-bottom: 0.5rem;
+            }
+            
+            .info-location {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .info-logo img {
+                max-width: 80px;
             }
 
+            /* Smaller play button for mobile */
+            .play-button {
+                width: 70px;
+                height: 70px;
+            }
+
+            .play-button i {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 600px) {
             .video-section {
                 padding: 2rem 1rem;
             }
+            
+            .info-section {
+                padding: 2rem 1rem;
+            }
+            
+            .video-wrapper {
+                border-radius: 8px;
+            }
+            
+            .info-name .full-name {
+                font-size: 2.5rem !important;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            
+            .info-location {
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            
+            .info-logo img {
+                max-width: 70px;
+            }
+            
+            .info-right {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                text-align: left;
+            }
+            
+            .info-right p {
+                margin-bottom: 1.2rem;
+                text-indent: 1.5em;
+                text-align: center;
+            }
+            
+            .no-video {
+                padding: 2rem 1rem;
+            }
+            
+            .no-video p {
+                font-size: 1rem;
+            }
 
-            .video-container {
-                max-width: 100%;
+            /* Even smaller play button for small mobile */
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-button i {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Small mobile phones */
+        @media (max-width: 480px) {
+            .video-section {
+                padding: 1.5rem 0.8rem;
+            }
+            
+            .info-section {
+                padding: 1.5rem 0.8rem;
+            }
+            
+            .info-name .full-name {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .info-location {
+                font-size: 1.3rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .info-logo img {
+                max-width: 60px;
+            }
+            
+            .info-right {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            .info-right p {
+                margin-bottom: 1rem;
+                text-indent: 1.2em;
+            }
+            
+            .video-wrapper {
+                border-radius: 6px;
+            }
+
+            .play-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .play-button i {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Very small mobile phones */
+        @media (max-width: 360px) {
+            .video-section {
+                padding: 1rem 0.5rem;
+            }
+            
+            .info-section {
+                padding: 1rem 0.5rem;
+            }
+            
+            .info-name .full-name {
+                font-size: 1.6rem;
+            }
+            
+            .info-location {
+                font-size: 1.2rem;
+            }
+            
+            .info-right {
+                font-size: 0.85rem;
+            }
+            
+            .info-right p {
+                text-indent: 1em;
+            }
+
+            .play-button {
+                width: 45px;
+                height: 45px;
+            }
+
+            .play-button i {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Fix for very tall mobile screens */
+        @media (max-height: 700px) and (max-width: 768px) {
+            .video-section {
+                padding: 1.5rem 1rem;
+            }
+            
+            .info-section {
+                padding: 1.5rem 1rem;
             }
         }
     </style>
@@ -337,12 +526,18 @@ if ($has_video) {
 <section class="video-section" id="videos">
     <div class="video-container">
         <?php if ($has_video): ?>
-            <div class="video-wrapper">
+            <div class="video-wrapper" id="videoPlayer">
+                <div class="play-button-overlay" id="playOverlay">
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
                 <iframe 
-                    src="https://www.youtube.com/embed/<?= $youtube_id ?>?rel=0" 
+                    src="https://www.youtube.com/embed/<?= $youtube_id ?>?rel=0&enablejsapi=1" 
                     title="Wedding Film - <?= $bride ?> & <?= $groom ?>"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+                    allowfullscreen
+                    id="youtubeIframe">
                 </iframe>
             </div>
         <?php else: ?>
@@ -358,7 +553,7 @@ if ($has_video) {
     <div class="info-wrapper">
         <div class="info-left">
             <div class="info-name">
-                <span class="bride_name"><?= $bride ?></span><br/>
+                <span class="bride_name"><?= $bride ?></span>
                 <span class="groom_name"><?= $groom ?></span>
                 <span class="full-name"><?= $bride ?> + <?= $groom ?></span>
             </div>
@@ -390,6 +585,42 @@ if ($has_video) {
 <?php include 'footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Play button functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const videoWrapper = document.getElementById('videoPlayer');
+    const playOverlay = document.getElementById('playOverlay');
+    const youtubeIframe = document.getElementById('youtubeIframe');
+    
+    if (videoWrapper && playOverlay && youtubeIframe) {
+        // Click on play button or overlay to play video
+        playOverlay.addEventListener('click', function() {
+            // Hide the play button overlay
+            playOverlay.classList.add('hidden');
+            
+            // Get the current iframe src and add autoplay parameter
+            let currentSrc = youtubeIframe.src;
+            if (!currentSrc.includes('autoplay=1')) {
+                // Replace or add autoplay parameter
+                if (currentSrc.includes('?')) {
+                    youtubeIframe.src = currentSrc + '&autoplay=1';
+                } else {
+                    youtubeIframe.src = currentSrc + '?autoplay=1';
+                }
+            }
+        });
+
+        // Optional: Hide play button when video starts playing
+        youtubeIframe.addEventListener('load', function() {
+            // The play button will be hidden when user clicks it
+        });
+
+        // Optional: Show play button again when video ends (if needed)
+        // This would require YouTube API integration for more advanced control
+    }
+});
+</script>
 
 </body>
 </html>

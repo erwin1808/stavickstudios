@@ -236,7 +236,7 @@
 
        <!-- Card 1 -->
  <div class="portfolio-card" onclick="window.location.href='south-asian-weddings-images-details.php?id=1';" style="cursor: pointer;">
-  <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+  <img src="images/Jaclyn-Tyler.jpg" alt="Jaclyn § Tyler">
   <div class="portfolio-couple">Jaclyn § Tyler</div>
 </div>
 
@@ -260,7 +260,7 @@
 
       <!-- Duplicate cards for 12 total -->
       <div class="portfolio-card">
-        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+        <img src="images/Jaclyn-Tyler.jpg" alt="Jaclyn § Tyler">
         <div class="portfolio-couple">Jaclyn § Tyler</div>
       </div>
       <div class="portfolio-card">
@@ -277,7 +277,7 @@
       </div>
 
       <div class="portfolio-card">
-        <img src="images/Jaclyn § Tyler.jpg" alt="Jaclyn § Tyler">
+        <img src="images/Jaclyn-Tyler.jpg" alt="Jaclyn § Tyler">
         <div class="portfolio-couple">Jaclyn § Tyler</div>
       </div>
       <div class="portfolio-card">

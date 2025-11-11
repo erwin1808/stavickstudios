@@ -155,7 +155,7 @@
         <p class="feature-description mb-4">
           Our approach combines artistic vision with a relaxed and natural atmosphere. We focus on the details—the smiles, the glances, the small intimate moments—that transform every session into an emotional experience. From candid laughter to quiet, heartfelt moments, we capture memories you will treasure forever.
         </p>
-        <a href="#pricing" class="btn btn-custom">Book Your Session</a>
+        <a href="contact.php" class="btn btn-custom">Book Your Session</a>
       </div>
     </div>
   </div>
@@ -652,16 +652,17 @@ document.addEventListener("DOMContentLoaded", function() {
   margin-bottom: 10px;
   letter-spacing: 1px;
     color: #ebebeb;
-        font-family: 'Cormorant Garamond', sans-serif;
+     font-weight: 100 !important; 
 }
 
 .faq-subheading {
+  font-family: 'Cormorant Garamond', sans-serif;
  font-size: 34px;
-  
   margin-bottom: 40px;
-    color: #ebebeb;
+  color: #ebebeb;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 100;
 }
 
 .faq-section {

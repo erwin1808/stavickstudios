@@ -365,6 +365,7 @@ margin-bottom: -50px;
     letter-spacing: 2px;
     color: #2d2c2a;
     transform: translateY(-50px);
+    font-weight: 600;
 }
 
 .about-title {

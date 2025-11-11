@@ -275,10 +275,43 @@
                 <input type="email" name="email" id="email" class="form-control" placeholder="Youremail@gmail.com" required>
             </div>
 
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" name="phone" id="phone" class="form-control" placeholder="92915557777">
-            </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" name="phone" id="phone" class="form-control" placeholder="Loading...">
+        </div>
+
+        <script>
+        // Use IP geolocation to detect the user's country
+        fetch('https://ipapi.co/json/')
+          .then(response => response.json())
+          .then(data => {
+            const countryCode = data.country_code; // e.g. "US", "GB", "PH"
+            const phoneInput = document.getElementById('phone');
+            let placeholder = "Enter phone number";
+
+            // Sample phone number formats by country
+            const samples = {
+              US: "+1 415 555 2671",
+              GB: "+44 7700 900123",
+              IN: "+91 98765 43210",
+              CA: "+1 604 555 0189",
+              AU: "+61 400 123 456",
+              PH: "+63 912 345 6789" // Philippines 🇵🇭
+            };
+
+            // Set placeholder if country detected
+            if (samples[countryCode]) {
+              placeholder = samples[countryCode];
+            }
+
+            phoneInput.placeholder = placeholder;
+          })
+          .catch(err => {
+            console.error("Geolocation failed:", err);
+            document.getElementById('phone').placeholder = "+63 912 345 6789"; // default to PH fallback
+          });
+        </script>
+
 
             <div class="form-group datepicker-wrapper">
                 <label for="wedding-date">Wedding Date</label>
