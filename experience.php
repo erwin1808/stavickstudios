@@ -21,7 +21,7 @@
     }
 
     /* === HERO SECTION === */
-  .hero {
+.hero {
   position: relative;
   width: 100vw;
   height: 35vw;
@@ -34,15 +34,52 @@
   justify-content: center;
 }
 
-.hero-video {
+.hero-image {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: translate(-50%, -50%);
+  object-fit: cover; /* ensures image covers the container */
+  transform: translate(-50%, -50%); /* centers the image */
   z-index: 1;
+}
+
+
+/* Vertical Nav in Hero */
+.hero-nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* stack links vertically */
+  gap: 20px; /* spacing between links */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  text-align: center;
+}
+
+.hero-nav a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.hero-nav a:hover {
+  color: #7c806f;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-nav a {
+    font-size: 1rem;
+  }
+  .hero-nav {
+    gap: 15px;
+  }
 }
 
 
@@ -130,15 +167,22 @@
 
 <!-- === HERO SECTION === -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline>
-    <source src="videos/Stavick Studios - Website background video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <img src="images/vision.jpg" alt="Hero Image" class="hero-image">
+
+  <!-- Vertical Nav Links -->
+  <div class="hero-nav">
+    <a href="#section-feature">About</a>
+    <a href="#pricing-section">Pricing</a>
+    <a href="#faq-wrapper">FAQ</a>
+  </div>
 </section>
 
 
+
+
+
 <!-- === NEW SECTION: Image Left, Text Right === -->
-<section class="section-feature py-5">
+<section id="section-feature" class="section-feature py-5">
   <div class="container">
     <div class="row align-items-start gx-0"> <!-- remove horizontal spacing -->
       <!-- Left Column: Portrait Image -->
@@ -256,7 +300,7 @@
 
 
 <!-- Pricing & Packages Section -->
-<section class="pricing-section">
+<section id= "pricing-section"class="pricing-section">
   <!-- Parallax Background -->
   <div class="pricing-parallax" style="background-image: url('images/DJI_0292.jpg');"></div>
 
@@ -524,7 +568,7 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <!-- FAQ SECTION -->
-<section class="faq-wrapper">
+<section id="faq-wrapper" class="faq-wrapper">
   <h2 class="faq-heading">NEED HELP?​​</h2>
   <div class="faq-section">
     <h3 class="faq-subheading">Frequently Asked Questions</h3>
@@ -728,14 +772,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 @media screen and (max-width: 768px){
   .faq-wrapper {
-    margin-top: -100px;
+    margin-top: -50px;
     margin-bottom: -250px;
+  }
+    .faq-heading {
+    font-size: 20px;
+  }
+  .faq-subheading {
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
  .faq-wrapper {
-    margin-top: -100px;
+    margin-top: -50px;
     margin-bottom: -250px;
+  }
+     .faq-heading {
+    font-size: 20px;
+  }
+    .faq-subheading {
+    font-size: 28px;
   }
 }
 
@@ -749,6 +805,266 @@ document.addEventListener("DOMContentLoaded", function() {
       item.classList.toggle('active');
     });
   });
+</script>
+<!-- Font Awesome CDN (add in <head> if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<section class="experience-section">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Left Column (30%) -->
+      <div class="experience-section-left col-lg-4 col-md-12">
+        <p class="experience-section-pretitle">EXPECT MORE</p>
+        <h2 class="experience-section-title">PICTURE-PERFECT EXPERIENCE</h2>
+        <p class="experience-section-desc">
+          We're dedicated and passionate about our craft.
+        </p>
+        <p class="experience-section-desc">
+          But, we’re equally committed to providing you with an effortless and enjoyable experience.
+        </p>
+        <a href="services.php" class="experience-section-btn">MORE OF WHAT YOU'LL EXPERIENCE</a>
+      </div>
+
+      <!-- Right Column (70%) -->
+      <div class="experience-section-right col-lg-8 col-md-12" id="experience-section-right">
+        
+        <!-- Item 1 -->
+        <div class="experience-section-item">
+          <div class="experience-section-number">1</div>
+          <div class="experience-section-content">
+            <h3 class="experience-section-title-item" data-toggle="exp-desc-1">
+              Devoted Connection <i class="fas fa-arrow-down experience-section-arrow"></i>
+            </h3>
+            <p class="experience-section-desc-item" id="exp-desc-1">
+              We’ll start by personally connecting with you, to gain a deeper understanding of you and your story.
+              The bond we create allows you to trust us. And it allows us to fully capture you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="experience-section-item">
+          <div class="experience-section-number">2</div>
+          <div class="experience-section-content">
+            <h3 class="experience-section-title-item" data-toggle="exp-desc-2">
+              Thoughtful Moments <i class="fas fa-arrow-down experience-section-arrow"></i>
+            </h3>
+            <p class="experience-section-desc-item" id="exp-desc-2">
+              By discovering and honoring your wants, needs, and priorities, we’ll thoughtfully capture and edit the
+              moments and people that matter most to you.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="experience-section-item">
+          <div class="experience-section-number">3</div>
+          <div class="experience-section-content">
+            <h3 class="experience-section-title-item" data-toggle="exp-desc-3">
+              Positive Presence <i class="fas fa-arrow-down experience-section-arrow"></i>
+            </h3>
+            <p class="experience-section-desc-item" id="exp-desc-3">
+              We bring a positive, calming presence. And maintain a helpful and friendly demeanor from start to finish.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="experience-section-item">
+          <div class="experience-section-number">4</div>
+          <div class="experience-section-content">
+            <h3 class="experience-section-title-item" data-toggle="exp-desc-4">
+              Personal Touch <i class="fas fa-arrow-down experience-section-arrow"></i>
+            </h3>
+            <p class="experience-section-desc-item" id="exp-desc-4">
+              We personally edit your photos and film in-house—using carefully-selected music and audio, natural light,
+              and a touch of personal creativity.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Background */
+.experience-section {
+  background-color: #ebebeb;
+  padding: 90px 20px;
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Left Column */
+.experience-section-pretitle {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.experience-section-title {
+  font-size: 34px;
+  
+  margin-bottom: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #111;
+}
+
+.experience-section-desc {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.experience-section-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 1px solid #111;
+  border-radius: 40px;
+  color: #111;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.experience-section-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* Right Column Items */
+.experience-section-item {
+  display: flex;
+  align-items: flex-start; /* change to center vertically with title */
+  margin-bottom: 25px;
+}
+
+.experience-section-number {
+  font-size: 1.5rem;
+  
+  margin-right: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  color: #111;
+  line-height: 1; /* make sure number aligns with title */
+  display: flex;
+  align-items: center; /* vertically center with title */
+  margin-top: 5px;
+}
+.experience-section-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-section-title-item {
+  font-size: 26px;
+  margin: 0;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+  color: #111;
+}
+
+.experience-section-title-item:hover {
+  color: #555;
+}
+
+.experience-section-arrow {
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Smooth slide-down description */
+.experience-section-desc-item {
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+  color: #333;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.experience-section-desc-item.open {
+  max-height: 500px; /* enough to show content */
+  padding-top: 10px;
+}
+
+/* Open state arrow rotates */
+.experience-section-title-item.active .experience-section-arrow {
+  transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 60px 30px;
+    margin-top: 200px;
+  }
+  .experience-section-title {
+    font-size: 2rem;
+  }
+  .experience-section-title-item {
+    transform: translateY(7px);
+  }
+  .experience-section-btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .experience-section {
+    padding: 40px 15px;
+  }
+
+  .experience-section-title {
+    font-size: 34px;
+  }
+
+  .experience-section-title-item {
+    font-size: 24px;
+  }
+
+  .experience-section-number {
+    font-size: 1.4rem;
+    margin-right: 12px;
+  }
+}
+</style>
+
+<script>
+// Toggle accordion with smooth slide
+document.querySelectorAll('.experience-section-title-item').forEach(title => {
+  title.addEventListener('click', () => {
+    const targetId = title.getAttribute('data-toggle');
+    const desc = document.getElementById(targetId);
+
+    const isOpen = desc.classList.contains('open');
+
+    document.querySelectorAll('.experience-section-desc-item').forEach(el => el.classList.remove('open'));
+    document.querySelectorAll('.experience-section-title-item').forEach(el => el.classList.remove('active'));
+
+    if (!isOpen) {
+      desc.classList.add('open');
+      title.classList.add('active');
+    }
+  });
+});
 </script>
 
 

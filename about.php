@@ -73,39 +73,170 @@
 </head>
 <body>
 <?php include 'navbar.php'; ?>
-<!-- VIDEOGRAPHY & PHOTOGRAPHY SECTION -->
-<section style="background-color: #ebebeb; color: #2d2c2a; padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; ">
-  
-  <!-- Photo of the Couple -->
-  <div style="flex: 1 1 300px; max-width: 400px; text-align: center;">
-    <img src="images/EJSarahNR-2-1-683x1024.jpg" alt="Sarah & Ej" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+<!-- ========================================================= -->
+<!-- A BIT MORE ABOUT US — TWO COLUMN LAYOUT (ALTERNATING ROWS) -->
+<!-- ========================================================= -->
+
+<section class="about-couple-section">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <h2 class="about-couple-title">
+      A BIT MORE ABOUT US<br>
+      HERE’S TO MY BETTER HALF
+    </h2>
+
+    <!-- ROW 1 — Image Left / Text Right -->
+    <div class="about-row">
+      <div class="about-image">
+        <img src="images/Mask-Group-1-898x1024.jpg" alt="Ej">
+      </div>
+      <div class="about-text">
+        <h3>EJ ACCORDING TO SARAH</h3>
+        <p>
+          My husband is my rock, my protector, and my constant support system. As a family of four, he works tirelessly to make sure we have everything we need and more. He is the hardest-working person I know, and I am in awe of his dedication and determination.
+        </p>
+        <p>
+          Through thick and thin, my husband has always been there for me, accepting my faults and loving me unconditionally. He takes care of me in every possible way, and I feel so lucky to have him as my partner.
+        </p>
+      </div>
+    </div>
+
+    <!-- ROW 2 — Image Right / Text Left -->
+    <div class="about-row reverse">
+      <div class="about-image">
+        <img src="images/Mask-Group-2-898x1024.jpg" alt="Sarah">
+      </div>
+      <div class="about-text">
+        <h3>SARAH ACCORDING TO EJ</h3>
+        <p>
+          My beloved wife is a true gem, a kind and mindful person who loves nothing more than helping people. She is the one who always goes the extra mile to make sure everyone is happy and taken care of.
+        </p>
+        <p>
+          Her love for food and travel is contagious, and I am always amazed at her ability to find the best local food truck and places wherever we go. She takes the most amazing photos, capturing memories that we will cherish forever.
+        </p>
+      </div>
+    </div>
+
   </div>
-  
-  <!-- Text Content -->
-  <div style="flex: 2 1 500px; max-width: 700px;">
-    <!-- Header -->
-     <h4 style="font-size: 24px;">   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
-    <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 34px;
-   line-height: 1.2; margin-bottom: 40px;">
-   
-      ONE-OF-A-KIND MEMORIES. ONE-OF-A-KIND LOVE.
-    </h1>
-    
-    <!-- Description -->
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
-      Our love story began ten years ago before we ever dated. Although we always had a crush on each other, it wasn’t until Sarah rejected Ej. A year later another attempt, and asked her on a date to their favorite place at CHIPOTLE! We both love to travel and spend time together as a family.
-    </p>
-    
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
-      Our journey as wedding creatives didn’t just happen and we want to let you into the backstory of how that came about. Ej was a FedEx driver for nine years before quitting his full-time job to follow his passion for filming. Sarah was in the medical field until we both decided to team up together. Sarah loves to take pictures and capture authentic moments to create a story.
-    </p>
-    
-    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: -60px;">
-      Today, we’re engaged and planning a wedding of our own. So, we know a thing or two about finding one-of-a-kind love. And we understand how much your film and photos mean to you. We welcome and embrace this honor and responsibility, and promise to approach it with LOVE, PASSION, AND PURPOSE.
-    </p>
-  </div>
-  
 </section>
+<style>
+  .about-couple-section {
+  background-color: #ebebeb;
+  padding: 100px 20px;
+  color: #2d2c2a;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.about-couple-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 70px;
+}
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+  justify-content: center; /* CENTER THE ENTIRE ROW */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+  justify-content: center; /* also center reversed rows */
+}
+
+/* IMAGE SIDE */
+.about-image img {
+  width: 300px;  /* fixed width */
+  height: 400px; /* fixed height */
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+/* TEXT SIDE */
+.about-text {
+  max-width: 500px; /* keeps text block consistent */
+  text-align: left;
+}
+
+/* TEXT STYLING */
+.about-text h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ========================== */
+/* MOBILE RESPONSIVE STYLING */
+/* ========================== */
+@media (max-width: 992px) {
+  .about-row {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 30px;
+  }
+  .about-text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+    .about-image img {
+  width: 200px;  /* fixed width */
+  height: 300px; /* fixed height */
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+  .about-text p:last-child {
+  margin-bottom: -50px; /* adjust as needed */
+}
+}
+
+@media (max-width: 576px) {
+  .about-couple-title {
+    font-size: 26px;
+  }
+  .about-text h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .about-text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  .about-text p:last-child {
+  margin-bottom: -50px; /* adjust as needed */
+}
+    .about-image img {
+  width: 200px;  /* fixed width */
+  height: 300px; /* fixed height */
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+.about-row.reverse .about-text {
+  margin-bottom: -100px;
+}
+}
+
+</style>
 
 
 
@@ -189,171 +320,40 @@
 </style>
 
 <div class="section-divider"></div>
-<!-- A BIT MORE ABOUT US SECTION WITH SWIPE AND SAME LAYOUT -->
-<section class="about-couple" style="background-color: #ebebeb; color: #2d2c2a; padding: 100px 20px; text-align: center;">
-  <div style="max-width: 1000px; margin: 0 auto;">
 
-    <!-- Section Header -->
-    <h2 class="section-title" style="font-family: 'Cormorant Garamond', serif;   font-size: 34px;
-   margin-bottom: 60px; margin-top: -25px">
-      A BIT MORE ABOUT US<br>
-      HERE’S TO MY BETTER HALF
-    </h2>
-
-    <!-- Carousel Container -->
-    <div id="aboutCarousel" style="position: relative; overflow: hidden;">
-
-      <!-- Slides Wrapper -->
-      <div class="slides-wrapper" style="display: flex; transition: transform 0.5s ease;">
-
-        <!-- Ej Slide -->
-        <div class="slide" style="min-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px;">
-      <div class="image-container">
-  <img src="images/Mask-Group-1-898x1024.jpg" alt="Ej">
-</div>
-          <div style="flex: 2 1 500px; text-align: left;">
-            <h3 style="font-family: 'Cormorant Garamond', serif; font-size:  24px; margin-bottom: 20px;">EJ ACCORDING TO SARAH</h3>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
-              My husband is my rock, my protector, and my constant support system. As a family of four, he works tirelessly to make sure we have everything we need and more. He is the hardest-working person I know, and I am in awe of his dedication and determination.
-            </p>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify;">
-              Through thick and thin, my husband has always been there for me, accepting my faults and loving me unconditionally. He takes care of me in every possible way, and I feel so lucky to have him as my partner.
-            </p>
-          </div>
-        </div>
-
-        <!-- Sarah Slide -->
-        <div class="slide" style="min-width: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 40px; margin-bottom: 80px; flex-direction: row-reverse;">
-              <div class="image-container">
-          <img src="images/Mask-Group-2-898x1024.jpg" alt="Sarah & Ej">
-        </div>
-          <div style="flex: 2 1 500px; text-align: left;">
-            <h3 style="font-family: 'Cormorant Garamond', serif; font-size:  24px; margin-bottom: 20px;">SARAH ACCORDING TO EJ</h3>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px;text-align: justify;">
-              My beloved wife is a true gem, a kind and mindful person who loves nothing more than helping people. She is the one who always goes the extra mile to make sure everyone is happy and taken care of.
-            </p>
-            <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify;">
-              Her love for food and travel is contagious, and I am always amazed at her ability to find the best local food truck and places wherever we go. She takes the most amazing photos, capturing memories that we will cherish forever. But what I love most about my wife is how much she values spending time with family.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    
-
-    </div>
-      <!-- Right Arrow -->
-    <button id="nextBtn" 
-        style="position: absolute; 
-               right: 300px; 
-               transform: translateY(-350px); /* arrow pointing right */
-               background: #2d2c2a; 
-               color: #ebebeb; 
-               border: none; 
-               width: 60px; 
-               height: 60px; 
-               border-radius: 50%; /* perfect circle */
-               cursor: pointer; 
-               font-size: 1.5rem; 
-               display: flex; 
-               align-items: center; 
-               justify-content: center;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-</svg>
-    </button>
-
-    <!-- Left Arrow -->
-    <button id="prevBtn" 
-            style="position: absolute; 
-                  left: 300px; 
-                  transform: translateY(-350px); 
-                  background: #2d2c2a; 
-                  color: #ebebeb; 
-                  border: none; 
-                  width: 60px; 
-                  height: 60px; 
-                  border-radius: 50%; 
-                  cursor: pointer; 
-                  font-size: 1.5rem; 
-                  display: none; /* start hidden */
-                  align-items: center; 
-                  justify-content: center;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-      </svg>
-    </button>
-
-
-
+<section style="background-color: #ebebeb; color: #2d2c2a; padding: 80px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; ">
+  
+  <!-- Photo of the Couple -->
+  <div style="flex: 1 1 300px; max-width: 400px; text-align: center;">
+    <img src="images/EJSarahNR-2-1-683x1024.jpg" alt="Sarah & Ej" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
   </div>
+  
+  <!-- Text Content -->
+  <div style="flex: 2 1 500px; max-width: 700px;">
+    <!-- Header -->
+     <h4 style="font-size: 24px;">   UNIQUE. CAPTIVATING. EMOTIONAL.<br></h4>
+    <h1 style="font-family: 'Cormorant Garamond', serif;   font-size: 34px;
+   line-height: 1.2; margin-bottom: 40px;">
+   
+      ONE-OF-A-KIND MEMORIES. ONE-OF-A-KIND LOVE.
+    </h1>
+    
+    <!-- Description -->
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+      Our love story began ten years ago before we ever dated. Although we always had a crush on each other, it wasn’t until Sarah rejected Ej. A year later another attempt, and asked her on a date to their favorite place at CHIPOTLE! We both love to travel and spend time together as a family.
+    </p>
+    
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify;">
+      Our journey as wedding creatives didn’t just happen and we want to let you into the backstory of how that came about. Ej was a FedEx driver for nine years before quitting his full-time job to follow his passion for filming. Sarah was in the medical field until we both decided to team up together. Sarah loves to take pictures and capture authentic moments to create a story.
+    </p>
+    
+    <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.8; text-align: justify; margin-bottom: -60px;">
+      Today, we’re engaged and planning a wedding of our own. So, we know a thing or two about finding one-of-a-kind love. And we understand how much your film and photos mean to you. We welcome and embrace this honor and responsibility, and promise to approach it with LOVE, PASSION, AND PURPOSE.
+    </p>
+  </div>
+  
 </section>
-<style>/* Mobile Optimization Only */
-@media (max-width: 992px) {
-  /* Stack slide content vertically on tablets/small desktops */
-  #aboutCarousel .slide {
-    flex-direction: column !important;
-    gap: 20px !important;
-    margin-bottom: 60px !important;
-  }
-  .section-title {
-    font-size:  24px !important;
-  }
-  .about-couple{
-    margin-top: -120px !important;
-  }
-  #aboutCarousel .slide div {
-    text-align: center !important;
-  }
 
-  #aboutCarousel .slide-content {
-    flex: unset !important;
-    width: 100% !important;
-  }
-
-  #aboutCarousel .slide-image {
-    flex: unset !important;
-    width: 80% !important;
-    margin: 0 auto !important;
-  }
-
-  /* Adjust arrows for smaller screens */
-  #nextBtn, #prevBtn {
-    right: 175px !important;
-    left: 175px !important;
-    transform: translateY(-75%) !important;
-    width: 45px !important;
-    height: 45px !important;
-    font-size: 1.2rem !important;
-  }
-
-  #prevBtn { left: 175px !important; }
-  #nextBtn { right: 175px !important; }
-}
-
-@media (max-width: 576px) {
-  /* Stack content fully for mobile phones */
-  #aboutCarousel .slide-content p {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    text-align: justify !important;
-  }
-
-  #aboutCarousel .slide-content h3 {
-    font-size: 1.5rem !important;
-    margin-bottom: 15px !important;
-  }
-
-  #aboutCarousel .slide-image {
-    width: 100% !important;
-  }
-
-  #aboutCarousel .slide {
-    margin-bottom: 40px !important;
-  }
-}
-</style>
 <!-- JavaScript Carousel -->
 <script>
   const slidesWrapper = document.querySelector('#aboutCarousel .slides-wrapper');

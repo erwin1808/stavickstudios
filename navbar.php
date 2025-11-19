@@ -47,12 +47,53 @@
 
 /* Full-screen mobile navbar */
 @media (max-width: 991.98px) {
+
+    /* Navbar bar itself */
     .navbar {
+        position: relative;
+        z-index: 10010;
+        padding: 10px 15px; /* smaller spacing */
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* <-- forces left + right alignment */
+    }
+
+    /* Ensure container uses flex correctly */
+    .navbar .container-fluid {
         padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* left = logo / right = button */
     }
-        .navbar-brand img {
-        height: 40px; /* even smaller on mobile */
+
+    /* LOGO left */
+    .navbar-brand img {
+        margin: 0;
+        height: 35px;
+        width: auto;
+        position: relative;
+        z-index: 10002;
     }
+
+    /* MENU/CLOSE button right */
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #2d2c2a !important;
+        z-index: 10003;
+    }
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+    .navbar-toggler-icon {
+        display: none;
+    }
+
+    /* FULLSCREEN MENU PANEL */
     .navbar-collapse {
         position: fixed;
         top: 0;
@@ -61,7 +102,7 @@
         height: 100vh;
         background-color: #ebebeb;
         z-index: 9999;
-        padding-top: 70px;
+        padding-top: 120px; /* space for top bar (logo + button) */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -72,15 +113,19 @@
     .navbar-collapse.show {
         transform: translateX(0);
     }
+
+    /* Menu list inside fullscreen panel */
     .navbar-nav {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        transform: translateY(100px);
+        transform: translateY(50px);
     }
+
     .navbar-nav .nav-item {
         margin: 15px 0;
     }
+
     .dropdown-menu {
         position: static;
         background-color: #ebebeb !important;
@@ -89,14 +134,12 @@
         width: 100%;
         text-align: center;
     }
+
     .dropdown-item {
         padding: 10px 0;
     }
-    .navbar-toggler {
-        z-index: 10001;
-        margin-right: 20px;
-    }
 }
+
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light">
@@ -106,28 +149,57 @@
             <img src="images/header-logo.png" alt="Logo">
         </a>
 
-        <!-- Hamburger button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Menu button -->
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="menu-text">MENU</span>
+</button>
+
 
         <!-- Centered nav links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.php">SERVICES</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
-                        PORTFOLIO
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
-                        <li><a class="dropdown-item" href="south-asian-weddings.php">SOUTH ASIAN WEDDINGS</a></li>
-                        <li><a class="dropdown-item" href="western-weddings.php">WESTERN WEDDINGS</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="experience.php">EXPERIENCE</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.php">CONTACT</a></li>
-            </ul>
+<ul class="navbar-nav">
+
+    <!-- MOBILE ONLY HOME LINK -->
+    <li class="nav-item d-block d-lg-none">
+        <a class="nav-link" href="index.php">HOME</a>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
+    <li class="nav-item"><a class="nav-link" href="services.php">SERVICES</a></li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
+            PORTFOLIO
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+            <li><a class="dropdown-item" href="south-asian-weddings.php">SOUTH ASIAN WEDDINGS</a></li>
+            <li><a class="dropdown-item" href="western-weddings.php">WESTERN WEDDINGS</a></li>
+        </ul>
+    </li>
+
+    <li class="nav-item"><a class="nav-link" href="experience.php">EXPERIENCE</a></li>
+    <li class="nav-item"><a class="nav-link" href="contact.php">CONTACT</a></li>
+
+</ul>
+
         </div>
     </div>
 </nav>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const menuText = document.querySelector(".menu-text");
+    const navbarCollapse = document.getElementById("navbarNav");
+
+    toggler.addEventListener("click", function () {
+        setTimeout(() => {
+            if (navbarCollapse.classList.contains("show")) {
+                menuText.textContent = "MENU";
+            } else {
+                menuText.textContent = "CLOSE";
+            }
+        }, 150); // waits for animation
+    });
+});
+</script>
+

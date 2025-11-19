@@ -233,33 +233,37 @@
 </p>
 
 </section>
-
 <!-- HOW IT WORKS SECTION -->
 <section style="background-color: #ebebeb; color: #2d2c2a; padding: 60px 15px;">
   <div style="max-width: 1200px; margin: 0 auto;">
 
     <h2 style="font-size: 34px;
-  
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 1rem;
-  color: #2d2c2a; text-align: center; margin-bottom: 100px; margin-top: -50px;">
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 1rem;
+      color: #2d2c2a; 
+      text-align: center; 
+      margin-bottom: 100px; 
+      margin-top: -50px;">
       HOW IT WORKS
     </h2>
 
     <!-- VISION ROW -->
     <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <img src="images/vision.jpg" alt="Vision" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+        <div class="landscape-img">
+          <img src="images/vision.jpg" alt="Vision">
+        </div>
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 26px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 1rem;
-  color: #2d2c2a; margin-bottom: 10px; text-align: left;">VISION</h3>
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: 'Cormorant Garamond', serif;
+          margin-bottom: 10px;
+          color: #2d2c2a; 
+          text-align: left;">VISION</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           The best way to meet and exceed your expectations is to have a clear picture of what those expectations are. So, we'll start with a video call to get to know more about you, your needs, and what you envision for your photos and films.
         </p>
@@ -269,16 +273,18 @@
     <!-- APPROACH ROW (REVERSED) -->
     <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px; flex-direction: row-reverse;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <img src="images/approach.jpeg" alt="Approach" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+        <div class="landscape-img">
+          <img src="images/approach.jpeg" alt="Approach">
+        </div>
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 26px;
-  
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 1rem;
-  color: #2d2c2a; margin-bottom: 10px; text-align: right;">APPROACH</h3>
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: 'Cormorant Garamond', serif;
+          margin-bottom: 10px;
+          color: #2d2c2a; 
+          text-align: right;">APPROACH</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           Whether you choose photos, videos, or both, we'll send you a detailed questionnaire to confirm the details and dynamics of your day. By understanding your priorities—and the plan—we can prepare a solid approach to preserve your day.
         </p>
@@ -288,16 +294,18 @@
     <!-- CRAFT ROW -->
     <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <img src="images/craft.jpg" alt="Craft" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+        <div class="landscape-img">
+          <img src="images/craft.jpg" alt="Craft">
+        </div>
       </div>
       <div style="flex: 2 1 500px;">
         <h3 style="font-size: 26px;
-  
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-family: 'Cormorant Garamond', serif;
-  margin-bottom: 1rem;
-  color: #2d2c2a; margin-bottom: 10px; text-align: left;">CRAFT</h3>
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: 'Cormorant Garamond', serif;
+          margin-bottom: 10px;
+          color: #2d2c2a; 
+          text-align: left;">CRAFT</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           We'll focus on the real moments and unique details that enhance your photos and film and encompass the full story of your day. Maintaining natural light, real colors, and true beauty ensures nothing short of an exceptional final result.
         </p>
@@ -306,7 +314,26 @@
 
   </div>
 </section>
+
 <style>
+.landscape-img {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.landscape-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media screen and (max-width: 768px){
   .how-row p:last-child {
     margin-bottom: 0;
@@ -317,8 +344,8 @@
     margin-bottom: 0;
   }
 }
-
 </style>
+
 
 <!-- MEDIA FEATURES SECTION -->
 <section class="media-features">

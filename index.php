@@ -127,11 +127,13 @@
     </div>
 
     <!-- 2nd Row: Title -->
-    <div class="row mb-4">
-      <div class="col">
-        <h1 class="lux-title">Eternal Moments Photography</h1>
-      </div>
-    </div>
+<div class="row mb-4">
+  <div class="col">
+    <h1 class="lux-title">Preserving Your Legacy</h1>
+    <p class="lux-subtext">Through Elegant, Artful Imagery Designed to Withstand the Passage of Time</p>
+  </div>
+</div>
+
 
     <!-- 3rd Row: Vimeo Video Cover with Badge -->
 <div class="row mb-4">
@@ -201,40 +203,34 @@
   </div>
 </section>
 
-<style>/* === Section Wrapper === */
+<style>
+  /* === Section Wrapper === */
 .lux-section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  padding: 60px 20px; /* desktop spacing */
-}
-.lux-logo {
-  top: -40px;
-}
 @media (max-width: 576px) {
   .lux-section {
-    padding: 20px 10px; /* tighter spacing on phones */
-  }
-
-  .lux-section .row {
-    margin-bottom: 0.75rem !important; /* rows closer together */
-  }
-
-  .lux-section .row:last-child {
-    margin-bottom: 0 !important; /* remove last gap */
+    padding: 30px 15px;
   }
 }
 
 /* === Title === */
 .lux-title {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 34px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #2d2c2a;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
   .lux-title {
     font-size: 2rem;
     letter-spacing: 1px;
-    margin-bottom: -200px;
+    margin-bottom: 8px;
   }
 }
 
@@ -242,6 +238,16 @@
   .lux-title {
     font-size: 1.6rem;
   }
+}
+
+/* === Subtext === */
+.lux-subtext {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.05rem;
+  color: #4a4947;
+  margin: 10px auto 25px auto;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 /* === Description Box === */
@@ -252,7 +258,7 @@
   padding: 1.5rem;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 30px auto;
   font-weight: 400;
   box-sizing: border-box;
 }
@@ -266,7 +272,7 @@
 
 /* === Badge === */
 .badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 45px;
@@ -276,28 +282,29 @@
   font-weight: 500;
   letter-spacing: 1px;
   border-radius: 0;
-  transform: translate(84px, 30px);
-  text-align: center;
+  padding: 0 1.25rem;
+  margin: 0 auto 30px auto;
 }
 
 @media (max-width: 576px) {
   .badge {
-    transform: translate(85px, -75px);
     font-size: 1rem;
     height: auto;
     padding: 0.5rem 1rem;
+    transform: none; /* keeps it centered & clean */
   }
 }
 
 /* === Video Wrapper === */
 .lux-video {
+  transform: translateY(-50px);
   position: relative;
   width: 100%;
-  max-width: 1000px; /* desktop max */
-  height: auto;
-  aspect-ratio: 16/9; /* keeps ratio */
+  max-width: 1000px;
+  aspect-ratio: 16/9;
   border-radius: 8px;
   overflow: hidden;
+  margin: 40px auto 0 auto;
 }
 
 .lux-iframe {
@@ -308,22 +315,13 @@
   height: 100%;
 }
 
+/* mobile video spacing fix */
 @media (max-width: 768px) {
-.lux-video {
-margin-top: -150px;
-transform: translateY(100px);
-
-}
-.lux-iframe {
-margin-bottom: -50px;
-}
-
-}
-@media (max-width: 576px) {
-  .lux-title {
-    font-size: 1.6rem;
+  .lux-video {
+    margin-top: 20px;
   }
 }
+
 </style>
 
 
@@ -336,11 +334,12 @@ margin-bottom: -50px;
         <!-- Right: Infos -->
         <div class="col-md-6 d-flex flex-column justify-content-center py-5 px-4 text-white">
             <h2 class="about-names mb-4">EJ &sect; SARAH</h2>
-            <h3 class="about-title mb-4 text-left">Meet the Filmmakers</h3>
+            <h3 class="about-title mb-4 text-left">MEET EJ and Sarah</h3>
             <p class="about-desc mb-3">
-               We capture the big and small moments, personal details, and people that create the complete story.<br><br>
-               With us, you’ll not only get images that help you remember your wedding day— you’ll get photos and films that take your breath away. And allow you to see, relive, and fully cherish the whole, beautiful story. Over and over again.
-            </p>
+               EJ and Sarah are a husband-and-wife photography and videography team devoted to preserving your 
+most meaningful moments with artistry and intention. Known for their warm, effortless approach, they create an atmosphere 
+where couples feel at ease — allowing authentic emotions to shine through beautifully refined imagery.<br><br>
+               With us, you’ll receive more than photographs of your wedding day — you’ll be given a visual legacy that takes your breath away. Our photos and films invite you to see, feel, and relive the beauty of your celebration, allowing you to cherish every moment, time and time again.</p>
             <a href="about.php" class="about-btn">Learn More</a>
         </div>
     </div>
@@ -432,7 +431,7 @@ margin-bottom: -50px;
         min-height: 500px;
     }
 .about-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: left;
     line-height: 1; /* or 1 for tighter lines */
     padding-top: 10px; /* keeps spacing above the first line */
@@ -451,265 +450,17 @@ margin-bottom: -50px;
     .about-btn {
         margin: 0 auto;
     }
-}
-</style>
-
-<!-- Font Awesome CDN (add in <head> if not already included) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<section class="experience-section">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Left Column (30%) -->
-      <div class="experience-section-left col-lg-4 col-md-12">
-        <p class="experience-section-pretitle">EXPECT MORE</p>
-        <h2 class="experience-section-title">PICTURE-PERFECT EXPERIENCE</h2>
-        <p class="experience-section-desc">
-          We're dedicated and passionate about our craft.
-        </p>
-        <p class="experience-section-desc">
-          But, we’re equally committed to providing you with an effortless and enjoyable experience.
-        </p>
-        <a href="services.php" class="experience-section-btn">MORE OF WHAT YOU'LL EXPERIENCE</a>
-      </div>
-
-      <!-- Right Column (70%) -->
-      <div class="experience-section-right col-lg-8 col-md-12" id="experience-section-right">
-        
-        <!-- Item 1 -->
-        <div class="experience-section-item">
-          <div class="experience-section-number">1</div>
-          <div class="experience-section-content">
-            <h3 class="experience-section-title-item" data-toggle="exp-desc-1">
-              Devoted Connection <i class="fas fa-arrow-down experience-section-arrow"></i>
-            </h3>
-            <p class="experience-section-desc-item" id="exp-desc-1">
-              We’ll start by personally connecting with you, to gain a deeper understanding of you and your story.
-              The bond we create allows you to trust us. And it allows us to fully capture you.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="experience-section-item">
-          <div class="experience-section-number">2</div>
-          <div class="experience-section-content">
-            <h3 class="experience-section-title-item" data-toggle="exp-desc-2">
-              Thoughtful Moments <i class="fas fa-arrow-down experience-section-arrow"></i>
-            </h3>
-            <p class="experience-section-desc-item" id="exp-desc-2">
-              By discovering and honoring your wants, needs, and priorities, we’ll thoughtfully capture and edit the
-              moments and people that matter most to you.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="experience-section-item">
-          <div class="experience-section-number">3</div>
-          <div class="experience-section-content">
-            <h3 class="experience-section-title-item" data-toggle="exp-desc-3">
-              Positive Presence <i class="fas fa-arrow-down experience-section-arrow"></i>
-            </h3>
-            <p class="experience-section-desc-item" id="exp-desc-3">
-              We bring a positive, calming presence. And maintain a helpful and friendly demeanor from start to finish.
-            </p>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="experience-section-item">
-          <div class="experience-section-number">4</div>
-          <div class="experience-section-content">
-            <h3 class="experience-section-title-item" data-toggle="exp-desc-4">
-              Personal Touch <i class="fas fa-arrow-down experience-section-arrow"></i>
-            </h3>
-            <p class="experience-section-desc-item" id="exp-desc-4">
-              We personally edit your photos and film in-house—using carefully-selected music and audio, natural light,
-              and a touch of personal creativity.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* Section Background */
-.experience-section {
-  background-color: #ebebeb;
-  padding: 90px 20px;
-  color: #111;
-  font-family: 'DM Sans', sans-serif;
-}
-
-/* Left Column */
-.experience-section-pretitle {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.experience-section-title {
-  font-size: 34px;
-  
-  margin-bottom: 20px;
-  font-family: 'Cormorant Garamond', serif;
-  color: #111;
-}
-
-.experience-section-desc {
-  font-size: 16px;
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.experience-section-btn {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 12px 24px;
-  border: 1px solid #111;
-  border-radius: 40px;
-  color: #111;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-.experience-section-btn:hover {
-  background: #111;
-  color: #fff;
-}
-
-/* Right Column Items */
-.experience-section-item {
-  display: flex;
-  align-items: flex-start; /* change to center vertically with title */
-  margin-bottom: 25px;
-}
-
-.experience-section-number {
-  font-size: 1.5rem;
-  
-  margin-right: 20px;
-  font-family: 'Cormorant Garamond', serif;
-  color: #111;
-  line-height: 1; /* make sure number aligns with title */
-  display: flex;
-  align-items: center; /* vertically center with title */
-  margin-top: 5px;
-}
-.experience-section-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.experience-section-title-item {
-  font-size: 26px;
-  margin: 0;
-  cursor: pointer;
-  font-family: 'Cormorant Garamond', serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: color 0.3s ease;
-  color: #111;
-}
-
-.experience-section-title-item:hover {
-  color: #555;
-}
-
-.experience-section-arrow {
-  font-size: 1rem;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-/* Smooth slide-down description */
-.experience-section-desc-item {
-  max-height: 0;
-  overflow: hidden;
-  margin-top: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-family: 'DM Sans', sans-serif;
-  color: #333;
-  transition: max-height 0.5s ease, padding 0.5s ease;
-}
-
-.experience-section-desc-item.open {
-  max-height: 500px; /* enough to show content */
-  padding-top: 10px;
-}
-
-/* Open state arrow rotates */
-.experience-section-title-item.active .experience-section-arrow {
-  transform: rotate(180deg);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .experience-section-title {
-    font-size: 2rem;
-  }
-  .experience-section-title-item {
-    transform: translateY(7px);
-  }
-  .experience-section-btn {
-    font-size: 0.9rem;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .experience-section {
-    padding: 40px 15px;
-  }
-
-  .experience-section-title {
-    font-size: 34px;
-  }
-
-  .experience-section-title-item {
-    font-size: 24px;
-  }
-
-  .experience-section-number {
-    font-size: 1.4rem;
-    margin-right: 12px;
-  }
-}
-</style>
-
-<script>
-// Toggle accordion with smooth slide
-document.querySelectorAll('.experience-section-title-item').forEach(title => {
-  title.addEventListener('click', () => {
-    const targetId = title.getAttribute('data-toggle');
-    const desc = document.getElementById(targetId);
-
-    const isOpen = desc.classList.contains('open');
-
-    document.querySelectorAll('.experience-section-desc-item').forEach(el => el.classList.remove('open'));
-    document.querySelectorAll('.experience-section-title-item').forEach(el => el.classList.remove('active'));
-
-    if (!isOpen) {
-      desc.classList.add('open');
-      title.classList.add('active');
+        .about-section .row {
+        display: flex;
+        flex-direction: column-reverse; /* IMAGE goes to bottom */
     }
-  });
-});
-</script>
+
+    .about-image {
+        min-height: 450px; /* adjust mobile image height if needed */
+    }
+}
+</style>
+
 
 
 <section class="lux-story text-center">
