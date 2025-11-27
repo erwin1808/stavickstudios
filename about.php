@@ -19,6 +19,31 @@
             color: #2d2c2a;
             background: #ebebeb;
         }
+          /* === HERO SECTION === */
+        .hero {
+          position: relative;
+          width: 100vw;
+          height: 35vw;
+          max-width: 2000px;
+          max-height: 800px;
+          margin: 40px auto;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+           margin-bottom: -40px;
+        }
+
+        .hero-image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* ensures image covers the container */
+          transform: translate(-50%, -50%); /* centers the image */
+          z-index: 1;
+        }
 
         /* Styles for the A BIT MORE ABOUT US section */
       .image-container {
@@ -36,7 +61,7 @@
       }
 .section-divider {
   width: 100vw;              /* full width of the viewport */
-  height: 100px;             /* default height (desktop) */
+  height: 300px;             /* default height (desktop) */
   background-color: #7c806f; /* your divider color */
   margin: 0;
   border: none;
@@ -73,6 +98,10 @@
 </head>
 <body>
 <?php include 'navbar.php'; ?>
+<!-- === HERO SECTION === -->
+<section class="hero">
+  <img src="images/blackandwhite.jpg" alt="Hero Image" class="hero-image">
+</section>
 
 <!-- ========================================================= -->
 <!-- A BIT MORE ABOUT US — TWO COLUMN LAYOUT (ALTERNATING ROWS) -->

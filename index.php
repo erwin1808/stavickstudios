@@ -115,8 +115,9 @@
     </section>
 
 
-    <section class="lux-section text-center" style="margin-top: -30px;">
+<section class="lux-section text-center" style="margin-top: -30px;">
   <div class="container">
+
     <!-- 1st Row: Logo -->
     <div class="row mb-4">
       <div class="col">
@@ -127,93 +128,81 @@
     </div>
 
     <!-- 2nd Row: Title -->
-<div class="row mb-4">
-  <div class="col">
-    <h1 class="lux-title">Preserving Your Legacy</h1>
-    <p class="lux-subtext">Through Elegant, Artful Imagery Designed to Withstand the Passage of Time</p>
-  </div>
-</div>
-
-
-    <!-- 3rd Row: Vimeo Video Cover with Badge -->
-<div class="row mb-4">
-  <div class="col d-flex justify-content-center">
-    <div class="lux-video position-relative" style="width:1000px; height:450px; overflow:hidden; border-radius:8px;">
-
-      <!-- Loading text -->
-      <div id="video-loader" class="position-absolute top-50 start-50 translate-middle" 
-           style="z-index:10; font-size:24px; font-weight:bold; color:#333333;">
-       Video Loading...
-      </div>
-
-      <iframe 
-        id="vimeo-video"
-        src="https://player.vimeo.com/video/848916194?h=e5fae21f19&background=1&autoplay=1&muted=1&loop=1" 
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        class="lux-iframe"
-        style="width:100%; height:100%;">
-      </iframe>
-
-    </div>
-  </div>
-</div>
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script>
-  const iframe = document.getElementById('vimeo-video');
-  const loader = document.getElementById('video-loader');
-
-  const player = new Vimeo.Player(iframe);
-
-  // Hide loader when video is ready
-  player.on('loaded', function() {
-    loader.style.display = 'none';
-  });
-
-  // Fallback in case API fails
-  iframe.addEventListener('load', function() {
-    loader.style.display = 'none';
-  });
-</script>
-
-
-    <!-- 4th Row: Description -->
-<div class="row mb-4">
-  <div class="col-lg-8 mx-auto">
-    <div class="lux-desc p-4">
-      <p class="fs-6 mb-0">
-        Stavick Studios is dedicated to creating exceptional wedding films for couples who want to celebrate their love with elegance and style, while also inspiring and guiding aspiring filmmakers on their own creative paths. Whether it’s capturing a romantic escape in Venice or sharing knowledge through hands-on workshops, 
-        Stavick Studios serves sophisticated, adventurous couples and wedding professionals across the globe.
-      </p>
-    </div>
-  </div>
-</div>
-
-
-    <!-- 5th Row: Button -->
-    <div class="row">
+    <div class="row mb-4">
       <div class="col">
-        <a href="contact.php" class="btn btn-dark btn-lg px-5 rounded-pill shadow">
-    Learn More
-        </a>
+        <h1 class="lux-title">Preserving Your Legacy</h1>
+        <p class="lux-subtext">
+          Through Elegant, Artful Imagery Designed to Withstand the Passage of Time
+        </p>
       </div>
     </div>
+
+    <!-- 3rd Row: Scrollable 33-Image Gallery Strip -->
+    <div class="row mt-5">
+      <div class="col d-flex justify-content-center">
+
+        <div class="lux-strip-container">
+
+          <div class="lux-strip" id="luxStrip">
+            <!-- 33 images (same sample image) -->
+            <!-- Repeat your image 33 times -->
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
+          </div>
+
+          <!-- Pagination Dots -->
+          <div class="lux-pagination"></div>
+
+          <!-- Swipe message (mobile only) -->
+          <div class="lux-swipe-message">Swipe to see more</div>
+
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
 <style>
-  /* === Section Wrapper === */
+/* === Section Wrapper === */
 .lux-section {
   padding: 60px 20px;
   text-align: center;
 }
-
 @media (max-width: 576px) {
-  .lux-section {
-    padding: 30px 15px;
-  }
+  .lux-section { padding: 30px 15px; }
 }
 
 /* === Title === */
@@ -225,19 +214,11 @@
   color: #2d2c2a;
   margin-bottom: 10px;
 }
-
 @media (max-width: 768px) {
-  .lux-title {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
+  .lux-title { font-size: 2rem; }
 }
-
 @media (max-width: 576px) {
-  .lux-title {
-    font-size: 1.6rem;
-  }
+  .lux-title { font-size: 1.6rem; }
 }
 
 /* === Subtext === */
@@ -250,79 +231,169 @@
   line-height: 1.6;
 }
 
-/* === Description Box === */
-.lux-desc {
-  border: 1px solid #2d2c2a;
-  font-family: 'DM Sans', sans-serif;
-  text-align: center;
-  padding: 1.5rem;
+/* === Swipe Strip Container === */
+.lux-strip-container {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 30px auto;
-  font-weight: 400;
-  box-sizing: border-box;
-}
-
-@media (max-width: 576px) {
-  .lux-desc {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-/* === Badge === */
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  background: #ebebeb;
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  border-radius: 0;
-  padding: 0 1.25rem;
-  margin: 0 auto 30px auto;
-}
-
-@media (max-width: 576px) {
-  .badge {
-    font-size: 1rem;
-    height: auto;
-    padding: 0.5rem 1rem;
-    transform: none; /* keeps it centered & clean */
-  }
-}
-
-/* === Video Wrapper === */
-.lux-video {
-  transform: translateY(-50px);
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  aspect-ratio: 16/9;
-  border-radius: 8px;
+  max-width: 1200px;
   overflow: hidden;
-  margin: 40px auto 0 auto;
+  position: relative;
 }
 
-.lux-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* === Scrollable Image Row === */
+.lux-strip {
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  cursor: grab;
 }
+.lux-strip:active { cursor: grabbing; }
+.lux-strip::-webkit-scrollbar { display: none; }
 
-/* mobile video spacing fix */
+/* === Gallery Image === */
+.lux-item {
+  width: calc(25% - 10px);
+  flex-shrink: 0;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
 @media (max-width: 768px) {
-  .lux-video {
-    margin-top: 20px;
+  .lux-item { width: calc(50% - 15px); height: 360px; }
+}
+
+/* === Pagination Dots === */
+.lux-pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+.lux-dot {
+  height: 7px;
+  width: 7px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 3px;
+  opacity: 0.4;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.lux-dot.active {
+  background: black;
+  opacity: 1;
+}
+
+/* === Swipe message === */
+.lux-swipe-message {
+  display: none;
+}
+@media (max-width: 768px) {
+  .lux-pagination { display: none; }
+  .lux-swipe-message {
+    display: block;
+    font-family: 'Cormorant Garamond', sans-serif !important;
+    font-size: 1.5rem;
+    color: #4a4947;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-bottom: 1px solid #2d2c2a;
+    
   }
 }
-
 </style>
+
+<script>const strip = document.getElementById("luxStrip");
+const pagination = document.querySelector(".lux-pagination");
+
+const totalImages = strip.children.length;
+
+// Create pagination dots
+for (let i = 0; i < totalImages; i++) {
+  const dot = document.createElement("span");
+  dot.classList.add("lux-dot");
+  if (i === 0) dot.classList.add("active");
+  dot.dataset.index = i;
+  pagination.appendChild(dot);
+}
+
+// Update dots on scroll
+strip.addEventListener("scroll", () => {
+  const itemWidth = strip.children[0].offsetWidth + 15;
+  const index = Math.round(strip.scrollLeft / itemWidth);
+  document.querySelectorAll(".lux-dot").forEach((d, i) => {
+    d.classList.toggle("active", i === index);
+  });
+});
+
+// Click dot to scroll
+document.querySelectorAll(".lux-dot").forEach(dot => {
+  dot.addEventListener("click", () => {
+    const index = dot.dataset.index;
+    const itemWidth = strip.children[0].offsetWidth + 15;
+    strip.scrollTo({ left: index * itemWidth, behavior: "smooth" });
+  });
+});
+
+// === DRAG ON LONG PRESS ===
+let isDragging = false;
+let startX = 0;
+let scrollStart = 0;
+let dragTimeout = null;
+
+// Desktop long press drag
+strip.addEventListener("mousedown", (e) => {
+  dragTimeout = setTimeout(() => {
+    isDragging = true;
+    startX = e.pageX;
+    scrollStart = strip.scrollLeft;
+    strip.style.cursor = "grabbing";
+  }, 250); // 250ms long press
+});
+
+// Move handler
+const handleMouseMove = (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const dx = e.pageX - startX;
+  strip.scrollLeft = scrollStart - dx;
+};
+
+const stopDrag = () => {
+  clearTimeout(dragTimeout);  // stop any pending long press
+  isDragging = false;
+  strip.style.cursor = "grab";
+};
+
+// Attach mouse events
+strip.addEventListener("mousemove", handleMouseMove);
+strip.addEventListener("mouseup", stopDrag);
+strip.addEventListener("mouseleave", stopDrag);
+
+// Touch handlers
+strip.addEventListener("touchstart", (e) => {
+  dragTimeout = setTimeout(() => {
+    isDragging = true;
+    startX = e.touches[0].pageX;
+    scrollStart = strip.scrollLeft;
+  }, 250);
+});
+
+strip.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
+  const dx = e.touches[0].pageX - startX;
+  strip.scrollLeft = scrollStart - dx;
+});
+
+strip.addEventListener("touchend", () => {
+  clearTimeout(dragTimeout);
+  isDragging = false;
+});
+</script>
+
+
 
 
 

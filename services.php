@@ -23,7 +23,31 @@
         p {
             font-family: 'DM Sans', sans-serif;
         }
+          /* === HERO SECTION === */
+        .hero {
+          position: relative;
+          width: 100vw;
+          height: 35vw;
+          max-width: 2000px;
+          max-height: 800px;
+          margin: 40px auto;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: -50px;
+        }
 
+        .hero-image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; /* ensures image covers the container */
+          transform: translate(-50%, -50%); /* centers the image */
+          z-index: 1;
+        }
         /* General Section Styling */
         section {
             padding: 80px 20px;
@@ -217,7 +241,9 @@
 <body>
 
 <?php include 'navbar.php'; ?>
-
+<section class="hero">
+  <img src="images/blackandwhite.jpg" alt="Hero Image" class="hero-image">
+</section>
 <!-- QUALITY | VALUE | TRUST SECTION -->
 <section>
     <h4 style="font-size: 22px;">QUALITY | VALUE | TRUST​​​​​</h4>
@@ -233,7 +259,6 @@
 </p>
 
 </section>
-<!-- HOW IT WORKS SECTION -->
 <section style="background-color: #ebebeb; color: #2d2c2a; padding: 60px 15px;">
   <div style="max-width: 1200px; margin: 0 auto;">
 
@@ -241,29 +266,22 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       font-family: 'Cormorant Garamond', serif;
-      margin-bottom: 1rem;
-      color: #2d2c2a; 
-      text-align: center; 
-      margin-bottom: 100px; 
-      margin-top: -50px;">
+      margin-bottom: 100px;
+      margin-top: -50px;
+      text-align: center;
+      color: #2d2c2a;">
       HOW IT WORKS
     </h2>
 
     <!-- VISION ROW -->
     <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <div class="landscape-img">
+        <div class="fixed-img">
           <img src="images/vision.jpg" alt="Vision">
         </div>
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 26px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-family: 'Cormorant Garamond', serif;
-          margin-bottom: 10px;
-          color: #2d2c2a; 
-          text-align: left;">VISION</h3>
+        <h3 style="font-size: 26px; letter-spacing: 1px; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #2d2c2a; text-align:left;">VISION</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           The best way to meet and exceed your expectations is to have a clear picture of what those expectations are. So, we'll start with a video call to get to know more about you, your needs, and what you envision for your photos and films.
         </p>
@@ -273,18 +291,12 @@
     <!-- APPROACH ROW (REVERSED) -->
     <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px; flex-direction: row-reverse;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <div class="landscape-img">
+        <div class="fixed-img">
           <img src="images/approach.jpeg" alt="Approach">
         </div>
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 26px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-family: 'Cormorant Garamond', serif;
-          margin-bottom: 10px;
-          color: #2d2c2a; 
-          text-align: right;">APPROACH</h3>
+        <h3 style="font-size: 26px; letter-spacing: 1px; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #2d2c2a; text-align: right;">APPROACH</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           Whether you choose photos, videos, or both, we'll send you a detailed questionnaire to confirm the details and dynamics of your day. By understanding your priorities—and the plan—we can prepare a solid approach to preserve your day.
         </p>
@@ -292,20 +304,14 @@
     </div>
 
     <!-- CRAFT ROW -->
-    <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px;">
+    <div class="how-row" style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; margin-bottom: 30px; text-align:left;">
       <div style="flex: 1 1 300px; text-align: center;">
-        <div class="landscape-img">
+        <div class="fixed-img">
           <img src="images/craft.jpg" alt="Craft">
         </div>
       </div>
       <div style="flex: 2 1 500px;">
-        <h3 style="font-size: 26px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
-          font-family: 'Cormorant Garamond', serif;
-          margin-bottom: 10px;
-          color: #2d2c2a; 
-          text-align: left;">CRAFT</h3>
+        <h3 style="font-size: 26px; letter-spacing: 1px; text-transform: uppercase; font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #2d2c2a;">CRAFT</h3>
         <p style="font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; text-align: justify;">
           We'll focus on the real moments and unique details that enhance your photos and film and encompass the full story of your day. Maintaining natural light, real colors, and true beauty ensures nothing short of an exceptional final result.
         </p>
@@ -316,35 +322,32 @@
 </section>
 
 <style>
-.landscape-img {
-  width: 100%;
-  position: relative;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
+.fixed-img {
+  width: 400px;
+  height: 500px;
   overflow: hidden;
   border-radius: 12px;
+  margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.landscape-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.fixed-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 @media screen and (max-width: 768px){
-  .how-row p:last-child {
-    margin-bottom: 0;
-  }
+  .how-row p:last-child { margin-bottom: 0; }
+  .fixed-img { width: 100%; height: auto; }
+  .fixed-img img { height: auto; }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .how-row p:last-child {
-    margin-bottom: 0;
-  }
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .how-row p:last-child { margin-bottom: 0; }
 }
 </style>
+
 
 
 <!-- MEDIA FEATURES SECTION -->
