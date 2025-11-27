@@ -158,12 +158,6 @@
         <!-- Centered nav links -->
         <div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav">
-
-    <!-- MOBILE ONLY HOME LINK -->
-    <li class="nav-item d-block d-lg-none">
-        <a class="nav-link" href="index.php">HOME</a>
-    </li>
-
     <li class="nav-item"><a class="nav-link" href="about.php">ABOUT</a></li>
     <li class="nav-item"><a class="nav-link" href="services.php">SERVICES</a></li>
 

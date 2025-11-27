@@ -91,7 +91,39 @@
      color: #ebebeb !important;
   }
 }
+@media (max-width: 768px) {
+  .hero {
+    height: 75vw; /* shorter height for landscape orientation */
+    background-size: cover;
+  }
 
+  .hero-logo img {
+    max-width: 180px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 1rem;
+    bottom: 10px;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vw; /* maintain a wide landscape look */
+  }
+
+  .hero-logo img {
+    max-width: 150px;
+  }
+
+  .hero-caption-left,
+  .hero-caption-right {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+}
 
     </style>
 
@@ -297,55 +329,7 @@
   z-index: 10;
 }
 
-/* Adjust mobile view for hero */
-@media screen and (max-width: 956px) {
-  .hero {
-    height: 100vh;
-    padding: 0;
-    position: relative;
-  }
 
-  .hero-container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-
-  .hero-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-  }
-
-  .hero-container .image-bg {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-  
-  /* Keep the rest of your mobile styles as they were */
-  .logo-container {
-    display: none;
-  }
-
-  .hero-logo {
-    transform: translateY(-20px);
-    width: 375px;
-    margin-bottom: 1rem;
-  }
-
-  .nav-links-hero {
-    display: none;
-  }
- .image-section {
-
-    margin-top: 14rem;
-    position: relative;
-    z-index: 5;
-  }
-}
 </style>
 
 <div class="section-divider"></div>

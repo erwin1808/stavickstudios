@@ -128,7 +128,7 @@
     </div>
 
     <!-- 2nd Row: Title -->
-    <div class="row mb-4">
+    <div class="row mb-3">
       <div class="col">
         <h1 class="lux-title">Preserving Your Legacy</h1>
         <p class="lux-subtext">
@@ -138,7 +138,7 @@
     </div>
 
     <!-- 3rd Row: Scrollable 33-Image Gallery Strip -->
-    <div class="row mt-5">
+    <div class="row mt-3">
       <div class="col d-flex justify-content-center">
 
         <div class="lux-strip-container">
@@ -202,7 +202,7 @@
   text-align: center;
 }
 @media (max-width: 576px) {
-  .lux-section { padding: 30px 15px; }
+  .lux-section { padding: 30px 0px; } /* Removed side padding to let strip hit edges */
 }
 
 /* === Title === */
@@ -224,11 +224,12 @@
 /* === Subtext === */
 .lux-subtext {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: #4a4947;
   margin: 10px auto 25px auto;
-  max-width: 600px;
+  max-width: 700px;
   line-height: 1.6;
+  padding: 0 15px; /* Added padding so text doesn't hit edge on mobile */
 }
 
 /* === Swipe Strip Container === */
@@ -243,24 +244,48 @@
 .lux-strip {
   display: flex;
   gap: 15px;
-  overflow-x: scroll;
+  overflow-x: auto; /* Changed to auto for better mobile handling */
   scroll-behavior: smooth;
   padding-bottom: 10px;
   cursor: grab;
+  /* Hides scrollbar in Firefox */
+  scrollbar-width: none; 
 }
 .lux-strip:active { cursor: grabbing; }
 .lux-strip::-webkit-scrollbar { display: none; }
 
-/* === Gallery Image === */
+/* === Gallery Image (Default Desktop) === */
 .lux-item {
   width: calc(25% - 10px);
   flex-shrink: 0;
   height: 420px;
   object-fit: cover;
   border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth effect */
 }
+
+/* === MOBILE STRIP VIEW (The Magic) === */
 @media (max-width: 768px) {
-  .lux-item { width: calc(50% - 15px); height: 360px; }
+ .lux-strip {
+  
+    scroll-snap-type: x mandatory;
+    padding-left: 0; /* Show first image */
+    padding-right: 10%; 
+    box-sizing: border-box;
+  }
+
+  .lux-item { 
+    /* 50% Width ensures that the 25% gap shows exactly HALF the next image */
+    width: 100%; 
+    flex: 0 0 50%; /* Ensures flex doesn't shrink it */
+    height: 360px; 
+    
+    /* Snaps the image to the center of the screen */
+    scroll-snap-align: center; 
+    
+    /* Optional: Slight opacity for side images to focus middle one */
+    opacity: 1; 
+  }
 }
 
 /* === Pagination Dots === */
@@ -300,12 +325,22 @@
     font-weight: 400;
     text-transform: capitalize;
     border-bottom: 1px solid #2d2c2a;
-    
   }
 }
 </style>
 
-<script>const strip = document.getElementById("luxStrip");
+<script>
+window.addEventListener("load", () => {
+  if (window.innerWidth <= 768) {
+    const strip = document.getElementById("luxStrip");
+    const firstItem = strip.children[0];
+    const itemWidth = firstItem.offsetWidth + 15; // includes gap
+    strip.scrollLeft = itemWidth; // Scroll to second image
+  }
+});
+
+
+const strip = document.getElementById("luxStrip");
 const pagination = document.querySelector(".lux-pagination");
 
 const totalImages = strip.children.length;
