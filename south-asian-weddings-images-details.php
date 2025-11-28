@@ -716,11 +716,11 @@ width: 200px;
 
 
     <div class="info-left">
-        <div class="info-name">
-            <span class="bride_name"><?= $bride ?></span><br/>
-            <span class="groom_name"><?= $groom ?></span>
-            <span class="full-name"><?= $bride ?> + <?= $groom ?></span>
-        </div>
+          <div class="info-name">
+                <span class="bride_name"><?= $bride ?> &</span>
+                <span class="groom_name"><?= $groom ?></span>
+                <span class="full-name"><?= $bride ?> & <?= $groom ?></span>
+            </div>
         <div class="info-location"><?= $location ?></div>
         <div class="info-logo">
             <img src="images/header-logo.png" alt="Logo" />

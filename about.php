@@ -59,16 +59,23 @@
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
       }
-.section-divider {
-  width: 100vw;              /* full width of the viewport */
-  height: 300px;             /* default height (desktop) */
-  background-color: #7c806f; /* your divider color */
-  margin: 0;
-  border: none;
-}
+      .section-divider {
+        transform: translateY(-125px);
+        width: 100vw;              /* full width of the viewport */
+        height: 500px;             /* default height (desktop) */
+        background-color: #7c806f; /* your divider color */
+        margin-bottom: -125px;
+        border: none;
+      }
 
 /* 🌿 Responsive sizing for smaller screens */
 @media (max-width: 1024px) {
+  .section-divider {
+    transform: translateY(0);
+    margin-bottom: -20px;
+    height: 300px; 
+
+  }
   .about-couple {
     margin-top: 15px !important;
     background-color: #7c806f !important;            /* tablet */
@@ -82,6 +89,11 @@
      background-color: #7c806f !important;           /* small tablet / large phone */
      color: #ebebeb !important;
   }
+    .section-divider {
+    transform: translateY(0);
+    margin-bottom: -20px;
+    height: 300px; 
+  }
 }
 
 @media (max-width: 480px) {
@@ -89,6 +101,11 @@
      margin-top: 15px !important;
      background-color: #7c806f !important;            /* mobile phones */
      color: #ebebeb !important;
+  }
+    .section-divider {
+    transform: translateY(0);
+    margin-bottom: -20px;
+    height: 300px;
   }
 }
 @media (max-width: 768px) {
@@ -107,6 +124,7 @@
     bottom: 10px;
     max-width: 180px;
   }
+  
 }
 
 @media (max-width: 480px) {
@@ -216,7 +234,6 @@
   width: 300px;  /* fixed width */
   height: 400px; /* fixed height */
   object-fit: cover;
-  border-radius: 4px;
   display: block;
 }
 
@@ -262,7 +279,6 @@
   width: 200px;  /* fixed width */
   height: 300px; /* fixed height */
   object-fit: cover;
-  border-radius: 4px;
   display: block;
 }
   .about-text p:last-child {
@@ -289,7 +305,6 @@
   width: 200px;  /* fixed width */
   height: 300px; /* fixed height */
   object-fit: cover;
-  border-radius: 4px;
   display: block;
 }
 .about-row.reverse .about-text {
@@ -338,7 +353,7 @@
   
   <!-- Photo of the Couple -->
   <div style="flex: 1 1 300px; max-width: 400px; text-align: center;">
-    <img src="images/EJSarahNR-2-1-683x1024.jpg" alt="Sarah & Ej" style="width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+    <img src="images/EJSarahNR-2-1-683x1024.jpg" alt="Sarah & Ej" style="width: 100%; height: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
   </div>
   
   <!-- Text Content -->

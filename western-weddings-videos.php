@@ -141,7 +141,6 @@
 
 .portfolio-card {
     background: #fff;
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -258,7 +257,6 @@
 
 .portfolio-card {
     background: #fff;
-    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -291,18 +289,20 @@
     <h2>Western Weddings</h2>
 <div class="row g-4 justify-content-center">
 
-  <!-- Video Card 1 -->
-  <div class="col-12">
-    <a href="western-weddings-videos-details.php?id=1" class="portfolio-card-link">
-      <div class="portfolio-card">
-        <div class="video-thumbnail">
-          <img src="https://img.youtube.com/vi/7UoP9ABJXGE/maxresdefault.jpg" alt="Ava & Liam Wedding">
-          <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
-          <div class="video-title">Ava & Liam</div>
-        </div>
+<!-- Video Card 1 -->
+<div class="col-12">
+  <a href="western-weddings-videos-details.php?id=2" class="portfolio-card-link">
+    <div class="portfolio-card">
+      <div class="video-thumbnail">
+        <img src="https://img.youtube.com/vi/-btyG7bVzog/maxresdefault.jpg" alt="Video Thumbnail">
+        <div class="play-button"><i class="fa-regular fa-circle-play"></i></div>
+        <div class="video-title">Sharon + Matthew</div>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
+</div>
+
+
 
   <!-- Video Card 2 -->
   <div class="col-12">

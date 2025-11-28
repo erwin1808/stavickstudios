@@ -52,7 +52,6 @@
       display: block;
       height: 650px;
       overflow: hidden;
-      border-radius: 8px;
       text-decoration: none;
       color: #fff;
       background: #000;

@@ -89,7 +89,7 @@
         }
  /* Featured Services Section */
         .featured-services {
-            padding: 80px 20px;
+            padding: 100px 20px 0 0;
             text-align: center;
         }
         
@@ -119,18 +119,18 @@
         }
 
      .service-card {
-    padding: 40px 30px;
-    border-radius: 12px;
-    max-width: 400px;
-    border: 1px solid #ddd; /* Added border */
-    text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    flex: 1;
-    min-width: 350px;
-    /* box-shadow removed */
-}
+          padding: 40px 30px;
+          border-radius: 12px;
+          max-width: 400px;
+          border: 1px solid #ddd; /* Added border */
+          text-align: center;
+          transition: all 0.4s ease;
+          position: relative;
+          overflow: hidden;
+          flex: 1;
+          min-width: 350px;
+          /* box-shadow removed */
+      }
 
         
         .service-card:hover {
@@ -145,12 +145,12 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #d4af37, #b8941f);
+            background: linear-gradient(90deg, #7c806f, #595c51ff);
         }
         
         .service-icon {
             font-size: 26px;
-            color: #d4af37;
+            color: #7c806f;
             margin-bottom: 25px;
         }
         
@@ -185,7 +185,7 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #d4af37;
+            color: #7c806f;
             font-weight: bold;
         }
         
@@ -239,7 +239,7 @@
             position: absolute;
             top: 20px;
             right: -30px;
-            background: #d4af37;
+            background: #7c806f;
             color: #2d2c2a;
             padding: 5px 30px;
             transform: rotate(45deg);
@@ -258,6 +258,10 @@
             .service-card {
                 min-width: 100%;
                 max-width: 500px;
+            }
+            .featured-services {
+                padding: 150px 20px 0 0;
+                margin-bottom: -200px;
             }
         }
         
@@ -360,7 +364,6 @@
   width: 400px;
   height: 500px;
   overflow: hidden;
-  border-radius: 12px;
   margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
@@ -372,14 +375,36 @@
 }
 
 @media screen and (max-width: 768px){
-  .how-row p:last-child { margin-bottom: 0; }
-  .fixed-img { width: 100%; height: auto; }
-  .fixed-img img { height: auto; }
+  .how-row p:last-child { margin-bottom: 0;
+   flex-direction: column !important;
+    text-align: center !important;
+    margin-left: 15px;
+    margin-right: 15px; }
+  .fixed-img {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+  .how-row h3,
+  .how-row p {
+    text-align: center !important;
+  }
+    h2 {
+  margin-top: -120px !important;   /* smaller top margin */
+    margin-bottom: 30px !important; /* smaller bottom margin */
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px){
   .how-row p:last-child { margin-bottom: 0; }
+    h2 {
+    margin-top: -40px !important;   /* smaller top margin */
+    margin-bottom: 40px !important; /* smaller bottom margin */
+  }
 }
+
 </style>
 
 
@@ -597,7 +622,7 @@ track.addEventListener('touchmove', (e) => {
                 </ul>
                 
                 <a href="stavick-films.php" class="service-cta">Explore Films</a>
-                <div class="service-badge">POPULAR</div>
+                
             </div>
 
             <!-- Photos Card -->
@@ -693,7 +718,7 @@ track.addEventListener('touchmove', (e) => {
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #d4af37;
+  color: #c7c2bc;
   margin-bottom: 0.5rem;
 }
 

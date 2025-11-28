@@ -115,10 +115,9 @@
     </section>
 
 
-<section class="lux-section text-center" style="margin-top: -30px;">
-  <div class="container">
+<section class="lux-section text-center" style="margin-top: -55px;">
+  <div class="container-fluid px-4">
 
-    <!-- 1st Row: Logo -->
     <div class="row mb-4">
       <div class="col">
         <div class="lux-logo">
@@ -127,7 +126,6 @@
       </div>
     </div>
 
-    <!-- 2nd Row: Title -->
     <div class="row mb-3">
       <div class="col">
         <h1 class="lux-title">Preserving Your Legacy</h1>
@@ -137,33 +135,12 @@
       </div>
     </div>
 
-    <!-- 3rd Row: Scrollable 33-Image Gallery Strip -->
     <div class="row mt-3">
       <div class="col d-flex justify-content-center">
 
         <div class="lux-strip-container">
 
           <div class="lux-strip" id="luxStrip">
-            <!-- 33 images (same sample image) -->
-            <!-- Repeat your image 33 times -->
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
-            <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
             <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
             <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
             <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
@@ -181,10 +158,8 @@
             <img src="images/Jaclyn-Tyler.jpg" class="lux-item">
           </div>
 
-          <!-- Pagination Dots -->
           <div class="lux-pagination"></div>
 
-          <!-- Swipe message (mobile only) -->
           <div class="lux-swipe-message">Swipe to see more</div>
 
         </div>
@@ -198,11 +173,8 @@
 <style>
 /* === Section Wrapper === */
 .lux-section {
-  padding: 60px 20px;
+  padding: 60px 0; /* Reduced side padding since container handles it */
   text-align: center;
-}
-@media (max-width: 576px) {
-  .lux-section { padding: 30px 0px; } /* Removed side padding to let strip hit edges */
 }
 
 /* === Title === */
@@ -229,13 +201,13 @@
   margin: 10px auto 25px auto;
   max-width: 700px;
   line-height: 1.6;
-  padding: 0 15px; /* Added padding so text doesn't hit edge on mobile */
+  padding: 0 15px; 
 }
 
 /* === Swipe Strip Container === */
 .lux-strip-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 90%; /* CHANGED: Removed pixel limit to allow full width */
   overflow: hidden;
   position: relative;
 }
@@ -243,12 +215,11 @@
 /* === Scrollable Image Row === */
 .lux-strip {
   display: flex;
-  gap: 15px;
-  overflow-x: auto; /* Changed to auto for better mobile handling */
+  gap: 10px;
+  overflow-x: auto; 
   scroll-behavior: smooth;
   padding-bottom: 10px;
   cursor: grab;
-  /* Hides scrollbar in Firefox */
   scrollbar-width: none; 
 }
 .lux-strip:active { cursor: grabbing; }
@@ -256,36 +227,32 @@
 
 /* === Gallery Image (Default Desktop) === */
 .lux-item {
-  width: calc(25% - 10px);
+  /* 20% width guarantees exactly 5 items. 
+     (100% / 5 = 20%). We subtract 12px to account for the 15px gap. */
+  width: calc(20% - 10px);
   flex-shrink: 0;
-  height: 420px;
+  height: 450px; /* Optional: Increased height slightly to match wider width */
   object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease; /* Smooth effect */
+  transition: transform 0.3s ease; 
 }
 
-/* === MOBILE STRIP VIEW (The Magic) === */
+/* === MOBILE STRIP VIEW === */
 @media (max-width: 768px) {
  .lux-strip {
-  
-    scroll-snap-type: x mandatory;
-    padding-left: 0; /* Show first image */
-    padding-right: 10%; 
-    box-sizing: border-box;
-  }
+   scroll-snap-type: x mandatory;
+   padding-left: 0; 
+   padding-right: 10%; 
+   box-sizing: border-box;
+ }
 
-  .lux-item { 
-    /* 50% Width ensures that the 25% gap shows exactly HALF the next image */
-    width: 100%; 
-    flex: 0 0 50%; /* Ensures flex doesn't shrink it */
-    height: 360px; 
-    
-    /* Snaps the image to the center of the screen */
-    scroll-snap-align: center; 
-    
-    /* Optional: Slight opacity for side images to focus middle one */
-    opacity: 1; 
-  }
+ .lux-item { 
+   /* Revert to larger items on mobile for better visibility */
+   width: 100%; 
+   flex: 0 0 80%; /* Shows 1 main image + peek of next */
+   height: 360px; 
+   scroll-snap-align: center; 
+   opacity: 1; 
+ }
 }
 
 /* === Pagination Dots === */
@@ -331,100 +298,97 @@
 
 <script>
 window.addEventListener("load", () => {
-  if (window.innerWidth <= 768) {
-    const strip = document.getElementById("luxStrip");
-    const firstItem = strip.children[0];
-    const itemWidth = firstItem.offsetWidth + 15; // includes gap
-    strip.scrollLeft = itemWidth; // Scroll to second image
+  const strip = document.getElementById("luxStrip");
+  const pagination = document.querySelector(".lux-pagination");
+  const totalImages = strip.children.length;
+
+  // Create pagination dots
+  for (let i = 0; i < totalImages; i++) {
+    const dot = document.createElement("span");
+    dot.classList.add("lux-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.dataset.index = i;
+    pagination.appendChild(dot);
   }
-});
 
+  // Update dots on scroll
+  const updateDots = () => {
+    const itemWidth = strip.children[0].offsetWidth + 15; 
+    const index = Math.round(strip.scrollLeft / itemWidth);
+    document.querySelectorAll(".lux-dot").forEach((d, i) => {
+      d.classList.toggle("active", i === index);
+    });
+  };
 
-const strip = document.getElementById("luxStrip");
-const pagination = document.querySelector(".lux-pagination");
+  strip.addEventListener("scroll", updateDots);
 
-const totalImages = strip.children.length;
-
-// Create pagination dots
-for (let i = 0; i < totalImages; i++) {
-  const dot = document.createElement("span");
-  dot.classList.add("lux-dot");
-  if (i === 0) dot.classList.add("active");
-  dot.dataset.index = i;
-  pagination.appendChild(dot);
-}
-
-// Update dots on scroll
-strip.addEventListener("scroll", () => {
-  const itemWidth = strip.children[0].offsetWidth + 15;
-  const index = Math.round(strip.scrollLeft / itemWidth);
-  document.querySelectorAll(".lux-dot").forEach((d, i) => {
-    d.classList.toggle("active", i === index);
+  // Click dot to scroll
+  document.querySelectorAll(".lux-dot").forEach(dot => {
+    dot.addEventListener("click", () => {
+      const index = dot.dataset.index;
+      const itemWidth = strip.children[0].offsetWidth + 15;
+      strip.scrollTo({ left: index * itemWidth, behavior: "smooth" });
+    });
   });
-});
 
-// Click dot to scroll
-document.querySelectorAll(".lux-dot").forEach(dot => {
-  dot.addEventListener("click", () => {
-    const index = dot.dataset.index;
+  // Auto-swipe every 2 seconds
+  let currentIndex = 0;
+  const swipeInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalImages;
     const itemWidth = strip.children[0].offsetWidth + 15;
-    strip.scrollTo({ left: index * itemWidth, behavior: "smooth" });
+    strip.scrollTo({ left: currentIndex * itemWidth, behavior: "smooth" });
+    updateDots();
+  }, 2000); // 2000ms = 2 seconds
+
+  // === DRAG ON LONG PRESS ===
+  let isDragging = false;
+  let startX = 0;
+  let scrollStart = 0;
+  let dragTimeout = null;
+
+  const stopDrag = () => {
+    clearTimeout(dragTimeout);
+    isDragging = false;
+    strip.style.cursor = "grab";
+  };
+
+  strip.addEventListener("mousedown", (e) => {
+    clearInterval(swipeInterval); // Stop auto-swipe on manual interaction
+    dragTimeout = setTimeout(() => {
+      isDragging = true;
+      startX = e.pageX;
+      scrollStart = strip.scrollLeft;
+      strip.style.cursor = "grabbing";
+    }, 250); 
   });
-});
 
-// === DRAG ON LONG PRESS ===
-let isDragging = false;
-let startX = 0;
-let scrollStart = 0;
-let dragTimeout = null;
+  strip.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const dx = e.pageX - startX;
+    strip.scrollLeft = scrollStart - dx;
+  });
 
-// Desktop long press drag
-strip.addEventListener("mousedown", (e) => {
-  dragTimeout = setTimeout(() => {
-    isDragging = true;
-    startX = e.pageX;
-    scrollStart = strip.scrollLeft;
-    strip.style.cursor = "grabbing";
-  }, 250); // 250ms long press
-});
+  strip.addEventListener("mouseup", stopDrag);
+  strip.addEventListener("mouseleave", stopDrag);
 
-// Move handler
-const handleMouseMove = (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const dx = e.pageX - startX;
-  strip.scrollLeft = scrollStart - dx;
-};
+  strip.addEventListener("touchstart", (e) => {
+    clearInterval(swipeInterval); // Stop auto-swipe on touch
+    dragTimeout = setTimeout(() => {
+      isDragging = true;
+      startX = e.touches[0].pageX;
+      scrollStart = strip.scrollLeft;
+    }, 250);
+  });
 
-const stopDrag = () => {
-  clearTimeout(dragTimeout);  // stop any pending long press
-  isDragging = false;
-  strip.style.cursor = "grab";
-};
+  strip.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    const dx = e.touches[0].pageX - startX;
+    strip.scrollLeft = scrollStart - dx;
+  });
 
-// Attach mouse events
-strip.addEventListener("mousemove", handleMouseMove);
-strip.addEventListener("mouseup", stopDrag);
-strip.addEventListener("mouseleave", stopDrag);
+  strip.addEventListener("touchend", stopDrag);
 
-// Touch handlers
-strip.addEventListener("touchstart", (e) => {
-  dragTimeout = setTimeout(() => {
-    isDragging = true;
-    startX = e.touches[0].pageX;
-    scrollStart = strip.scrollLeft;
-  }, 250);
-});
-
-strip.addEventListener("touchmove", (e) => {
-  if (!isDragging) return;
-  const dx = e.touches[0].pageX - startX;
-  strip.scrollLeft = scrollStart - dx;
-});
-
-strip.addEventListener("touchend", () => {
-  clearTimeout(dragTimeout);
-  isDragging = false;
 });
 </script>
 

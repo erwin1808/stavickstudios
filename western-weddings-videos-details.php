@@ -93,7 +93,6 @@ if ($result && $result->num_rows > 0) {
             width: 100%;
             aspect-ratio: 21 / 9; /* Standard YouTube ratio */
             background: #000;
-            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 8px 30px rgba(0,0,0,0.1);
             cursor: pointer;
@@ -556,10 +555,11 @@ if ($result && $result->num_rows > 0) {
     <div class="info-wrapper">
         <div class="info-left">
             <div class="info-name">
-                <span class="bride_name"><?= $bride ?></span>
+                <span class="bride_name"><?= $bride ?> &</span>
                 <span class="groom_name"><?= $groom ?></span>
-                <span class="full-name"><?= $bride ?> + <?= $groom ?></span>
+                <span class="full-name"><?= $bride ?> & <?= $groom ?></span>
             </div>
+
             <div class="info-location"><?= $location ?></div>
             <div class="info-logo">
                 <img src="images/header-logo.png" alt="Logo" />

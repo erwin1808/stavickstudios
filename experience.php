@@ -253,7 +253,6 @@
   width: 400px;
   height: 500px;
   object-fit: cover;
-  border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
