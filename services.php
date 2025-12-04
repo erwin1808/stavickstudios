@@ -416,7 +416,7 @@
     <div class="carousel-track">
       <!-- First set of logos -->
       <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
-        <img src="images/wedding_wire.png" alt="Wedding Wire" class="media-logo">
+        <img src="images/wedding-wire.png" alt="Wedding Wire" class="media-logo">
       </a>
       <a href="https://www.google.com/search?q=stavick+studio" target="_blank">
         <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
@@ -425,13 +425,13 @@
         <img src="images/the-knot.png" alt="The Knot" class="media-logo">
       </a>
       <a href="#" target="_blank">
-        <img src="images/vogue.png" alt="Vogue" class="media-logo">
+        <img src="images/vogue_india.png" alt="Vogue India" class="media-logo">
       </a>
       <a href="#" target="_blank">
         <img src="images/azb-logo.png" alt="Arizona Bride" class="media-logo">
       </a>
       <a href="#" target="_blank">
-        <img src="images/wedding_sutra_featured_charcoal_1.png" alt="Wedding Sutra" class="media-logo">
+        <img src="images/wedding-sutra.png" alt="Wedding Sutra" class="media-logo">
       </a>
       <a href="#" target="_blank">
         <img src="images/sab.webp" alt="South Asian Magazine" class="media-logo">
@@ -439,7 +439,7 @@
 
       <!-- Duplicate logos for seamless infinite scroll -->
       <a href="https://www.weddingwire.com/reviews/stavick-studios/ccf3c49204b1a46b.html" target="_blank">
-        <img src="images/wedding_wire.png" alt="Wedding Wire" class="media-logo">
+        <img src="images/wedding-wire.png" alt="Wedding Wire" class="media-logo">
       </a>
       <a href="https://www.google.com/search?q=stavick+studio" target="_blank">
         <img src="images/google-reviews.png" alt="Google Reviews" class="media-logo">
@@ -448,13 +448,13 @@
         <img src="images/the-knot.png" alt="The Knot" class="media-logo">
       </a>
       <a href="#" target="_blank">
-        <img src="images/vogue.png" alt="Vogue" class="media-logo">
+        <img src="images/vogue_india.png" alt="Vogue India" class="media-logo">
       </a>
       <a href="#" target="_blank">
         <img src="images/azb-logo.png" alt="Arizona Bride" class="media-logo">
       </a>
       <a href="#" target="_blank">
-        <img src="images/wedding_sutra_featured_charcoal_1.png" alt="Wedding Sutra" class="media-logo">
+        <img src="images/wedding-sutra.png" alt="Wedding Sutra" class="media-logo">
       </a>
       <a href="#" target="_blank">
         <img src="images/sab.webp" alt="South Asian Magazine" class="media-logo">

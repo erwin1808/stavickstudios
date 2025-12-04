@@ -149,7 +149,6 @@
 
     .portfolio-card {
       background: #fff;
-      border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -238,7 +237,6 @@
       width: 80%;
       height: 80vh;
       border: none;
-      border-radius: 8px;
     }
 
     .close-lightbox {
